@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solagates Global | ISO-Certified Solar Engineering Nigeria</title>
+    <meta name="description" content="Nigeria's premier solar engineering firm. ISO-Certified solar installations in Abuja, Lagos, PH, Ibadan, and Ekiti.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        :root {
+            --primary: #D4AF37; /* Solar Gold */
+            --primary-dark: #B8860B;
+            --secondary: #0F172A; /* Deep Navy Slate */
+            --bg-dark: #0F172A;
+            --bg-accent: #1E293B;
+            --white: #FFFFFF;
+            --text-muted: #94A3B8;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        html { scroll-padding-top: 80px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background: var(--bg-dark); 
+            color: var(--white);
+            scroll-behavior: smooth; 
+            overflow-x: hidden;
+        }
+
+        /* Premium Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img { height: 60px; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2)); }
+        .nav-menu { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-menu a { text-decoration: none; color: var(--white); font-weight: 500; font-size: 14px; transition: 0.3s; }
+        .nav-menu a:hover { color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 120px 20px 80px;
+            overflow: hidden;
+        }
+        .hero-bg-image {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; opacity: 0.3;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, var(--bg-dark) 100%);
+        }
+        .hero-content { position: relative; z-index: 5; max-width: 1000px; text-align: center; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 8px 20px; border-radius: 100px; color: var(--primary); font-size: 13px; font-weight: 600; margin-bottom: 30px;
+        }
+        .hero h1 { font-size: clamp(36px, 8vw, 72px); font-weight: 800; line-height: 1.1; margin-bottom: 25px; letter-spacing: -1px; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: clamp(17px, 2vw, 22px); color: var(--text-muted); margin-bottom: 40px; max-width: 800px; margin-inline: auto; line-height: 1.6; }
+
+        /* Buttons */
+        .btn { padding: 16px 40px; border-radius: 100px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: 0.4s; cursor: pointer; border: none; font-size: 16px; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.05); color: var(--white); border: 1px solid var(--glass-border); backdrop-filter: blur(10px); }
+
+        /* Cards */
+        .section { padding: 120px 20px; }
+        .section-header { text-align: center; max-width: 800px; margin: 0 auto 80px; }
+        .section-title { font-size: clamp(32px, 5vw, 52px); font-weight: 800; margin-bottom: 20px; color: var(--white); }
+        .section-title span { color: var(--primary); }
+        .section-subtitle { color: var(--text-muted); font-size: 18px; }
+
+        .grid-advantage { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1300px; margin: 0 auto; }
+        .adv-card {
+            background: var(--bg-accent); padding: 50px 40px; border-radius: 32px;
+            border: 1px solid var(--glass-border); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: center;
+        }
+        .adv-card:hover { transform: translateY(-12px); border-color: var(--primary); box-shadow: var(--shadow-premium); }
+        .adv-icon { width: 70px; height: 70px; background: rgba(212, 175, 55, 0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; color: var(--primary); font-size: 28px; }
+
+        /* Calculator */
+        .calc-container { background: var(--bg-accent); border-radius: 40px; padding: 80px 40px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; border: 1px solid var(--glass-border); }
+        .calc-card { background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); border-radius: 24px; padding: 40px; }
+        .calc-slider { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; outline: none; -webkit-appearance: none; }
+        .calc-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; background: var(--primary); border-radius: 50%; cursor: pointer; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+
+        /* Locations */
+        .location-tag {
+            background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08); text-align: center;
+            font-weight: 700; font-size: 16px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: var(--white);
+        }
+        .location-tag:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--primary); transform: translateY(-5px); }
+
+        /* FAQ */
+        .faq-item { background: rgba(255,255,255,0.02); padding: 25px; border-radius: 20px; border: 1px solid var(--glass-border); margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
+        .faq-item:hover { border-color: var(--primary); }
+        .faq-answer { display: none; margin-top: 15px; color: var(--text-muted); line-height: 1.7; border-top: 1px solid var(--glass-border); padding-top: 15px; }
+
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 15px 30px; border-radius: 100px; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 10px; z-index: 1000; box-shadow: 0 10px 30px rgba(37,211,102,0.3); }
+        
+        [data-aos] { transition-duration: 800ms !important; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="public/logo.png" alt="Solagate Global"></a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#advantage">Engineering</a></li>
+                <li><a href="#academy">Academy</a></li>
+                <li><a href="#calculator">ROI Tool</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <a href="#contact" class="btn btn-primary" style="padding: 10px 25px; font-size: 14px;">Free Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <img src="public/hero-prime.jpg" class="hero-bg-image" alt="Solar House">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+                <i data-lucide="shield-check" style="width: 14px;"></i> ISO 9001:2015 Certified
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="200">Power Your Home & Business <br><span>Without Generators</span></h1>
+            <p data-aos="fade-up" data-aos-delay="300">Nigeria's premier AI-powered solar platform. Delivering uninterrupted energy solutions for estates and industries nationwide.</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="btn btn-primary">Start Engineering Audit →</a>
+                <a href="#calculator" class="btn btn-secondary">Calculate Your ROI</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="advantage">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">The Solagates <span>Advantage</span></h2>
+            <p class="section-subtitle">Why Nigeria's high-ticket clients trust our engineering standard.</p>
+        </div>
+        <div class="grid-advantage">
+            <div class="adv-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="adv-icon"><i data-lucide="cpu"></i></div>
+                <h3>Smart Load Balancing</h3>
+                <p>AI-driven management that prioritizes critical power, extending lithium life by up to 40%.</p>
+            </div>
+            <div class="adv-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="adv-icon"><i data-lucide="battery-charging"></i></div>
+                <h3>Tier-1 Lithium Only</h3>
+                <p>We've eliminated lead-acid. Only fire-safe, high-density LiFePO4 storage for 10+ years of use.</p>
+            </div>
+            <div class="adv-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="adv-icon"><i data-lucide="shield-check"></i></div>
+                <h3>ISO Certified Installs</h3>
+                <p>Every bolt and wire follows international engineering protocols for maximum system safety.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="academy" style="background: rgba(255,255,255,0.02);">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Solagate <span>Academy</span></h2>
+            <p class="section-subtitle">Building Africa's next generation of ISO-certified energy leaders.</p>
+        </div>
+        <div class="grid-advantage" style="max-width: 1200px; margin: 0 auto;">
+            <!-- Program Tiers -->
+            <div class="adv-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="adv-icon" style="background: rgba(56, 189, 248, 0.1); color: var(--accent);"><i data-lucide="sun"></i></div>
+                <h4 style="color: var(--primary); margin-bottom: 15px;">1. Basic Installation</h4>
+                <p style="font-size: 14px; color: var(--text-muted);">Foundational training in PV panel mounting, circuit wiring, and home inverter configuration.</p>
+            </div>
+            <div class="adv-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="adv-icon" style="background: rgba(212, 175, 55, 0.1);"><i data-lucide="zap"></i></div>
+                <h4 style="color: var(--primary); margin-bottom: 15px;">2. Advanced Masterclass</h4>
+                <p style="font-size: 14px; color: var(--text-muted);">Deep-dive into complex industrial system design, smart load management, and high-voltage engineering.</p>
+            </div>
+            <div class="adv-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="adv-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i data-lucide="trending-up"></i></div>
+                <h4 style="color: var(--primary); margin-bottom: 15px;">3. Elite Mentorship</h4>
+                <p style="font-size: 14px; color: var(--text-muted);">A specialized business launchpad. Learn how to brand, market, and scale your own high-ticket solar firm.</p>
+            </div>
+            
+            <!-- Outcome Card -->
+            <div class="adv-card" style="grid-column: span 3; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center; text-align: left; background: var(--bg-accent);" data-aos="fade-up">
+                <img src="public/certified-team.jpg" style="width: 100%; height: 300px; border-radius: 20px; object-fit: cover; border: 1px solid var(--glass-border);">
+                <div>
+                    <div class="hero-badge" style="margin-bottom: 15px;">CAREER ACCELERATOR</div>
+                    <h3 style="font-size: 32px; margin-bottom: 15px;">ISO 9001:2015 <span style="color: var(--primary);">Certification</span></h3>
+                    <p style="color: var(--text-muted); margin-bottom: 25px; line-height: 1.6;">Every graduate receives a globally recognized ISO certification and access to our exclusive network of 500+ industrial hiring partners across Nigeria.</p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="#contact" class="btn btn-primary">Enroll in Next Cohort →</a>
+                        <div style="border-left: 1px solid var(--glass-border); padding-left: 20px;">
+                            <span style="display: block; font-size: 24px; font-weight: 800; color: var(--primary);">98%</span>
+                            <span style="font-size: 12px; color: var(--text-muted);">Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storage Showcase -->
+    <section class="section" id="storage">
+        <div class="calc-container" style="background: var(--bg-dark); border: none;">
+            <div data-aos="fade-right">
+                <h2 class="section-title" style="text-align: left;">Next-Gen <br><span>Energy Storage</span></h2>
+                <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">We've eliminated lead-acid. Only fire-safe, high-density LiFePO4 storage for 10+ years of use.</p>
+                <img src="public/storage-premium.jpg" alt="Premium Storage" style="width: 100%; border-radius: 20px; border: 1px solid var(--glass-border);">
+            </div>
+            <div data-aos="fade-left" style="display: grid; gap: 20px;">
+                <img src="public/storage-industrial.jpg" alt="Industrial" style="width: 100%; border-radius: 20px; border: 1px solid var(--glass-border);">
+                <img src="public/storage-rack.jpg" alt="Rack" style="width: 100%; border-radius: 20px; border: 1px solid var(--glass-border);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footprint Section -->
+    <section class="section" id="footprint" style="background: var(--bg-dark); color: var(--white);">
+        <div class="nav-container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center;">
+            <div data-aos="fade-right">
+                <h2 class="section-title" style="text-align: left; font-size: 48px;">Serving All <span style="color: var(--primary);">36 States</span></h2>
+                <p class="section-subtitle" style="text-align: left; margin-bottom: 40px; color: #94A3B8;">From industrial hubs to luxury estates, Solagates delivers premium ISO-certified energy systems nationwide with core operational hubs in:</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div class="location-tag">🏛️ Abuja</div>
+                    <div class="location-tag">🏙️ Lagos</div>
+                    <div class="location-tag">⚓ PH</div>
+                    <div class="location-tag">🏫 Ibadan</div>
+                    <div class="location-tag">⛰️ Ekiti</div>
+                    <div class="location-tag">🛰️ Global</div>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <img src="public/commercial-prime.jpg" alt="Nationwide Solar Infrastructure" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-premium);">
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="calculator">
+        <div class="calc-container" data-aos="zoom-in" data-aos-delay="100">
+            <div>
+                <h2 class="section-title" style="text-align: left;">Energy Freedom <br><span>Calculator</span></h2>
+                <p class="section-subtitle" style="text-align: left; margin-bottom: 40px;">Stop bleeding money to fuel. See your 5-year savings projection in seconds.</p>
+                <div style="background: rgba(212,175,55,0.1); padding: 40px; border-radius: 30px; border: 1px solid var(--primary); text-align: center;">
+                    <span id="savings5yr" style="font-size: 42px; font-weight: 800; color: var(--primary); display: block;">₦12,500,000</span>
+                    <span style="color: var(--text-muted);">Estimated 5-Year Savings</span>
+                </div>
+            </div>
+            <div class="calc-card">
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 15px; color: var(--text-muted);">Monthly Diesel/Grid Spend: ₦<span id="billVal" style="color: var(--white);">250,000</span></label>
+                    <input type="range" min="50000" max="1000000" step="10000" value="250000" class="calc-slider" id="billInput">
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 15px; color: var(--text-muted);">Target Capacity: <span id="capVal" style="color: var(--white);">10</span> kW</label>
+                    <input type="range" min="3" max="50" step="1" value="10" class="calc-slider" id="capInput">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="text-align: center;">
+                        <span id="co2Val" style="font-size: 24px; font-weight: 800; color: var(--primary); display: block;">12.4</span>
+                        <span style="font-size: 12px; color: var(--text-muted);">Tons CO2 Saved/Yr</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span id="roiVal" style="font-size: 24px; font-weight: 800; color: var(--primary); display: block;">32</span>
+                        <span style="font-size: 12px; color: var(--text-muted);">Months to ROI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="calc-container" style="background: var(--bg-dark);">
+            <div data-aos="fade-right" data-aos-delay="100">
+                <h2 class="section-title" style="text-align: left;">Ready for <span>Energy Freedom?</span></h2>
+                <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">Join 500+ industrial leaders and estates. Request your engineering consultation.</p>
+                <div style="color: var(--primary); font-weight: 800; font-size: 24px;">+234 807 515 5862</div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200">
+                <form id="leadForm" style="display: grid; gap: 20px;">
+                    <input type="text" id="leadName" placeholder="Full Name" required style="width: 100%; padding: 18px; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white;">
+                    <input type="tel" id="leadPhone" placeholder="Phone" required style="width: 100%; padding: 18px; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white;">
+                    <select id="leadInterest" style="width: 100%; padding: 18px; border-radius: 12px; background: rgba(15,23,42,1); border: 1px solid var(--glass-border); color: white;">
+                        <option>Residential Estate</option>
+                        <option>Industrial Complex</option>
+                        <option>Academy Enrollment</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Inquiry →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 80px 20px 40px; border-top: 1px solid var(--glass-border);">
+        <div style="max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;">
+            <div>
+                <img src="public/logo.png" alt="Logo" style="height: 50px; margin-bottom: 25px;">
+                <p style="color: var(--text-muted); line-height: 1.7;">ISO-Certified energy infrastructure for Africa's future. Engineering excellence in every watt.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Quick Links</h4>
+                <ul style="list-style: none; color: var(--text-muted); font-size: 14px;">
+                    <li style="margin-bottom: 10px;"><a href="#advantage" style="color: inherit; text-decoration: none;">Engineering</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#calculator" style="color: inherit; text-decoration: none;">ROI Tool</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#contact" style="color: inherit; text-decoration: none;">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Legal</h4>
+                <p style="font-size: 13px; color: var(--text-muted);">RC: 12345678. ISO 9001 Certified.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2348075155862" class="whatsapp-float"><i data-lucide="message-circle"></i> WhatsApp</a>
+
+    <script>
+        lucide.createIcons();
+        AOS.init();
+
+        const billInput = document.getElementById('billInput');
+        const capInput = document.getElementById('capInput');
+        function updateCalc() {
+            const bill = parseInt(billInput.value);
+            const cap = parseInt(capInput.value);
+            document.getElementById('billVal').innerText = bill.toLocaleString();
+            document.getElementById('capVal').innerText = cap;
+            const savings = bill * 12 * 0.85 * 5;
+            document.getElementById('savings5yr').innerText = "₦" + Math.round(savings).toLocaleString();
+            document.getElementById('co2Val').innerText = (cap * 1.2).toFixed(1);
+            document.getElementById('roiVal').innerText = Math.min(Math.round((cap * 500000) / (bill * 0.85)), 48);
+        }
+        billInput.addEventListener('input', updateCalc);
+        capInput.addEventListener('input', updateCalc);
+        updateCalc();
+
+        document.getElementById('leadForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('✅ Inquiry Received. A Solagates engineer will contact you shortly.');
+            window.open('https://wa.me/2348075155862', '_blank');
+        });
+    </script>
+</body>
+</html>
