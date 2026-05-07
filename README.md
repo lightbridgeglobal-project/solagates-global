@@ -1,61 +1,54 @@
-# ☀️ Solagates Global - Solar Energy Solutions Nigeria
+# ☀️ Solagates Global - Premium Solar Engineering Nigeria
 
-**Powering Your Future with Solar Energy**
+**ISO-Certified Solar Energy Infrastructure for Africa's Future**
 
-Solagates Global is Nigeria's leading solar energy company offering solar panel installation, inverters, battery storage, maintenance services, and training programs.
-
----
-
-## 🌟 Features
-
-- ✅ **Solar Installation Packages** - Residential, Commercial systems
-- ✅ **Lead Capture Form** - Collects name, email, phone, location, interest, package, message
-- ✅ **Google Sheets Integration** - Automatically saves leads to Google Sheets
-- ✅ **WhatsApp Integration** - Direct lead notifications to WhatsApp
-- ✅ **Services Section** - 4 core services
-- ✅ **Trust Bar** - 500+ installations, 24/7 support, certified engineers
-- ✅ **SEO Optimized** - Meta tags, responsive design
-- ✅ **Docker Containerized** - Easy deployment
+Solagates Global is Nigeria's premier AI-powered solar engineering firm. We deliver uninterrupted, high-performance energy solutions for luxury estates, industrial complexes, and commercial hubs nationwide.
 
 ---
 
-## 🛠️ Solar Packages
+## 🌟 Premium Features
 
-| Package | Power | Features |
-|---------|-------|----------|
-| Residential Basic | 1.5kW | 1.5kW Panel, 1.5kW Inverter, 2 x 200Ah Battery, Free Installation |
-| Residential Standard | 3kW | 3kW Panel, 3kW Inverter, 4 x 200Ah Battery, Free Installation, 1 Year Warranty |
-| Residential Premium | 5kW | 5kW Panel, 5kW Inverter, 4 x Lithium Battery, Free Installation, 2 Year Warranty |
+- ✅ **ISO 9001:2015 Certified** - International engineering standards in every installation.
+- ✅ **AI-Powered Load Balancing** - Smart energy management to extend battery life by 40%.
+- ✅ **Tier-1 Lithium Storage** - Fire-safe LiFePO4 technology (No more lead-acid).
+- ✅ **Solagate Academy** - Building Africa's next generation of solar leaders.
+- ✅ **ROI Calculator** - Precision tools for energy savings projection.
+- ✅ **Nationwide Infrastructure** - Core hubs in Abuja, Lagos, PH, Ibadan, and Ekiti.
 
 ---
 
-## 📋 Services Offered
+## 🛠️ Engineering Standards
 
-- ☀️ Solar Panel Installation
-- 🔧 Maintenance & Support (24/7 monitoring)
-- 🛒 Solar Products Shop
-- 🎓 Training Academy
+| Standard | Description |
+|----------|-------------|
+| ISO 9001:2015 | Global quality management for solar engineering. |
+| Tier-1 LiFePO4 | High-density lithium storage with 10+ years lifespan. |
+| AI Management | Real-time monitoring and smart power prioritization. |
+
+---
+
+## 🎓 Solagate Academy
+
+We offer three tiers of ISO-certified training:
+1. **Basic Installation** - PV mounting and circuit wiring.
+2. **Advanced Masterclass** - Complex industrial system design.
+3. **Elite Mentorship** - Business scaling for solar entrepreneurs.
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Docker
+- Docker (Optional)
 
-### Installation
+### Local Development
+Simply open `index.html` in any modern browser or use a live server.
 
+### Docker Deployment
 ```bash
-# Clone the repository
-git clone https://github.com/Samuelade24/solagates.git
-cd solagates
-
 # Build and run
-docker build -t solagates .
-docker run -d --name solagates -p 8085:80 solagates
-
-# Access the application
-open http://localhost:8085
+docker build -t solagates-premium .
+docker run -d --name solagates -p 8085:80 solagates-premium
 ```
 
 ---
@@ -64,41 +57,33 @@ open http://localhost:8085
 
 ```
 solagates/
-├── index.html          # Main landing page with lead capture
-├── Dockerfile          # Docker configuration
+├── index.html          # Premium Dark Mode Landing Page
+├── public/             # High-resolution assets & images
+├── Dockerfile          # Nginx configuration
 ├── .gitignore          # Git ignore rules
 └── README.md           # Documentation
 ```
 
 ---
 
-## 📊 Lead Capture
+## 📊 Infrastructure Status
 
-The form submits data to Google Sheets. Captured fields:
-- Timestamp
-- Full Name
-- Email Address
-- Phone Number
-- Location / City
-- Service Interest
-- Package Interest
-- Additional Message
-- Source
+The current deployment features our "Premium Dark Mode" UI, optimized for high-ticket lead conversion and engineering authority.
 
 ---
 
-## 📞 Contact
+## 📞 Contact Engineering
 
 - **WhatsApp:** +234 807 515 5862
 - **Email:** solagateglobal@gmail.com
-- **Location:** Ibadan, Nigeria
+- **Hubs:** Abuja | Lagos | PH | Ibadan | Ekiti
 
 ---
 
 ## 📝 License
 
-All rights reserved. Proprietary software.
+All rights reserved. Solagates Global Proprietary Infrastructure.
 
 ---
 
-**Made with ☀️ for solar energy solutions in Nigeria**
+**Engineering Excellence in Every Watt.**
