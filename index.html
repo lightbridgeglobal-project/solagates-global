@@ -13,6 +13,23 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-links">
+                <a href="#"><i data-lucide="facebook" style="width:14px"></i></a>
+                <a href="#"><i data-lucide="twitter" style="width:14px"></i></a>
+                <a href="#"><i data-lucide="instagram" style="width:14px"></i></a>
+                <a href="#"><i data-lucide="linkedin" style="width:14px"></i></a>
+            </div>
+            <div class="top-bar-links">
+                <a href="#contact">Support</a>
+                <a href="#academy">Academy</a>
+                <a href="#">Sign in</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Mobile Overlay -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
@@ -22,12 +39,13 @@
             <a href="#" class="logo"><img src="public/logo.png" alt="Solagate Global"></a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#products" onclick="closeMenu()">Products</a></li>
                 <li><a href="#advantage" onclick="closeMenu()">Engineering</a></li>
                 <li><a href="#academy" onclick="closeMenu()">Academy</a></li>
-                <li><a href="#calculator" onclick="closeMenu()">ROI Tool</a></li>
-                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
             </ul>
             <div class="nav-cta">
+                <button class="btn btn-secondary" style="padding: 10px; border-radius: 50%; width: 40px; height: 40px;"><i data-lucide="search" style="width:18px"></i></button>
                 <a href="#contact" class="btn btn-primary" style="padding: 10px 22px; font-size: 13px;">Free Audit</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                     <span></span>
@@ -38,87 +56,153 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <img src="public/hero-prime.jpg" class="hero-bg-image" alt="Solar House" loading="eager">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
-                <i data-lucide="shield-check" style="width: 14px;"></i> ISO 9001:2015 Certified
+    <!-- Hero Slider -->
+    <section class="hero-slider" id="home">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <img src="public/hero-prime.jpg" class="hero-bg-image" alt="Solar House">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-down">
+                    <i data-lucide="shield-check" style="width: 14px;"></i> ISO 9001:2015 Certified
+                </div>
+                <h1 data-aos="fade-up">Power Your Home <br><span>Without Generators</span></h1>
+                <p data-aos="fade-up">Nigeria's premier AI-powered solar platform. Delivering uninterrupted energy solutions nationwide.</p>
+                <div class="hero-buttons" data-aos="fade-up">
+                    <a href="#contact" class="btn btn-primary">Start Engineering Audit →</a>
+                    <a href="#calculator" class="btn btn-secondary">Calculate ROI</a>
+                </div>
             </div>
-            <h1 data-aos="fade-up" data-aos-delay="200">Power Your Home & Business <br><span>Without Generators</span></h1>
-            <p data-aos="fade-up" data-aos-delay="300">Nigeria's premier AI-powered solar platform. Delivering uninterrupted energy solutions for estates and industries nationwide.</p>
-            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                <a href="#contact" class="btn btn-primary">Start Engineering Audit →</a>
-                <a href="#calculator" class="btn btn-secondary">Calculate Your ROI</a>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="public/hero-slide-2.jpg" class="hero-bg-image" alt="Energy Storage">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge"><i data-lucide="zap" style="width: 14px;"></i> High-Density Storage</div>
+                <h1>Next-Gen <br><span>Lithium Backup</span></h1>
+                <p>Engineered for continuous heavy-duty loads. 10+ years of maintenance-free power.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">View Battery Systems</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Advantage -->
-    <section class="section" id="advantage">
+    <!-- Service Highlights -->
+    <div class="service-highlights">
+        <div class="container">
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <i data-lucide="truck"></i>
+                    <div class="highlight-text">
+                        <h4>Nationwide Delivery</h4>
+                        <p>Safe shipping to all 36 states.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i data-lucide="headphones"></i>
+                    <div class="highlight-text">
+                        <h4>After-Sales Support</h4>
+                        <p>24/7 technical assistance.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i data-lucide="users"></i>
+                    <div class="highlight-text">
+                        <h4>Trained Engineers</h4>
+                        <p>ISO-certified installation team.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <i data-lucide="award"></i>
+                    <div class="highlight-text">
+                        <h4>Premium Warranty</h4>
+                        <p>Up to 5 years system coverage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <section class="section" id="products">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">The Solagates <span>Advantage</span></h2>
-                <p class="section-subtitle">Why Nigeria's high-ticket clients trust our engineering standard.</p>
+                <h2 class="section-title">Featured <span>Categories</span></h2>
+                <p class="section-subtitle">Tailored energy solutions for every requirement.</p>
             </div>
-            <div class="grid-advantage">
-                <div class="adv-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="adv-icon"><i data-lucide="cpu"></i></div>
-                    <h3>Smart Load Balancing</h3>
-                    <p>AI-driven management that prioritizes critical power, extending lithium life by up to 40%.</p>
+            <div class="category-grid">
+                <div class="category-card" data-aos="fade-up">
+                    <img src="public/category-residential.jpg" alt="Residential Solar">
+                    <div class="category-overlay">
+                        <h3>Residential Estates</h3>
+                        <a href="#contact" class="btn btn-primary" style="padding: 8px 15px; font-size: 12px; width: fit-content;">View Solutions</a>
+                    </div>
                 </div>
-                <div class="adv-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="adv-icon"><i data-lucide="battery-charging"></i></div>
-                    <h3>Tier-1 Lithium Only</h3>
-                    <p>We've eliminated lead-acid. Only fire-safe, high-density LiFePO4 storage for 10+ years of use.</p>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="public/category-industrial.jpg" alt="Industrial Solar">
+                    <div class="category-overlay">
+                        <h3>Industrial Complexes</h3>
+                        <a href="#contact" class="btn btn-primary" style="padding: 8px 15px; font-size: 12px; width: fit-content;">Explore Systems</a>
+                    </div>
                 </div>
-                <div class="adv-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="adv-icon"><i data-lucide="shield-check"></i></div>
-                    <h3>ISO Certified Installs</h3>
-                    <p>Every bolt and wire follows international engineering protocols for maximum system safety.</p>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="public/category-academy.jpg" alt="Solar Academy">
+                    <div class="category-overlay">
+                        <h3>Academy & Training</h3>
+                        <a href="#academy" class="btn btn-primary" style="padding: 8px 15px; font-size: 12px; width: fit-content;">Join Cohort</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Academy -->
-    <section class="section" id="academy" style="background: rgba(255,255,255,0.02);">
+    <!-- Engineering Advantage -->
+    <section class="section" id="advantage" style="background: rgba(255,255,255,0.01);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Engineering <span>Excellence</span></h2>
+                <p class="section-subtitle">Why high-ticket clients choose the Solagates standard.</p>
+            </div>
+            <div class="grid-advantage">
+                <div class="adv-card" data-aos="fade-up">
+                    <div class="adv-icon"><i data-lucide="cpu"></i></div>
+                    <h3>Smart Load Balancing</h3>
+                    <p>AI-driven management that extends lithium life by up to 40%.</p>
+                </div>
+                <div class="adv-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="adv-icon"><i data-lucide="battery-charging"></i></div>
+                    <h3>Tier-1 Lithium Only</h3>
+                    <p>Fire-safe, high-density LiFePO4 storage for 10+ years of use.</p>
+                </div>
+                <div class="adv-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="adv-icon"><i data-lucide="shield-check"></i></div>
+                    <h3>ISO Certified Installs</h3>
+                    <p>Systems following international protocols for maximum safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academy Section -->
+    <section class="section" id="academy">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Solagate <span>Academy</span></h2>
-                <p class="section-subtitle">Building Africa's next generation of ISO-certified energy leaders.</p>
+                <p class="section-subtitle">Building Africa's next generation of energy leaders.</p>
             </div>
-            <div class="grid-advantage">
-                <div class="adv-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="adv-icon" style="background: rgba(56, 189, 248, 0.1); color: #38bdf8;"><i data-lucide="sun"></i></div>
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">1. Basic Installation</h4>
-                    <p>Foundational training in PV panel mounting, circuit wiring, and home inverter configuration.</p>
-                </div>
-                <div class="adv-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="adv-icon"><i data-lucide="zap"></i></div>
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">2. Advanced Masterclass</h4>
-                    <p>Deep-dive into complex industrial system design, smart load management, and high-voltage engineering.</p>
-                </div>
-                <div class="adv-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="adv-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i data-lucide="trending-up"></i></div>
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">3. Elite Mentorship</h4>
-                    <p>A specialized business launchpad. Learn how to brand, market, and scale your own high-ticket solar firm.</p>
-                </div>
-
-                <!-- Outcome Card -->
-                <div class="adv-card academy-outcome" data-aos="fade-up">
-                    <img src="public/certified-team.jpg" alt="Certified Team" loading="lazy">
-                    <div>
-                        <div class="hero-badge" style="margin-bottom: 15px;">CAREER ACCELERATOR</div>
-                        <h3>ISO 9001:2015 <span style="color: var(--primary);">Certification</span></h3>
-                        <p style="color: var(--text-muted); margin-bottom: 25px; line-height: 1.6;">Every graduate receives a globally recognized ISO certification and access to our exclusive network of 500+ industrial hiring partners across Nigeria.</p>
-                        <div class="academy-cta-row">
-                            <a href="#contact" class="btn btn-primary">Enroll in Next Cohort →</a>
-                            <div class="academy-stat">
-                                <span class="num">98%</span>
-                                <span class="label">Success Rate</span>
-                            </div>
+            <div class="adv-card academy-outcome" data-aos="zoom-in">
+                <img src="public/certified-team.jpg" alt="Certified Team">
+                <div>
+                    <div class="hero-badge" style="margin-bottom: 15px;">CAREER ACCELERATOR</div>
+                    <h3>ISO 9001:2015 <span style="color: var(--primary);">Certification</span></h3>
+                    <p style="color: var(--text-muted); margin-bottom: 25px;">Every graduate receives a globally recognized ISO certification and access to our exclusive network of 500+ industrial hiring partners.</p>
+                    <div class="academy-cta-row">
+                        <a href="#contact" class="btn btn-primary">Enroll in Next Cohort →</a>
+                        <div class="academy-stat">
+                            <span class="num">98%</span>
+                            <span class="label">Success Rate</span>
                         </div>
                     </div>
                 </div>
@@ -126,49 +210,31 @@
         </div>
     </section>
 
-    <!-- Storage Showcase -->
-    <section class="section" id="storage">
-        <div class="split-layout">
-            <div data-aos="fade-right">
-                <h2 class="section-title">Next-Gen <br><span>Energy Storage</span></h2>
-                <p class="section-subtitle" style="margin-bottom: 30px;">We've eliminated lead-acid. Only fire-safe, high-density LiFePO4 storage for 10+ years of use.</p>
-                <img src="public/storage-premium.jpg" alt="Premium Storage" loading="lazy">
+    <!-- Past Projects Gallery -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Past <span>Projects</span></h2>
+                <p class="section-subtitle">Real results for residential and industrial clients across Nigeria.</p>
             </div>
-            <div class="split-images" data-aos="fade-left">
-                <img src="public/storage-industrial.jpg" alt="Industrial Storage" loading="lazy">
-                <img src="public/storage-rack.jpg" alt="Storage Rack" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <!-- Footprint -->
-    <section class="section" id="footprint">
-        <div class="split-layout">
-            <div data-aos="fade-right">
-                <h2 class="section-title">Serving All <span>36 States</span></h2>
-                <p class="section-subtitle" style="margin-bottom: 40px;">From industrial hubs to luxury estates, Solagates delivers premium ISO-certified energy systems nationwide with core operational hubs in:</p>
-                <div class="location-grid">
-                    <div class="location-tag">🏛️ Abuja</div>
-                    <div class="location-tag">🏙️ Lagos</div>
-                    <div class="location-tag">⚓ PH</div>
-                    <div class="location-tag">🏫 Ibadan</div>
-                    <div class="location-tag">⛰️ Ekiti</div>
-                    <div class="location-tag">🛰️ Global</div>
-                </div>
-            </div>
-            <div data-aos="fade-left">
-                <img src="public/commercial-prime.jpg" alt="Nationwide Solar Infrastructure" style="box-shadow: var(--shadow-premium);" loading="lazy">
+            <div class="project-gallery">
+                <div class="project-item" data-aos="fade-up"><img src="public/project-1.jpg" alt="Project"></div>
+                <div class="project-item" data-aos="fade-up" data-aos-delay="50"><img src="public/project-2.jpg" alt="Project"></div>
+                <div class="project-item" data-aos="fade-up" data-aos-delay="100"><img src="public/project-3.jpg" alt="Project"></div>
+                <div class="project-item" data-aos="fade-up" data-aos-delay="150"><img src="public/project-4.jpg" alt="Project"></div>
+                <div class="project-item" data-aos="fade-up" data-aos-delay="200"><img src="public/commercial-prime.jpg" alt="Project"></div>
+                <div class="project-item" data-aos="fade-up" data-aos-delay="250"><img src="public/storage-industrial.jpg" alt="Project"></div>
             </div>
         </div>
     </section>
 
-    <!-- Calculator -->
+    <!-- ROI Calculator -->
     <section class="section" id="calculator">
         <div class="container">
-            <div class="calc-container" data-aos="zoom-in" data-aos-delay="100">
+            <div class="calc-container" data-aos="zoom-in">
                 <div>
                     <h2 class="section-title" style="text-align: left;">Energy Freedom <br><span>Calculator</span></h2>
-                    <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">Stop bleeding money to fuel. See your 5-year savings projection in seconds.</p>
+                    <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">Stop bleeding money to fuel. See your 5-year savings projection.</p>
                     <div class="calc-display">
                         <span id="savings5yr" class="amount">₦12,500,000</span>
                         <span class="desc">Estimated 5-Year Savings</span>
@@ -176,7 +242,7 @@
                 </div>
                 <div class="calc-card">
                     <div class="calc-slider-group">
-                        <label>Monthly Diesel/Grid Spend: ₦<span id="billVal">250,000</span></label>
+                        <label>Monthly Fuel Spend: ₦<span id="billVal">250,000</span></label>
                         <input type="range" min="50000" max="1000000" step="10000" value="250000" class="calc-slider" id="billInput">
                     </div>
                     <div class="calc-slider-group">
@@ -184,14 +250,28 @@
                         <input type="range" min="3" max="50" step="1" value="10" class="calc-slider" id="capInput">
                     </div>
                     <div class="calc-stats">
-                        <div>
-                            <span id="co2Val" class="val">12.4</span>
-                            <span class="label">Tons CO2 Saved/Yr</span>
-                        </div>
-                        <div>
-                            <span id="roiVal" class="val">32</span>
-                            <span class="label">Months to ROI</span>
-                        </div>
+                        <div><span id="co2Val" class="val">12.4</span><span class="label">CO2 Saved/Yr</span></div>
+                        <div><span id="roiVal" class="val">32</span><span class="label">Months ROI</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Customer <span>Reviews</span></h2>
+                <p class="section-subtitle">What Nigeria's elite estates say about our engineering.</p>
+            </div>
+            <div class="testimonial-slider" data-aos="fade-up">
+                <p style="font-size: 18px; font-style: italic; margin-bottom: 20px; color: var(--text-muted);">"Solagates transformed our estate power grid. We've eliminated generator noise completely. Their ISO-certified approach is visible in every detail."</p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%;"></div>
+                    <div>
+                        <h4 style="margin: 0;">Engr. Taiwo O.</h4>
+                        <p style="font-size: 12px; color: var(--text-muted); margin: 0;">Abuja Luxury Estate Manager</p>
                     </div>
                 </div>
             </div>
@@ -202,12 +282,12 @@
     <section class="section" id="contact">
         <div class="container">
             <div class="calc-container contact-container">
-                <div data-aos="fade-right" data-aos-delay="100">
+                <div data-aos="fade-right">
                     <h2 class="section-title" style="text-align: left;">Ready for <span>Energy Freedom?</span></h2>
-                    <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">Join 500+ industrial leaders and estates. Request your engineering consultation.</p>
+                    <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">Join 500+ industrial leaders. Request your consultation.</p>
                     <div class="contact-phone">+234 807 515 5862</div>
                 </div>
-                <div data-aos="fade-left" data-aos-delay="200">
+                <div data-aos="fade-left">
                     <form id="leadForm" class="contact-form">
                         <input type="text" id="leadName" placeholder="Full Name" required>
                         <input type="tel" id="leadPhone" placeholder="Phone" required>
@@ -223,7 +303,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Expanded Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -232,17 +312,34 @@
                     <p>ISO-Certified energy infrastructure for Africa's future. Engineering excellence in every watt.</p>
                 </div>
                 <div>
-                    <h4>Quick Links</h4>
+                    <h4>Products</h4>
                     <ul class="footer-links">
-                        <li><a href="#advantage">Engineering</a></li>
-                        <li><a href="#calculator">ROI Tool</a></li>
-                        <li><a href="#contact">Support</a></li>
+                        <li><a href="#">Lithium Batteries</a></li>
+                        <li><a href="#">Solar Inverters</a></li>
+                        <li><a href="#">Solar Panels</a></li>
+                        <li><a href="#">Charge Controllers</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Legal</h4>
-                    <p class="footer-legal">RC: 12345678. ISO 9001 Certified.</p>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#advantage">Installation</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                        <li><a href="#academy">Training</a></li>
+                        <li><a href="#">Consultation</a></li>
+                    </ul>
                 </div>
+                <div>
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact Support</a></li>
+                        <li><a href="#">Branch Outlets</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                <p class="footer-legal">RC: 12345678. ISO 9001 Certified. Copyright © 2026 Solagates. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -251,7 +348,6 @@
     <a href="https://wa.me/2348075155862" class="whatsapp-float"><i data-lucide="message-circle"></i> WhatsApp</a>
 
     <script>
-        // Initialize libraries
         lucide.createIcons();
         AOS.init({ once: true, duration: 800 });
 
@@ -275,6 +371,16 @@
         hamburger.addEventListener('click', toggleMenu);
         overlay.addEventListener('click', closeMenu);
 
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 6000);
+
         // Calculator
         const billInput = document.getElementById('billInput');
         const capInput = document.getElementById('capInput');
@@ -292,21 +398,10 @@
         capInput.addEventListener('input', updateCalc);
         updateCalc();
 
-        // Form
-        document.getElementById('leadForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('✅ Inquiry Received. A Solagates engineer will contact you shortly.');
-            window.open('https://wa.me/2348075155862', '_blank');
-        });
-
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(15, 23, 42, 0.9)';
-            }
+            navbar.style.background = window.scrollY > 50 ? 'rgba(15, 23, 42, 0.98)' : 'rgba(15, 23, 42, 0.9)';
         });
     </script>
 </body>
