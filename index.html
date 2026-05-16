@@ -438,27 +438,52 @@
 
     <script>
         lucide.createIcons();
-        AOS.init({ once: true, duration: 800 });
+        AOS.init({ once: true, duration: 800, offset: 50, easing: 'ease-out-cubic' });
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
 
         // Mobile Menu
         const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-        const overlay = document.getElementById('mobileOverlay');
+        const navMenu   = document.getElementById('navMenu');
+        const overlay   = document.getElementById('mobileOverlay');
 
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        function openMenu() {
+            hamburger.classList.add('active');
+            navMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            hamburger.setAttribute('aria-expanded','true');
         }
         function closeMenu() {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
+            hamburger.setAttribute('aria-expanded','false');
         }
-        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('click', () => navMenu.classList.contains('active') ? closeMenu() : openMenu());
         overlay.addEventListener('click', closeMenu);
+        window.addEventListener('resize', () => { if (window.innerWidth >= 1024) closeMenu(); });
+
+        // Active nav on scroll
+        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+        const sections = document.querySelectorAll('section[id]');
+        function highlightNav() {
+            const y = window.scrollY + 120;
+            sections.forEach(s => {
+                if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
+                    navLinks.forEach(l => {
+                        l.classList.remove('active');
+                        if (l.getAttribute('href') === '#' + s.id) l.classList.add('active');
+                    });
+                }
+            });
+        }
+        window.addEventListener('scroll', highlightNav);
 
         // Hero Slider
         let currentSlide = 0;
@@ -470,28 +495,23 @@
         }
         setInterval(nextSlide, 6000);
 
-        // Calculator
+        // ROI Calculator
         const billInput = document.getElementById('billInput');
-        const capInput = document.getElementById('capInput');
+        const capInput  = document.getElementById('capInput');
         function updateCalc() {
             const bill = parseInt(billInput.value);
-            const cap = parseInt(capInput.value);
-            document.getElementById('billVal').innerText = bill.toLocaleString();
-            document.getElementById('capVal').innerText = cap;
+            const cap  = parseInt(capInput.value);
+            document.getElementById('billVal').innerText  = bill.toLocaleString();
+            document.getElementById('capVal').innerText   = cap;
             const savings = bill * 12 * 0.85 * 5;
-            document.getElementById('savings5yr').innerText = "₦" + Math.round(savings).toLocaleString();
-            document.getElementById('co2Val').innerText = (cap * 1.2).toFixed(1);
-            document.getElementById('roiVal').innerText = Math.min(Math.round((cap * 500000) / (bill * 0.85)), 48);
+            document.getElementById('savings5yr').innerText = '₦' + Math.round(savings).toLocaleString();
+            document.getElementById('co2Val').innerText  = (cap * 1.2).toFixed(1) + ' tonnes';
+            document.getElementById('roiVal').innerText  = Math.min(Math.round((cap * 500000) / (bill * 0.85)), 48) + ' mo';
         }
         billInput.addEventListener('input', updateCalc);
         capInput.addEventListener('input', updateCalc);
         updateCalc();
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            navbar.style.background = window.scrollY > 50 ? 'rgba(15, 23, 42, 0.98)' : 'rgba(15, 23, 42, 0.9)';
-        });
     </script>
 </body>
 </html>
+
