@@ -72,10 +72,10 @@
                 <li><a href="#ai-calc">Energy AI</a></li>
                 <li><a href="#academy">Academy</a></li>
                 <li><a href="#projects">Portfolio</a></li>
-                <li><a href="#corporate" class="nav-desktop-only">Enterprise</a></li>
+                <li><a href="#corporate">Enterprise</a></li>
+                <li><a href="#assessment">Login</a></li>
             </ul>
             <div class="nav-actions">
-                <a href="#assessment" class="btn btn-glass nav-desktop-only">Login</a>
                 <a href="#assessment" class="btn btn-primary">Free Assessment</a>
                 <button class="menu-toggle" id="menuToggle">
                     <span></span>
@@ -366,7 +366,7 @@
                         <p class="test-quote">"Eliminated our ₦400k monthly diesel bill. The AI load-monitoring system is brilliant at auto-balancing power, ensuring our essential estate services never skip a beat."</p>
                     </div>
                     <div class="test-user">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" alt="Engr. Taiwo Oyewole" class="tu-img">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80" alt="Engr. Taiwo Oyewole" class="tu-img">
                         <div class="tu-info">
                             <strong>Engr. Taiwo Oyewole</strong>
                             <span>Estate Manager, Abuja</span>
@@ -559,11 +559,12 @@
             document.body.classList.toggle('has-sticky-cta', shouldShowCta);
         });
 
-        // Mobile Menu Toggle & Links Auto-Close
+        // Hamburger Menu Toggle & Auto-Close
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navLinks.classList.toggle('active');
             menuToggle.classList.toggle('active');
         });
@@ -573,6 +574,14 @@
                 navLinks.classList.remove('active');
                 menuToggle.classList.remove('active');
             });
+        });
+
+        // Close menu if clicked outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
         });
 
         // WhatsApp FAB Panel Toggle
