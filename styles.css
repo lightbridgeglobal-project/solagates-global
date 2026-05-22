@@ -807,7 +807,7 @@ select:focus {
 /* SOLUTIONS CARDS */
 .solutions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
 }
 .solution-card {
@@ -997,7 +997,7 @@ select:focus {
 }
 .faq-item.active .faq-answer {
     padding: 0 20px 20px;
-    max-height: 200px;
+    max-height: 500px;
 }
 .faq-item.active .faq-question i {
     transform: rotate(180deg);
@@ -1006,16 +1006,19 @@ select:focus {
 /* RESPONSIVE OVERRIDES */
 @media (min-width: 1025px) {
     .sticky-cta-bar { display: none !important; }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
 }
 
 @media (max-width: 1024px) {
+    .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .corp-wrapper, .founder-grid, .footprint-wrapper { flex-direction: column; text-align: center; gap: 40px; }
     .outcome-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
     .outcome-content { text-align: center; }
     .outcome-stats { justify-content: center; }
     .outcome-img { height: 280px; }
     .calc-body { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
     .timeline { flex-direction: column; gap: 30px; }
     .timeline::before { display: none; }
     
@@ -1025,10 +1028,13 @@ select:focus {
 
 @media (max-width: 768px) {
     .nav-desktop-only { display: none; }
-    .footer-grid { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: 1fr; text-align: center; }
+    .trust-item { justify-content: center; padding: 15px; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
     .hero h1 { font-size: clamp(2rem, 7vw, 3.2rem); word-break: break-word; hyphens: auto; }
     .hero-metrics { flex-direction: column; align-items: center; }
     .metric-card { width: 100%; max-width: 300px; }
+    .appliance-grid { grid-template-columns: 1fr; }
     
     .toast-container {
         left: 20px;
