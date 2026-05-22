@@ -477,7 +477,7 @@ select:focus {
     border-top: 1px solid var(--glass-border);
 }
 .footer-brand img { max-width: 160px; height: auto; margin-bottom: 20px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; margin-bottom: 60px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 60px; margin-bottom: 60px; }
 .footer-brand p { margin: 24px 0; font-size: 14px; }
 .socials { display: flex; gap: 16px; }
 .socials a { color: var(--text-muted); transition: var(--t-fast); }
