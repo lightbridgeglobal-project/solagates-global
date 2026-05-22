@@ -30,7 +30,7 @@
 
 /* BASE */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 body {
     background: var(--bg-deep);
     color: var(--text-primary);
@@ -1074,7 +1074,7 @@ select:focus {
         gap: 16px;
     }
     .wa-panel {
-        width: calc(100vw - 40px);
+        width: calc(100% - 40px);
         right: -10px;
     }
 }
@@ -1281,7 +1281,7 @@ select:focus {
 }
 @media (max-width: 480px) {
     .admin-panel {
-        width: 100vw;
+        width: 100%;
     }
     .uploader-item {
         flex-direction: column;
