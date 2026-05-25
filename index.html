@@ -9,247 +9,230 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Tailwind CSS & Stitch Design System -->
+    <!-- Tailwind Config -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "error": "#ba1a1a",
-                      "primary-fixed-dim": "#7bda93",
-                      "primary-fixed": "#97f7ad",
-                      "tertiary-fixed-dim": "#b0ceb9",
-                      "surface-container-high": "#e7e8e9",
-                      "outline": "#6f7a6f",
-                      "tertiary-fixed": "#ccead4",
-                      "inverse-on-surface": "#f0f1f2",
-                      "inverse-surface": "#2e3132",
-                      "inverse-primary": "#7bda93",
-                      "secondary-fixed-dim": "#fdbc13",
-                      "surface": "#f8f9fa",
-                      "secondary-fixed": "#ffdea3",
-                      "on-error": "#ffffff",
-                      "surface-container-lowest": "#ffffff",
-                      "surface-tint": "#006d35",
-                      "on-secondary-fixed-variant": "#5d4200",
-                      "on-surface": "#191c1d",
-                      "on-secondary-fixed": "#261900",
-                      "background": "#f8f9fa",
-                      "tertiary-container": "#55705e",
-                      "surface-bright": "#f8f9fa",
-                      "on-primary": "#ffffff",
-                      "primary": "#005f2d",
-                      "surface-variant": "#e1e3e4",
-                      "on-primary-fixed-variant": "#005227",
-                      "secondary-container": "#fdbc13",
-                      "primary-container": "#0e7a3e",
-                      "on-secondary-container": "#6b4d00",
-                      "on-primary-fixed": "#00210c",
-                      "tertiary": "#3d5847",
-                      "secondary": "#7a5900",
-                      "on-error-container": "#93000a",
-                      "surface-container": "#edeeef",
-                      "on-tertiary": "#ffffff",
-                      "on-surface-variant": "#3f493f",
-                      "on-secondary": "#ffffff",
-                      "surface-container-highest": "#e1e3e4",
-                      "surface-dim": "#d9dadb",
-                      "on-tertiary-container": "#d4f2dc",
-                      "error-container": "#ffdad6",
-                      "on-primary-container": "#a5ffb9",
-                      "on-tertiary-fixed-variant": "#324c3c",
-                      "outline-variant": "#becabc",
-                      "on-tertiary-fixed": "#062013",
-                      "surface-container-low": "#f3f4f5",
-                      "on-background": "#191c1d"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "xs": "4px",
-                      "lg": "48px",
-                      "sm": "12px",
-                      "md": "24px",
-                      "xl": "80px",
-                      "base": "8px",
-                      "margin-mobile": "16px",
-                      "max-width": "1440px",
-                      "margin-desktop": "64px",
-                      "gutter": "24px"
-              },
-              "fontFamily": {
-                      "headline-md": ["metropolis", "sans-serif"],
-                      "display-lg-mobile": ["metropolis", "sans-serif"],
-                      "label-md": ["hankenGrotesk", "sans-serif"],
-                      "display-lg": ["metropolis", "sans-serif"],
-                      "headline-lg": ["metropolis", "sans-serif"],
-                      "body-lg": ["hankenGrotesk", "sans-serif"],
-                      "title-lg": ["hankenGrotesk", "sans-serif"],
-                      "body-md": ["hankenGrotesk", "sans-serif"],
-                      "label-sm": ["hankenGrotesk", "sans-serif"]
-              },
-              "fontSize": {
-                      "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                      "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                      "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
-                      "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                      "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                      "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
-                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                      "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
-              }
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "primary": "#005f2d",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed": "#062013",
+                    "inverse-surface": "#2f3131",
+                    "surface-bright": "#f9f9f9",
+                    "surface-tint": "#006d35",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-fixed-dim": "#fdbc13",
+                    "background": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "primary-fixed-dim": "#7bda93",
+                    "inverse-primary": "#7bda93",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fdbc13",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#3f493f",
+                    "on-primary-fixed": "#00210c",
+                    "tertiary-fixed-dim": "#b0ceb9",
+                    "secondary-fixed": "#ffdea3",
+                    "on-primary-fixed-variant": "#005227",
+                    "primary-container": "#0e7a3e",
+                    "secondary": "#7a5900",
+                    "surface-dim": "#dadada",
+                    "tertiary-container": "#55705e",
+                    "tertiary-fixed": "#ccead4",
+                    "tertiary": "#3d5847",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#324c3c",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-container-low": "#f3f3f3",
+                    "on-background": "#1a1c1c",
+                    "primary-fixed": "#97f7ad",
+                    "on-secondary-container": "#6b4d00",
+                    "on-primary-container": "#a5ffb9",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f0f1f1",
+                    "outline": "#6f7a6f",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#261900",
+                    "surface": "#f9f9f9",
+                    "on-tertiary-container": "#d4f2dc",
+                    "outline-variant": "#becabc",
+                    "surface-variant": "#e2e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "margin-desktop": "80px",
+                    "section-gap": "120px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Manrope", "sans-serif"],
+                    "headline-sm": ["Manrope", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "headline-md": ["Manrope", "sans-serif"],
+                    "body-lg": ["Inter", "sans-serif"],
+                    "display-lg": ["Manrope", "sans-serif"],
+                    "label-sm": ["JetBrains Mono", "monospace"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                    "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                    "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                    "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                    "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                    "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }]
             }
           }
         }
+      }
     </script>
     <style>
-        /* Custom Metropolis Font Face (Fallback) */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'hankenGrotesk', 'Inter', sans-serif;
-            background-color: theme('colors.background');
-            color: theme('colors.on-background');
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            margin: 0;
-        }
-
-        h1, h2, h3, h4, h5, h6, .font-headline-md, .font-display-lg, .font-headline-lg {
-            font-family: 'metropolis', 'Inter', sans-serif;
-        }
-
         .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
-
-        .bento-card {
-            background-color: theme('colors.surface-container-lowest');
-            border: 1px solid theme('colors.outline-variant');
+        .ambient-shadow {
+            box-shadow: 0 16px 40px rgba(0, 95, 45, 0.06);
+        }
+        .premium-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .premium-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 48px rgba(0, 95, 45, 0.1);
+        }
+        .btn-primary {
             transition: all 0.3s ease;
         }
-
-        .bento-card:hover {
-            border-color: theme('colors.primary');
-            box-shadow: 0px 10px 25px rgba(16, 42, 28, 0.08);
-            transform: translateY(-2px);
+        .btn-primary:hover {
+            box-shadow: -4px 0 0 0 #fdbc13, 0 8px 24px rgba(0, 95, 45, 0.2);
+            transform: translateX(2px);
         }
-
-        .ambient-shadow {
-            box-shadow: 0px 10px 25px rgba(16, 42, 28, 0.08);
+        
+        @media (prefers-reduced-motion: no-preference) {
+            .scroll-reveal {
+                opacity: 0;
+                transform: translateY(32px);
+                transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1), transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .scroll-reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 
     <!-- Base Stylesheet (Legacy fallback) -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
     <!-- 7. CRO: STICKY MOBILE CTA BAR -->
     <div class="sticky-cta-bar" id="mobileStickyCta">
         <a href="#assessment" class="btn btn-primary">Free Assessment</a>
         <a href="https://wa.me/2348075155862" class="btn btn-whatsapp"><i data-lucide="message-circle"></i></a>
     </div>
 
-    <!-- NAVIGATION (Tailwind) -->
-    <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300">
-        <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-            <!-- Brand Logo -->
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto bg-surface/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,95,45,0.04)]">
+        <div class="flex items-center">
             <a href="#">
                 <img src="public/logo.png" alt="Solagates Logo" class="h-10 w-auto">
             </a>
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center gap-md">
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#solutions">Solutions</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#ai-calc">Energy AI</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#academy">Academy</a>
-                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#projects">Portfolio</a>
-            </div>
-            <!-- Actions -->
-            <div class="flex items-center gap-sm">
-                <a class="hidden md:inline-flex items-center justify-center font-label-md text-label-md text-primary bg-transparent border border-primary px-4 py-2 rounded-full hover:bg-primary/5 transition-colors" href="#assessment">Login</a>
-                <a class="inline-flex items-center justify-center font-label-md text-label-md text-on-primary bg-primary px-6 py-2 rounded-full hover:bg-primary-container transition-colors shadow-sm" href="#assessment">Get Started</a>
-            </div>
         </div>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary" href="#solutions">Solutions</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out" href="#ai-calc">Academy</a>
+            <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300 ease-in-out" href="#projects">Portfolio</a>
+        </div>
+        <a href="#assessment" class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-sm text-label-sm btn-primary">
+            Get Free Assessment
+        </a>
     </nav>
 
-    <main class="flex-grow pt-20">
-        <!-- HERO SECTION (Tailwind) -->
-        <section class="relative pt-xl pb-lg px-margin-mobile md:px-margin-desktop overflow-hidden">
-            <div class="max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-xl items-center relative z-10">
-                <!-- Content -->
-                <div class="flex flex-col gap-md max-w-2xl">
-                    <div class="inline-flex items-center gap-2 bg-secondary-container/20 text-on-secondary-container px-3 py-1 rounded-full w-fit">
-                        <span class="material-symbols-outlined text-[16px]">verified</span>
-                        <span class="font-label-sm text-label-sm uppercase tracking-wider">Premium Enterprise Solar Standard</span>
+    <main class="pt-[100px]">
+        <!-- Hero Section -->
+        <section class="min-h-[85vh] flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative pt-12 pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center z-10">
+                <div class="max-w-2xl scroll-reveal">
+                    <div class="inline-flex items-center space-x-2 bg-surface-container-low px-4 py-2 rounded-full mb-6 border border-surface-dim">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        <span class="font-label-sm text-label-sm text-primary">Premium Enterprise Solar Standard</span>
                     </div>
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+                    <h1 class="font-display-lg text-display-lg text-on-background mb-6">
                         Reliable Solar Energy Solutions For Homes, Businesses &amp; Industrial Operations
                     </h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
                         Energy Audit • Solar Design • Installation • Battery Systems • Maintenance • Energy Independence
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-sm pt-sm">
-                        <a href="#assessment" class="bg-primary text-on-primary font-label-md text-label-md px-8 py-3 rounded-full hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-2 w-fit">
-                            Get Free Energy Assessment
+                    <div class="flex flex-col sm:flex-row gap-4 mb-16">
+                        <a href="#assessment" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-sm text-label-sm btn-primary flex items-center justify-center space-x-2">
+                            <span>Get Free Energy Assessment</span>
                             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
                         </a>
-                        <a href="#assessment" class="bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-8 py-3 rounded-full hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2 w-fit">
+                        <a href="#assessment" class="bg-surface-container text-on-surface px-8 py-4 rounded-lg font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors flex items-center justify-center">
                             Request Quote
                         </a>
                     </div>
-                    <!-- Authority Metrics -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-md pt-lg border-t border-outline-variant/30 mt-sm">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-surface-dim">
                         <div>
-                            <div class="font-title-lg text-title-lg text-primary">10+</div>
-                            <div class="font-label-sm text-label-sm text-on-surface-variant">Years Experience</div>
+                            <div class="font-headline-md text-headline-md text-primary">10+</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Years Exp</div>
                         </div>
                         <div>
-                            <div class="font-title-lg text-title-lg text-primary">500+</div>
-                            <div class="font-label-sm text-label-sm text-on-surface-variant">Installs</div>
+                            <div class="font-headline-md text-headline-md text-primary">500+</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Installs</div>
                         </div>
                         <div>
-                            <div class="font-title-lg text-title-lg text-primary">15MW+</div>
-                            <div class="font-label-sm text-label-sm text-on-surface-variant">Capacity</div>
+                            <div class="font-headline-md text-headline-md text-primary">15MW+</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Capacity</div>
                         </div>
                         <div>
-                            <div class="font-title-lg text-title-lg text-primary">24/7</div>
-                            <div class="font-label-sm text-label-sm text-on-surface-variant">Support</div>
+                            <div class="font-headline-md text-headline-md text-primary">24/7</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Support</div>
                         </div>
                     </div>
                 </div>
-                <!-- Hero Image Area -->
-                <div class="relative h-[500px] lg:h-[700px] w-full rounded-2xl overflow-hidden glass-panel ambient-shadow flex items-center justify-center bg-surface-container">
-                    <img alt="Modern architectural home with premium solar panels" class="w-full h-full object-cover absolute inset-0" src="public/hero-african-family-solar-home.jpg" />
-                    <!-- Floating UI Element -->
-                    <div class="absolute bottom-md right-md bg-surface-container-lowest/90 backdrop-blur-md p-md rounded-xl border border-outline-variant shadow-lg max-w-xs">
-                        <div class="flex items-center gap-sm mb-xs">
-                            <div class="w-2 h-2 bg-secondary-container rounded-full animate-pulse"></div>
-                            <span class="font-label-sm text-label-sm text-on-surface">System Status: Active Generating</span>
+                <div class="relative h-[600px] w-full rounded-2xl overflow-hidden ambient-shadow scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10 mix-blend-overlay"></div>
+                    <img class="w-full h-full object-cover" alt="Enterprise Solar Standard" src="public/hero-african-family-solar-home.jpg"/>
+                    <!-- Floating Dashboard Card -->
+                    <div class="absolute bottom-8 left-8 right-8 glass-panel rounded-xl p-6 z-20 flex justify-between items-center premium-hover">
+                        <div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant mb-1">System Output</div>
+                            <div class="font-headline-sm text-headline-sm text-on-surface">98.4 kW</div>
                         </div>
-                        <div class="font-headline-md text-headline-md text-primary">14.2 kWh</div>
-                        <div class="font-body-sm text-body-sm text-on-surface-variant">Current Output</div>
+                        <div class="h-12 w-32 relative">
+                            <!-- Simple SVG line chart simulation -->
+                            <svg class="w-full h-full stroke-secondary-fixed-dim" fill="none" stroke-linecap="round" stroke-width="2" viewBox="0 0 100 40">
+                                <path d="M0,35 Q10,30 20,25 T40,20 T60,10 T80,15 T100,5"></path>
+                            </svg>
+                        </div>
+                        <div class="bg-[#2FAF62]/10 text-[#2FAF62] px-3 py-1 rounded font-label-sm text-label-sm flex items-center">
+                            <span class="material-symbols-outlined text-[14px] mr-1">trending_up</span> Optimal
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Abstract background pattern -->
-            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px] -z-10 translate-x-1/3 -translate-y-1/3"></div>
         </section>
 
     <!-- 4. SOLUTIONS INFRASTRUCTURE -->
@@ -942,40 +925,42 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="public/logo.png" alt="Logo">
-                    <p>Africa's premium solar technology company. Powering the future with intelligent engineering.</p>
-                    <div class="socials" style="margin-top: 15px;">
-                        <a href="#"><i data-lucide="linkedin"></i></a>
-                        <a href="#"><i data-lucide="instagram"></i></a>
-                        <a href="#"><i data-lucide="twitter"></i></a>
-                        <a href="#"><i data-lucide="facebook"></i></a>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <h4>Enterprise Solutions</h4>
-                    <ul>
-                        <li><a href="#solutions">Residential Estates</a></li>
-                        <li><a href="#solutions">Commercial Hubs</a></li>
-                        <li><a href="#solutions">Agro-Processing</a></li>
-                        <li><a href="#solutions">Data Centers</a></li>
-                    </ul>
-                </div>
-                <div class="footer-nav">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i data-lucide="map-pin" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> <span>NO.67, JEJELAYE STREET, IBADAN, OYO STATE, NIGERIA - Head Office</span></li>
-                        <li><i data-lucide="phone" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> +234 807 515 5862</li>
-                        <li><i data-lucide="mail" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> solagateglobal@gmail.com</li>
-                    </ul>
-                </div>
+    <!-- Footer -->
+    <footer class="w-full bg-surface-container-low py-16 px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mt-24 scroll-reveal">
+        <div class="col-span-1 md:col-span-1">
+            <a href="#">
+                <img src="public/logo.png" alt="Solagates Logo" class="h-10 w-auto mb-4">
+            </a>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Africa's premium solar technology company. Powering the future with intelligent engineering.
+            </p>
+            <div class="flex gap-4 mt-4">
+                <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="instagram"></i></a>
+                <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="twitter"></i></a>
+                <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="facebook"></i></a>
             </div>
-            <div style="border-top: 1px solid rgba(0,0,0,0.1); margin-top: 40px; padding-top: 20px; text-align: center; font-size: 13px; color: #666;">
-                &copy; 2026 Solagates Global Infrastructure. All Rights Reserved. ISO 9001:2015 Certified.
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-8">
+                &copy; 2026 Solagates Global Infrastructure.<br>ISO 9001:2015 Certified.
+            </p>
+        </div>
+        <div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="font-label-sm text-label-sm font-bold text-on-surface mb-4">Enterprise Solutions</h4>
+                <ul class="space-y-3 font-body-md text-body-md">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#solutions">Residential Estates</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#solutions">Commercial Hubs</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#solutions">Agro-Processing</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#solutions">Data Centers</a></li>
+                </ul>
+            </div>
+            <div class="col-span-2 md:col-span-2">
+                <h4 class="font-label-sm text-label-sm font-bold text-on-surface mb-4">Contact Us</h4>
+                <ul class="space-y-3 font-body-md text-body-md">
+                    <li class="flex items-start gap-2 text-on-surface-variant"><i data-lucide="map-pin" class="mt-1" style="width:16px; flex-shrink: 0;"></i> <span>NO.67, JEJELAYE STREET, IBADAN, OYO STATE, NIGERIA - Head Office</span></li>
+                    <li class="flex items-center gap-2 text-on-surface-variant"><i data-lucide="phone" style="width:16px; flex-shrink: 0;"></i> +234 807 515 5862</li>
+                    <li class="flex items-center gap-2 text-on-surface-variant"><i data-lucide="mail" style="width:16px; flex-shrink: 0;"></i> solagateglobal@gmail.com</li>
+                </ul>
             </div>
         </div>
     </footer>
