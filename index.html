@@ -10,22 +10,154 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Base Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <style>
-        /* Essential inline styles for LCP/Above-the-fold */
-        :root {
-            --bg-deep: #030712;
-            --accent-gold: #D4AF37;
+    <!-- Tailwind CSS & Stitch Design System -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#7bda93",
+                      "primary-fixed": "#97f7ad",
+                      "tertiary-fixed-dim": "#b0ceb9",
+                      "surface-container-high": "#e7e8e9",
+                      "outline": "#6f7a6f",
+                      "tertiary-fixed": "#ccead4",
+                      "inverse-on-surface": "#f0f1f2",
+                      "inverse-surface": "#2e3132",
+                      "inverse-primary": "#7bda93",
+                      "secondary-fixed-dim": "#fdbc13",
+                      "surface": "#f8f9fa",
+                      "secondary-fixed": "#ffdea3",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#006d35",
+                      "on-secondary-fixed-variant": "#5d4200",
+                      "on-surface": "#191c1d",
+                      "on-secondary-fixed": "#261900",
+                      "background": "#f8f9fa",
+                      "tertiary-container": "#55705e",
+                      "surface-bright": "#f8f9fa",
+                      "on-primary": "#ffffff",
+                      "primary": "#005f2d",
+                      "surface-variant": "#e1e3e4",
+                      "on-primary-fixed-variant": "#005227",
+                      "secondary-container": "#fdbc13",
+                      "primary-container": "#0e7a3e",
+                      "on-secondary-container": "#6b4d00",
+                      "on-primary-fixed": "#00210c",
+                      "tertiary": "#3d5847",
+                      "secondary": "#7a5900",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#edeeef",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#3f493f",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-dim": "#d9dadb",
+                      "on-tertiary-container": "#d4f2dc",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#a5ffb9",
+                      "on-tertiary-fixed-variant": "#324c3c",
+                      "outline-variant": "#becabc",
+                      "on-tertiary-fixed": "#062013",
+                      "surface-container-low": "#f3f4f5",
+                      "on-background": "#191c1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "lg": "48px",
+                      "sm": "12px",
+                      "md": "24px",
+                      "xl": "80px",
+                      "base": "8px",
+                      "margin-mobile": "16px",
+                      "max-width": "1440px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": ["metropolis", "sans-serif"],
+                      "display-lg-mobile": ["metropolis", "sans-serif"],
+                      "label-md": ["hankenGrotesk", "sans-serif"],
+                      "display-lg": ["metropolis", "sans-serif"],
+                      "headline-lg": ["metropolis", "sans-serif"],
+                      "body-lg": ["hankenGrotesk", "sans-serif"],
+                      "title-lg": ["hankenGrotesk", "sans-serif"],
+                      "body-md": ["hankenGrotesk", "sans-serif"],
+                      "label-sm": ["hankenGrotesk", "sans-serif"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                      "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                      "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                      "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                      "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+              }
+            }
+          }
         }
-        body { background: var(--bg-deep); color: #fff; margin: 0; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
-        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+    </script>
+    <style>
+        /* Custom Metropolis Font Face (Fallback) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'hankenGrotesk', 'Inter', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-headline-md, .font-display-lg, .font-headline-lg {
+            font-family: 'metropolis', 'Inter', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .bento-card {
+            background-color: theme('colors.surface-container-lowest');
+            border: 1px solid theme('colors.outline-variant');
+            transition: all 0.3s ease;
+        }
+
+        .bento-card:hover {
+            border-color: theme('colors.primary');
+            box-shadow: 0px 10px 25px rgba(16, 42, 28, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .ambient-shadow {
+            box-shadow: 0px 10px 25px rgba(16, 42, 28, 0.08);
+        }
     </style>
+
+    <!-- Base Stylesheet (Legacy fallback) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -35,187 +167,224 @@
         <a href="https://wa.me/2348075155862" class="btn btn-whatsapp"><i data-lucide="message-circle"></i></a>
     </div>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-wrapper">
-            <a href="/" class="logo">
-                <img src="public/logo.png" alt="Solagates Global" class="logo-img">
+    <!-- NAVIGATION (Tailwind) -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+        <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+            <!-- Brand Logo -->
+            <a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed flex items-center gap-2" href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+                SOLAGATES
             </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#ai-calc">Energy AI</a></li>
-                <li><a href="#academy">Academy</a></li>
-                <li><a href="#projects">Portfolio</a></li>
-                <li><a href="#corporate">Enterprise</a></li>
-                <li><a href="#assessment">Login</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="menu-toggle" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-md">
+                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#solutions">Solutions</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#ai-calc">Energy AI</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#academy">Academy</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#projects">Portfolio</a>
+            </div>
+            <!-- Actions -->
+            <div class="flex items-center gap-sm">
+                <a class="hidden md:inline-flex items-center justify-center font-label-md text-label-md text-primary bg-transparent border border-primary px-4 py-2 rounded-full hover:bg-primary/5 transition-colors" href="#assessment">Login</a>
+                <a class="inline-flex items-center justify-center font-label-md text-label-md text-on-primary bg-primary px-6 py-2 rounded-full hover:bg-primary-container transition-colors shadow-sm" href="#assessment">Get Started</a>
             </div>
         </div>
     </nav>
 
-    <!-- 3. HERO SECTION (Optimized) -->
-    <header class="hero" id="home">
-        <div class="hero-bg">
-            <div class="hero-overlay"></div>
-            <img src="public/hero-african-family-solar-home.jpg" alt="African Family Solar Home" class="hero-media">
-        </div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-badge" data-aos="fade-down">
-                    <span class="pulse"></span> Premium Enterprise Solar Standard
+    <main class="flex-grow pt-20">
+        <!-- HERO SECTION (Tailwind) -->
+        <section class="relative pt-xl pb-lg px-margin-mobile md:px-margin-desktop overflow-hidden">
+            <div class="max-w-max-width mx-auto grid grid-cols-1 lg:grid-cols-2 gap-xl items-center relative z-10">
+                <!-- Content -->
+                <div class="flex flex-col gap-md max-w-2xl">
+                    <div class="inline-flex items-center gap-2 bg-secondary-container/20 text-on-secondary-container px-3 py-1 rounded-full w-fit">
+                        <span class="material-symbols-outlined text-[16px]">verified</span>
+                        <span class="font-label-sm text-label-sm uppercase tracking-wider">Premium Enterprise Solar Standard</span>
+                    </div>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+                        Reliable Solar Energy Solutions For Homes, Businesses &amp; Industrial Operations
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Energy Audit • Solar Design • Installation • Battery Systems • Maintenance • Energy Independence
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-sm pt-sm">
+                        <a href="#assessment" class="bg-primary text-on-primary font-label-md text-label-md px-8 py-3 rounded-full hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-2 w-fit">
+                            Get Free Energy Assessment
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                        </a>
+                        <a href="#assessment" class="bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-8 py-3 rounded-full hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2 w-fit">
+                            Request Quote
+                        </a>
+                    </div>
+                    <!-- Authority Metrics -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-md pt-lg border-t border-outline-variant/30 mt-sm">
+                        <div>
+                            <div class="font-title-lg text-title-lg text-primary">10+</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant">Years Experience</div>
+                        </div>
+                        <div>
+                            <div class="font-title-lg text-title-lg text-primary">500+</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant">Installs</div>
+                        </div>
+                        <div>
+                            <div class="font-title-lg text-title-lg text-primary">15MW+</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant">Capacity</div>
+                        </div>
+                        <div>
+                            <div class="font-title-lg text-title-lg text-primary">24/7</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant">Support</div>
+                        </div>
+                    </div>
                 </div>
-                <h1 data-aos="fade-up" data-aos-delay="100">Reliable Solar Energy Solutions For <br><span>Homes, Businesses & Industrial Operations</span></h1>
-                <p data-aos="fade-up" data-aos-delay="200" class="hero-subline">Energy Audit &bull; Solar Design &bull; Installation &bull; Battery Systems &bull; Maintenance &bull; Energy Independence</p>
-                <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#assessment" class="btn btn-primary btn-lg">Get Free Energy Assessment <i data-lucide="arrow-right"></i></a>
-                    <a href="#assessment" class="btn btn-secondary btn-lg">Request Quote</a>
-                </div>
-                
-                <!-- Authority Metrics Row -->
-                <div class="hero-metrics" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="metric-card glass">
-                        <i data-lucide="award" class="text-gold"></i>
-                        <div class="metric-info">
-                            <span class="m-val">10+ Years</span>
-                            <span class="m-label">Industry Experience</span>
+                <!-- Hero Image Area -->
+                <div class="relative h-[500px] lg:h-[700px] w-full rounded-2xl overflow-hidden glass-panel ambient-shadow flex items-center justify-center bg-surface-container">
+                    <img alt="Modern architectural home with premium solar panels" class="w-full h-full object-cover absolute inset-0 mix-blend-overlay opacity-80" src="public/hero-african-family-solar-home.jpg" />
+                    <!-- Floating UI Element -->
+                    <div class="absolute bottom-md right-md bg-surface-container-lowest/90 backdrop-blur-md p-md rounded-xl border border-outline-variant shadow-lg max-w-xs">
+                        <div class="flex items-center gap-sm mb-xs">
+                            <div class="w-2 h-2 bg-secondary-container rounded-full animate-pulse"></div>
+                            <span class="font-label-sm text-label-sm text-on-surface">System Status: Active Generating</span>
                         </div>
-                    </div>
-                    <div class="metric-card glass">
-                        <i data-lucide="check-circle" class="text-gold"></i>
-                        <div class="metric-info">
-                            <span class="m-val">500+</span>
-                            <span class="m-label">Successful Installs</span>
-                        </div>
-                    </div>
-                    <div class="metric-card glass">
-                        <i data-lucide="zap" class="text-gold"></i>
-                        <div class="metric-info">
-                            <span class="m-val">15MW+</span>
-                            <span class="m-label">Capacity Delivered</span>
-                        </div>
-                    </div>
-                    <div class="metric-card glass">
-                        <i data-lucide="headset" class="text-gold"></i>
-                        <div class="metric-info">
-                            <span class="m-val">24/7</span>
-                            <span class="m-label">Technical Support</span>
-                        </div>
+                        <div class="font-headline-md text-headline-md text-primary">14.2 kWh</div>
+                        <div class="font-body-sm text-body-sm text-on-surface-variant">Current Output</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+            <!-- Abstract background pattern -->
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px] -z-10 translate-x-1/3 -translate-y-1/3"></div>
+        </section>
 
-    <!-- 4. SOLUTIONS INFRASTRUCTURE -->
-    <section class="section solutions" id="solutions">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Premium <span>Energy Solutions</span></h2>
-                <p class="section-subtitle">Enterprise-grade solar infrastructure tailored for high-ticket residential, commercial, and industrial ecosystems.</p>
+    <!-- 4. PREMIUM ENERGY SOLUTIONS (Tailwind Zig-Zag Layout) -->
+    <section class="py-xl bg-surface" id="solutions">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center max-w-3xl mx-auto mb-lg" data-aos="fade-up">
+                <h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-background mb-4">Premium <span class="text-primary">Energy Solutions</span></h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Enterprise-grade solar infrastructure tailored for high-ticket residential, commercial, and industrial ecosystems.</p>
             </div>
-            <div class="solutions-grid">
-                <!-- Card 1 -->
-                <div class="solution-card glass-card" data-aos="fade-up">
-                    <img src="public/residential-rooftop-solar-africa.jpg" alt="Residential Solar" class="sol-img">
-                    <div class="sol-content">
-                        <h3>Residential Solar Systems</h3>
-                        <p>Luxury estate power solutions with silent, seamless lithium storage.</p>
-                        <ul class="sol-benefits">
-                            <li><i data-lucide="check"></i> 24/7 Power Independence</li>
-                            <li><i data-lucide="check"></i> Silent Operation</li>
-                            <li><i data-lucide="check"></i> Smart Home Integration</li>
+            
+            <div class="flex flex-col gap-xl">
+                <!-- Solution 1: Residential -->
+                <div class="flex flex-col lg:flex-row gap-lg items-center" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
+                        <img src="public/residential-rooftop-solar-africa.jpg" alt="Residential Solar" class="w-full h-full object-cover mix-blend-overlay opacity-90">
+                    </div>
+                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Residential Solar Systems</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Luxury estate power solutions with silent, seamless lithium storage.</p>
+                        <ul class="flex flex-col gap-2 mt-2">
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> 24/7 Power Independence</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Silent Operation</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Smart Home Integration</li>
                         </ul>
-                        <a href="#assessment" class="btn btn-secondary btn-full">View Residential Solutions</a>
+                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">View Residential Solutions</a>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="public/commercial-office-solar-installation.jpg" alt="Commercial Solar" class="sol-img">
-                    <div class="sol-content">
-                        <h3>Commercial Solar Systems</h3>
-                        <p>Reliable power infrastructure for offices, retail, and corporate centers.</p>
-                        <ul class="sol-benefits">
-                            <li><i data-lucide="check"></i> 80% Bill Reduction</li>
-                            <li><i data-lucide="check"></i> ESG Compliance</li>
-                            <li><i data-lucide="check"></i> Tax Incentives</li>
+
+                <!-- Solution 2: Commercial (Reverse) -->
+                <div class="flex flex-col lg:flex-row-reverse gap-lg items-center" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
+                        <img src="public/commercial-office-solar-installation.jpg" alt="Commercial Solar" class="w-full h-full object-cover mix-blend-overlay opacity-90">
+                    </div>
+                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Commercial Solar Systems</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Reliable power infrastructure for offices, retail, and corporate centers.</p>
+                        <ul class="flex flex-col gap-2 mt-2">
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> 80% Bill Reduction</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> ESG Compliance</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Tax Incentives</li>
                         </ul>
-                        <a href="#assessment" class="btn btn-secondary btn-full">View Commercial Systems</a>
+                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">View Commercial Systems</a>
                     </div>
                 </div>
-                <!-- Card 3 -->
-                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="public/industrial-factory-solar-system.jpg" alt="Industrial Systems" class="sol-img">
-                    <div class="sol-content">
-                        <h3>Industrial Energy Systems</h3>
-                        <p>Heavy-duty power arrays designed for factories and agro-processing.</p>
-                        <ul class="sol-benefits">
-                            <li><i data-lucide="check"></i> Tri-Phase Sync</li>
-                            <li><i data-lucide="check"></i> High Surge Capacity</li>
-                            <li><i data-lucide="check"></i> Zero Production Downtime</li>
+
+                <!-- Solution 3: Industrial -->
+                <div class="flex flex-col lg:flex-row gap-lg items-center" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
+                        <img src="public/industrial-factory-solar-system.jpg" alt="Industrial Systems" class="w-full h-full object-cover mix-blend-overlay opacity-90">
+                    </div>
+                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Industrial Energy Systems</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Heavy-duty power arrays designed for factories and agro-processing.</p>
+                        <ul class="flex flex-col gap-2 mt-2">
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Tri-Phase Sync</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> High Surge Capacity</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Zero Production Downtime</li>
                         </ul>
-                        <a href="#assessment" class="btn btn-secondary btn-full">Explore Industrial Systems</a>
+                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">Explore Industrial Systems</a>
                     </div>
                 </div>
-                <!-- Card 4 -->
-                <div class="solution-card glass-card" data-aos="fade-up">
-                    <img src="public/hybrid-inverter-premium.jpg" alt="Hybrid Inverters" class="sol-img">
-                    <div class="sol-content">
-                        <h3>Hybrid Inverter Systems</h3>
-                        <p>Intelligent power routing between solar, grid, and battery storage.</p>
-                        <ul class="sol-benefits">
-                            <li><i data-lucide="check"></i> Auto-Failover < 10ms</li>
-                            <li><i data-lucide="check"></i> Grid Export Ready</li>
-                            <li><i data-lucide="check"></i> High Efficiency MPPT</li>
+
+                <!-- Solution 4: Hybrid Inverters (Reverse) -->
+                <div class="flex flex-col lg:flex-row-reverse gap-lg items-center" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
+                        <img src="public/hybrid-inverter-premium.jpg" alt="Hybrid Inverters" class="w-full h-full object-cover mix-blend-overlay opacity-90">
+                    </div>
+                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Hybrid Inverter Systems</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Intelligent power routing between solar, grid, and battery storage.</p>
+                        <ul class="flex flex-col gap-2 mt-2">
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Auto-Failover < 10ms</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Grid Export Ready</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> High Efficiency MPPT</li>
                         </ul>
-                        <a href="#assessment" class="btn btn-secondary btn-full">View Inverters</a>
+                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">View Inverters</a>
                     </div>
                 </div>
-                <!-- Card 5 -->
-                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="public/lithium-battery-bank.jpg" alt="Battery Storage" class="sol-img">
-                    <div class="sol-content">
-                        <h3>Battery Storage Solutions</h3>
-                        <p>High-density LiFePO4 storage engineered for 10+ years of deep cycling.</p>
-                        <ul class="sol-benefits">
-                            <li><i data-lucide="check"></i> 6000+ Lifecycles</li>
-                            <li><i data-lucide="check"></i> Advanced BMS</li>
-                            <li><i data-lucide="check"></i> Modular Expansion</li>
+
+                <!-- Solution 5: Battery Storage -->
+                <div class="flex flex-col lg:flex-row gap-lg items-center" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
+                        <img src="public/lithium-battery-bank.jpg" alt="Battery Storage" class="w-full h-full object-cover mix-blend-overlay opacity-90">
+                    </div>
+                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Battery Storage Solutions</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">High-density LiFePO4 storage engineered for 10+ years of deep cycling.</p>
+                        <ul class="flex flex-col gap-2 mt-2">
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> 6000+ Lifecycles</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Advanced BMS</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Modular Expansion</li>
                         </ul>
-                        <a href="#assessment" class="btn btn-secondary btn-full">Explore Batteries</a>
+                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">Explore Batteries</a>
                     </div>
                 </div>
-                <!-- Card 6 -->
-                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="public/solar-maintenance-engineer-service.jpg" alt="Maintenance" class="sol-img">
-                    <div class="sol-content">
-                        <h3>Maintenance & Support</h3>
-                        <p>Predictive AI-driven monitoring and on-site engineering support.</p>
-                        <ul class="sol-benefits">
-                            <li><i data-lucide="check"></i> 24/7 Monitoring</li>
-                            <li><i data-lucide="check"></i> Preventative Cleaning</li>
-                            <li><i data-lucide="check"></i> Rapid Response Fleet</li>
+
+                <!-- Solution 6: Maintenance (Reverse) -->
+                <div class="flex flex-col lg:flex-row-reverse gap-lg items-center" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
+                        <img src="public/solar-maintenance-engineer-service.jpg" alt="Maintenance" class="w-full h-full object-cover mix-blend-overlay opacity-90">
+                    </div>
+                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Maintenance & Support</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Predictive AI-driven monitoring and on-site engineering support.</p>
+                        <ul class="flex flex-col gap-2 mt-2">
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> 24/7 Monitoring</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Preventative Cleaning</li>
+                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Rapid Response Fleet</li>
                         </ul>
-                        <a href="#assessment" class="btn btn-secondary btn-full">Get Maintenance</a>
+                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">Get Maintenance</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TRUST INFRASTRUCTURE (Moved below Solutions) -->
-    <section class="trust-bar border-y border-glass">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item"><img src="public/warranty-badge.png" alt="Warranty" style="height:35px; margin-right:12px;"><span>Comprehensive Warranty</span></div>
-                <div class="trust-item"><img src="public/certified-engineers-badge.png" alt="Certified" style="height:35px; margin-right:12px;"><span>Certified Engineers</span></div>
-                <div class="trust-item"><img src="public/nationwide-support-icon.png" alt="Support" style="height:35px; margin-right:12px;"><span>Nationwide Support</span></div>
-                <div class="trust-item"><img src="public/quality-assurance-icon.png" alt="Quality" style="height:35px; margin-right:12px;"><span>Quality Assurance</span></div>
+    <!-- Trust Band (Tailwind) -->
+    <section class="border-y border-outline-variant/30 bg-surface-container-lowest py-md overflow-hidden">
+        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-center gap-lg items-center">
+            <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary">shield</span>
+                <span class="font-label-md text-label-md font-semibold">Comprehensive Warranty</span>
+            </div>
+            <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary">engineering</span>
+                <span class="font-label-md text-label-md font-semibold">Certified Engineers</span>
+            </div>
+            <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary">public</span>
+                <span class="font-label-md text-label-md font-semibold">Nationwide Support</span>
+            </div>
+            <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined text-primary">fact_check</span>
+                <span class="font-label-md text-label-md font-semibold">Quality Assurance</span>
             </div>
         </div>
     </section>
@@ -790,40 +959,39 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="public/logo.png" alt="Logo">
-                    <p>Africa's premium solar technology company. Powering the future with intelligent engineering.</p>
-                    <div class="socials" style="margin-top: 15px;">
-                        <a href="#"><i data-lucide="linkedin"></i></a>
-                        <a href="#"><i data-lucide="instagram"></i></a>
-                        <a href="#"><i data-lucide="twitter"></i></a>
-                        <a href="#"><i data-lucide="facebook"></i></a>
-                    </div>
+    <!-- FOOTER (Tailwind) -->
+    <footer class="w-full bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant mt-xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+            <!-- Brand Info -->
+            <div class="col-span-2 md:col-span-1 flex flex-col gap-sm">
+                <div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed flex items-center gap-2">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">solar_power</span>
+                    SOLAGATES
                 </div>
-                <div class="footer-nav">
-                    <h4>Enterprise Solutions</h4>
-                    <ul>
-                        <li><a href="#solutions">Residential Estates</a></li>
-                        <li><a href="#solutions">Commercial Hubs</a></li>
-                        <li><a href="#solutions">Agro-Processing</a></li>
-                        <li><a href="#solutions">Data Centers</a></li>
-                    </ul>
-                </div>
-                <div class="footer-nav">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i data-lucide="map-pin" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> <span>NO.67, JEJELAYE STREET, IBADAN, OYO STATE, NIGERIA - Head Office</span></li>
-                        <li><i data-lucide="phone" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> +234 807 515 5862</li>
-                        <li><i data-lucide="mail" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> solagateglobal@gmail.com</li>
-                    </ul>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    © 2026 Solagates Global. Engineering the Future of Sustainable Authority. ISO 9001:2015 Certified.
+                </p>
+                <div class="flex gap-sm mt-sm">
+                    <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="facebook"></i></a>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; font-size: 13px; color: #aaa;">
-                &copy; 2026 Solagates Global Infrastructure. All Rights Reserved. ISO 9001:2015 Certified.
+            <!-- Links Column 1 -->
+            <div class="flex flex-col gap-sm">
+                <h4 class="font-title-lg text-title-lg text-on-surface">Enterprise Solutions</h4>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#solutions">Residential Estates</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#solutions">Commercial Hubs</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#solutions">Agro-Processing</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#solutions">Data Centers</a>
+            </div>
+            <!-- Links Column 2 -->
+            <div class="col-span-2 md:col-span-2 flex flex-col gap-sm">
+                <h4 class="font-title-lg text-title-lg text-on-surface">Contact Us</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant flex items-start gap-2"><i data-lucide="map-pin" class="mt-1" style="width:20px; flex-shrink:0;"></i> <span>NO.67, JEJELAYE STREET, IBADAN, OYO STATE, NIGERIA - Head Office</span></p>
+                <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2"><i data-lucide="phone" style="width:20px; flex-shrink:0;"></i> +234 807 515 5862</p>
+                <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2"><i data-lucide="mail" style="width:20px; flex-shrink:0;"></i> solagateglobal@gmail.com</p>
             </div>
         </div>
     </footer>
