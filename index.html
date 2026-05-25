@@ -237,7 +237,7 @@
                 </div>
                 <!-- Hero Image Area -->
                 <div class="relative h-[500px] lg:h-[700px] w-full rounded-2xl overflow-hidden glass-panel ambient-shadow flex items-center justify-center bg-surface-container">
-                    <img alt="Modern architectural home with premium solar panels" class="w-full h-full object-cover absolute inset-0 mix-blend-overlay opacity-80" src="public/hero-african-family-solar-home.jpg" />
+                    <img alt="Modern architectural home with premium solar panels" class="w-full h-full object-cover absolute inset-0" src="public/hero-african-family-solar-home.jpg" />
                     <!-- Floating UI Element -->
                     <div class="absolute bottom-md right-md bg-surface-container-lowest/90 backdrop-blur-md p-md rounded-xl border border-outline-variant shadow-lg max-w-xs">
                         <div class="flex items-center gap-sm mb-xs">
@@ -253,141 +253,125 @@
             <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px] -z-10 translate-x-1/3 -translate-y-1/3"></div>
         </section>
 
-    <!-- 4. PREMIUM ENERGY SOLUTIONS (Tailwind Zig-Zag Layout) -->
-    <section class="py-xl bg-surface" id="solutions">
-        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="text-center max-w-3xl mx-auto mb-lg" data-aos="fade-up">
-                <h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-background mb-4">Premium <span class="text-primary">Energy Solutions</span></h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant">Enterprise-grade solar infrastructure tailored for high-ticket residential, commercial, and industrial ecosystems.</p>
+    <!-- 4. SOLUTIONS INFRASTRUCTURE -->
+    <section class="section solutions" id="solutions">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Premium <span>Energy Solutions</span></h2>
+                <p class="section-subtitle">Enterprise-grade solar infrastructure tailored for high-ticket residential, commercial, and industrial ecosystems.</p>
             </div>
-            
-            <div class="flex flex-col gap-xl">
-                <!-- Solution 1: Residential -->
-                <div class="flex flex-col lg:flex-row gap-lg items-center" data-aos="fade-up">
-                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
-                        <img src="public/residential-rooftop-solar-africa.jpg" alt="Residential Solar" class="w-full h-full object-cover mix-blend-overlay opacity-90">
-                    </div>
-                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
-                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Residential Solar Systems</h3>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">Luxury estate power solutions with silent, seamless lithium storage.</p>
-                        <ul class="flex flex-col gap-2 mt-2">
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> 24/7 Power Independence</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Silent Operation</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Smart Home Integration</li>
+            <div class="solutions-grid">
+                <!-- Card 1 -->
+                <div class="solution-card glass-card" data-aos="fade-up">
+                    <img src="public/residential-rooftop-solar-africa.jpg" alt="Residential Solar" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Residential Solar Systems</h3>
+                        <p>Luxury estate power solutions with silent, seamless lithium storage.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> 24/7 Power Independence</li>
+                            <li><i data-lucide="check"></i> Silent Operation</li>
+                            <li><i data-lucide="check"></i> Smart Home Integration</li>
                         </ul>
-                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">View Residential Solutions</a>
+                        <a href="#assessment" class="btn btn-secondary btn-full">View Residential Solutions</a>
                     </div>
                 </div>
-
-                <!-- Solution 2: Commercial (Reverse) -->
-                <div class="flex flex-col lg:flex-row-reverse gap-lg items-center" data-aos="fade-up">
-                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
-                        <img src="public/commercial-office-solar-installation.jpg" alt="Commercial Solar" class="w-full h-full object-cover mix-blend-overlay opacity-90">
-                    </div>
-                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
-                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Commercial Solar Systems</h3>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">Reliable power infrastructure for offices, retail, and corporate centers.</p>
-                        <ul class="flex flex-col gap-2 mt-2">
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> 80% Bill Reduction</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> ESG Compliance</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Tax Incentives</li>
+                <!-- Card 2 -->
+                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="public/commercial-office-solar-installation.jpg" alt="Commercial Solar" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Commercial Solar Systems</h3>
+                        <p>Reliable power infrastructure for offices, retail, and corporate centers.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> 80% Bill Reduction</li>
+                            <li><i data-lucide="check"></i> ESG Compliance</li>
+                            <li><i data-lucide="check"></i> Tax Incentives</li>
                         </ul>
-                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">View Commercial Systems</a>
+                        <a href="#assessment" class="btn btn-secondary btn-full">View Commercial Systems</a>
                     </div>
                 </div>
-
-                <!-- Solution 3: Industrial -->
-                <div class="flex flex-col lg:flex-row gap-lg items-center" data-aos="fade-up">
-                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
-                        <img src="public/industrial-factory-solar-system.jpg" alt="Industrial Systems" class="w-full h-full object-cover mix-blend-overlay opacity-90">
-                    </div>
-                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
-                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Industrial Energy Systems</h3>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">Heavy-duty power arrays designed for factories and agro-processing.</p>
-                        <ul class="flex flex-col gap-2 mt-2">
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Tri-Phase Sync</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> High Surge Capacity</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Zero Production Downtime</li>
+                <!-- Card 3 -->
+                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="public/industrial-factory-solar-system.jpg" alt="Industrial Systems" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Industrial Energy Systems</h3>
+                        <p>Heavy-duty power arrays designed for factories and agro-processing.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> Tri-Phase Sync</li>
+                            <li><i data-lucide="check"></i> High Surge Capacity</li>
+                            <li><i data-lucide="check"></i> Zero Production Downtime</li>
                         </ul>
-                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">Explore Industrial Systems</a>
+                        <a href="#assessment" class="btn btn-secondary btn-full">Explore Industrial Systems</a>
                     </div>
                 </div>
-
-                <!-- Solution 4: Hybrid Inverters (Reverse) -->
-                <div class="flex flex-col lg:flex-row-reverse gap-lg items-center" data-aos="fade-up">
-                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
-                        <img src="public/hybrid-inverter-premium.jpg" alt="Hybrid Inverters" class="w-full h-full object-cover mix-blend-overlay opacity-90">
-                    </div>
-                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
-                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Hybrid Inverter Systems</h3>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">Intelligent power routing between solar, grid, and battery storage.</p>
-                        <ul class="flex flex-col gap-2 mt-2">
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Auto-Failover < 10ms</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Grid Export Ready</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> High Efficiency MPPT</li>
+                <!-- Card 4 -->
+                <div class="solution-card glass-card" data-aos="fade-up">
+                    <img src="public/hybrid-inverter-premium.jpg" alt="Hybrid Inverters" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Hybrid Inverter Systems</h3>
+                        <p>Intelligent power routing between solar, grid, and battery storage.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> Auto-Failover < 10ms</li>
+                            <li><i data-lucide="check"></i> Grid Export Ready</li>
+                            <li><i data-lucide="check"></i> High Efficiency MPPT</li>
                         </ul>
-                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">View Inverters</a>
+                        <a href="#assessment" class="btn btn-secondary btn-full">View Inverters</a>
                     </div>
                 </div>
-
-                <!-- Solution 5: Battery Storage -->
-                <div class="flex flex-col lg:flex-row gap-lg items-center" data-aos="fade-up">
-                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
-                        <img src="public/lithium-battery-bank.jpg" alt="Battery Storage" class="w-full h-full object-cover mix-blend-overlay opacity-90">
-                    </div>
-                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
-                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Battery Storage Solutions</h3>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">High-density LiFePO4 storage engineered for 10+ years of deep cycling.</p>
-                        <ul class="flex flex-col gap-2 mt-2">
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> 6000+ Lifecycles</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Advanced BMS</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Modular Expansion</li>
+                <!-- Card 5 -->
+                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="public/lithium-battery-bank.jpg" alt="Battery Storage" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Battery Storage Solutions</h3>
+                        <p>High-density LiFePO4 storage engineered for 10+ years of deep cycling.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> 6000+ Lifecycles</li>
+                            <li><i data-lucide="check"></i> Advanced BMS</li>
+                            <li><i data-lucide="check"></i> Modular Expansion</li>
                         </ul>
-                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">Explore Batteries</a>
+                        <a href="#assessment" class="btn btn-secondary btn-full">Explore Batteries</a>
                     </div>
                 </div>
-
-                <!-- Solution 6: Maintenance (Reverse) -->
-                <div class="flex flex-col lg:flex-row-reverse gap-lg items-center" data-aos="fade-up">
-                    <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-panel ambient-shadow aspect-[4/3]">
-                        <img src="public/solar-maintenance-engineer-service.jpg" alt="Maintenance" class="w-full h-full object-cover mix-blend-overlay opacity-90">
-                    </div>
-                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
-                        <h3 class="font-headline-lg text-headline-lg text-on-surface">Maintenance & Support</h3>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant">Predictive AI-driven monitoring and on-site engineering support.</p>
-                        <ul class="flex flex-col gap-2 mt-2">
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> 24/7 Monitoring</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Preventative Cleaning</li>
-                            <li class="flex items-center gap-2 font-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">check_circle</span> Rapid Response Fleet</li>
+                <!-- Card 6 -->
+                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="public/solar-maintenance-engineer-service.jpg" alt="Maintenance" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Maintenance & Support</h3>
+                        <p>Predictive AI-driven monitoring and on-site engineering support.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> 24/7 Monitoring</li>
+                            <li><i data-lucide="check"></i> Preventative Cleaning</li>
+                            <li><i data-lucide="check"></i> Rapid Response Fleet</li>
                         </ul>
-                        <a href="#assessment" class="mt-4 bg-surface-container-lowest text-primary border border-primary font-label-md text-label-md px-6 py-2 rounded-full hover:bg-surface-container-low transition-colors w-fit">Get Maintenance</a>
+                        <a href="#assessment" class="btn btn-secondary btn-full">Get Maintenance</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Band (Tailwind) -->
-    <section class="border-y border-outline-variant/30 bg-surface-container-lowest py-md overflow-hidden">
-        <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-center gap-lg items-center">
-            <div class="flex items-center gap-2 text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary">shield</span>
-                <span class="font-label-md text-label-md font-semibold">Comprehensive Warranty</span>
-            </div>
-            <div class="flex items-center gap-2 text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary">engineering</span>
-                <span class="font-label-md text-label-md font-semibold">Certified Engineers</span>
-            </div>
-            <div class="flex items-center gap-2 text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary">public</span>
-                <span class="font-label-md text-label-md font-semibold">Nationwide Support</span>
-            </div>
-            <div class="flex items-center gap-2 text-on-surface-variant">
-                <span class="material-symbols-outlined text-primary">fact_check</span>
-                <span class="font-label-md text-label-md font-semibold">Quality Assurance</span>
+    <!-- 3. TRUST BAND -->
+    <div class="trust-band">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i data-lucide="shield"></i>
+                    <span>Comprehensive Warranty</span>
+                </div>
+                <div class="trust-item">
+                    <i data-lucide="cog"></i>
+                    <span>Certified Engineers</span>
+                </div>
+                <div class="trust-item">
+                    <i data-lucide="globe"></i>
+                    <span>Nationwide Support</span>
+                </div>
+                <div class="trust-item">
+                    <i data-lucide="check-circle"></i>
+                    <span>Quality Assurance</span>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- 5B. REGIONAL FOOTPRINT SECTION -->
     <section class="section footprint" id="footprint">
@@ -959,39 +943,40 @@
         </div>
     </section>
 
-    <!-- FOOTER (Tailwind) -->
-    <footer class="w-full bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant mt-xl">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-            <!-- Brand Info -->
-            <div class="col-span-2 md:col-span-1 flex flex-col gap-sm">
-                <div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed flex items-center gap-2">
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">solar_power</span>
-                    SOLAGATES
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="public/logo.png" alt="Logo">
+                    <p>Africa's premium solar technology company. Powering the future with intelligent engineering.</p>
+                    <div class="socials" style="margin-top: 15px;">
+                        <a href="#"><i data-lucide="linkedin"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                    </div>
                 </div>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                    © 2026 Solagates Global. Engineering the Future of Sustainable Authority. ISO 9001:2015 Certified.
-                </p>
-                <div class="flex gap-sm mt-sm">
-                    <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="linkedin"></i></a>
-                    <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="instagram"></i></a>
-                    <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="twitter"></i></a>
-                    <a href="#" class="text-on-surface-variant hover:text-primary"><i data-lucide="facebook"></i></a>
+                <div class="footer-nav">
+                    <h4>Enterprise Solutions</h4>
+                    <ul>
+                        <li><a href="#solutions">Residential Estates</a></li>
+                        <li><a href="#solutions">Commercial Hubs</a></li>
+                        <li><a href="#solutions">Agro-Processing</a></li>
+                        <li><a href="#solutions">Data Centers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i data-lucide="map-pin" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> <span>NO.67, JEJELAYE STREET, IBADAN, OYO STATE, NIGERIA - Head Office</span></li>
+                        <li><i data-lucide="phone" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> +234 807 515 5862</li>
+                        <li><i data-lucide="mail" style="width:14px; margin-right:8px; flex-shrink: 0;"></i> solagateglobal@gmail.com</li>
+                    </ul>
                 </div>
             </div>
-            <!-- Links Column 1 -->
-            <div class="flex flex-col gap-sm">
-                <h4 class="font-title-lg text-title-lg text-on-surface">Enterprise Solutions</h4>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#solutions">Residential Estates</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#solutions">Commercial Hubs</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#solutions">Agro-Processing</a>
-                <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#solutions">Data Centers</a>
-            </div>
-            <!-- Links Column 2 -->
-            <div class="col-span-2 md:col-span-2 flex flex-col gap-sm">
-                <h4 class="font-title-lg text-title-lg text-on-surface">Contact Us</h4>
-                <p class="font-body-md text-body-md text-on-surface-variant flex items-start gap-2"><i data-lucide="map-pin" class="mt-1" style="width:20px; flex-shrink:0;"></i> <span>NO.67, JEJELAYE STREET, IBADAN, OYO STATE, NIGERIA - Head Office</span></p>
-                <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2"><i data-lucide="phone" style="width:20px; flex-shrink:0;"></i> +234 807 515 5862</p>
-                <p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2"><i data-lucide="mail" style="width:20px; flex-shrink:0;"></i> solagateglobal@gmail.com</p>
+            <div style="border-top: 1px solid rgba(0,0,0,0.1); margin-top: 40px; padding-top: 20px; text-align: center; font-size: 13px; color: #666;">
+                &copy; 2026 Solagates Global Infrastructure. All Rights Reserved. ISO 9001:2015 Certified.
             </div>
         </div>
     </footer>

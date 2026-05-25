@@ -4,17 +4,17 @@
 */
 
 :root {
-    /* Colors */
-    --bg-deep: #0F172A;
-    --bg-card: rgba(30, 41, 59, 0.7);
-    --bg-nav: rgba(15, 23, 42, 0.85);
-    --accent-gold: #D4AF37;
-    --accent-gold-light: #F6E05E;
-    --accent-gold-dark: #B8860B;
-    --text-primary: #F9FAFB;
-    --text-muted: #9CA3AF;
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-glow: rgba(212, 175, 55, 0.15);
+    /* Colors (White & Green Theme) */
+    --bg-deep: #f5fbf4; /* light green-white background */
+    --bg-card: #ffffff; /* white cards */
+    --bg-nav: rgba(245, 251, 244, 0.85);
+    --accent-gold: #106d34; /* primary green */
+    --accent-gold-light: #7bda93; /* light green */
+    --accent-gold-dark: #0a4d23; /* dark green */
+    --text-primary: #171d18; /* dark text */
+    --text-muted: #6f7970; /* muted text */
+    --glass-border: rgba(0, 0, 0, 0.08); /* dark border for light bg */
+    --glass-glow: rgba(16, 109, 52, 0.15); /* green glow */
     
     /* Spacing & Sizes */
     --container-w: 1280px;
@@ -74,22 +74,22 @@ p { color: var(--text-muted); font-weight: 400; }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
-    color: var(--bg-deep);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(16, 109, 52, 0.2);
 }
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 15px 40px rgba(16, 109, 52, 0.4);
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
     border: 1px solid var(--glass-border);
 }
-.btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); }
+.btn-secondary:hover { background: rgba(0, 0, 0, 0.1); border-color: rgba(0, 0, 0, 0.3); }
 
-.btn-glass { background: rgba(255, 255, 255, 0.03); color: #fff; backdrop-filter: blur(10px); }
+.btn-glass { background: rgba(0, 0, 0, 0.03); color: var(--text-primary); backdrop-filter: blur(10px); }
 
 .btn-whatsapp { background: #25D366; color: #fff; padding: 12px; border-radius: 50%; }
 
@@ -103,7 +103,7 @@ p { color: var(--text-muted); font-weight: 400; }
     padding: 40px;
     transition: var(--t-smooth);
 }
-.glass-card:hover { border-color: rgba(212, 175, 55, 0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+.glass-card:hover { border-color: rgba(16, 109, 52, 0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
 
 .glass {
     background: rgba(255, 255, 255, 0.03);
