@@ -271,7 +271,8 @@ p { color: var(--text-muted); font-weight: 400; }
 /* AI CALCULATOR */
 .calc-box { max-width: 1000px; margin: 0 auto; }
 .calc-header { text-align: center; margin-bottom: 40px; }
-.calc-body { display: grid; grid-template-columns: 1fr 400px; gap: 60px; }
+.calc-body { display: grid; grid-template-columns: 1fr 400px; gap: 60px; transition: all 0.3s ease; }
+.calc-body.collapsed { display: none !important; }
 .calc-inputs { display: flex; flex-direction: column; gap: 32px; }
 .input-group label { display: block; margin-bottom: 12px; font-weight: 600; color: var(--text-muted); }
 input[type="range"] { width: 100%; height: 6px; background: #333; border-radius: 10px; appearance: none; }

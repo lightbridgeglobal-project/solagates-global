@@ -248,11 +248,11 @@
     <section class="section ai-calc-section" id="ai-calc">
         <div class="container">
             <div class="calc-box glass-card" data-aos="zoom-in">
-                <div class="calc-header">
-                    <h2>What Do You Need To <span>Power?</span></h2>
-                    <p>Select your appliances to instantly calculate your recommended solar architecture.</p>
+                <div class="calc-header" style="cursor: pointer;" onclick="document.getElementById('calcBody').classList.toggle('collapsed'); document.getElementById('calcToggleIcon').style.transform = document.getElementById('calcBody').classList.contains('collapsed') ? 'rotate(0deg)' : 'rotate(180deg)';">
+                    <h2>What Do You Need To <span>Power?</span> <i data-lucide="chevron-down" id="calcToggleIcon" style="display: inline-block; transition: transform 0.3s ease; vertical-align: middle;"></i></h2>
+                    <p>Select your appliances to instantly calculate your recommended solar architecture. (Click to expand/collapse)</p>
                 </div>
-                <div class="calc-body">
+                <div class="calc-body" id="calcBody" style="transition: all 0.3s ease;">
                     <div class="calc-inputs" id="applianceInputs">
                         <div class="appliance-grid">
                             <div class="appliance-item"><label>💡 Bulbs</label><div class="app-counter"><button type="button" onclick="updateApp('bulbs', -1)">-</button><input type="number" id="app-bulbs" value="10" min="0" onchange="calculateApplianceLoad()"><button type="button" onclick="updateApp('bulbs', 1)">+</button></div></div>
