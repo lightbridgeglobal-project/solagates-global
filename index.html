@@ -291,67 +291,98 @@
         </div>
     </section>
 
-    <!-- 4. SERVICES / SOLUTIONS (Stacked) -->
-    <section class="bg-[#fcfdfc] py-24 px-8 relative" id="solutions">
-        <!-- Faint abstract pattern background -->
-        <div class="absolute inset-0 z-0 opacity-10" style="background-image: radial-gradient(#106d34 2px, transparent 2px); background-size: 30px 30px;"></div>
-        <div class="max-w-[1000px] mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <div class="text-primary font-label-md font-bold mb-4 tracking-wider uppercase">SERVICES</div>
-                <h2 class="font-display-md text-4xl font-extrabold text-[#111] leading-tight">
-                    Our Energy Solution empowers <br>sustainable energy.
-                </h2>
+    <!-- 4. SOLUTIONS INFRASTRUCTURE -->
+    <section class="section solutions" id="solutions">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Premium <span>Energy Solutions</span></h2>
+                <p class="section-subtitle">Enterprise-grade solar infrastructure tailored for high-ticket residential, commercial, and industrial ecosystems.</p>
             </div>
-            
-            <div class="flex flex-col gap-6">
-                <!-- Stacked Service Card 1 -->
-                <div class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group">
-                    <img src="public/residential-rooftop-solar-africa.jpg" alt="Residential" class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg">
-                    <div class="flex-grow text-center md:text-left">
-                        <h3 class="font-display-sm text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors">Residential Solar Systems</h3>
-                        <p class="text-gray-500 font-body-sm text-sm max-w-xl mx-auto md:mx-0">Luxury estate power solutions with silent, seamless lithium storage. Perfect for homes that need 24/7 power independence.</p>
+            <div class="solutions-grid">
+                <!-- Card 1 -->
+                <div class="solution-card glass-card" data-aos="fade-up">
+                    <img src="public/residential-rooftop-solar-africa.jpg" alt="Residential Solar" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Residential Solar Systems</h3>
+                        <p>Luxury estate power solutions with silent, seamless lithium storage.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> 24/7 Power Independence</li>
+                            <li><i data-lucide="check"></i> Silent Operation</li>
+                            <li><i data-lucide="check"></i> Smart Home Integration</li>
+                        </ul>
+                        <a href="#assessment" class="btn btn-secondary btn-full">View Residential Solutions</a>
                     </div>
-                    <button class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </button>
                 </div>
-                <!-- Stacked Service Card 2 -->
-                <div class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group">
-                    <img src="public/commercial-office-solar-installation.jpg" alt="Commercial" class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg">
-                    <div class="flex-grow text-center md:text-left">
-                        <h3 class="font-display-sm text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors">Commercial Solar Systems</h3>
-                        <p class="text-gray-500 font-body-sm text-sm max-w-xl mx-auto md:mx-0">Reliable power infrastructure for offices, retail, and corporate centers. Designed to slash energy bills by up to 80%.</p>
+                <!-- Card 2 -->
+                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="public/commercial-office-solar-installation.jpg" alt="Commercial Solar" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Commercial Solar Systems</h3>
+                        <p>Reliable power infrastructure for offices, retail, and corporate centers.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> 80% Bill Reduction</li>
+                            <li><i data-lucide="check"></i> ESG Compliance</li>
+                            <li><i data-lucide="check"></i> Tax Incentives</li>
+                        </ul>
+                        <a href="#assessment" class="btn btn-secondary btn-full">View Commercial Systems</a>
                     </div>
-                    <button class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </button>
                 </div>
-                <!-- Stacked Service Card 3 -->
-                <div class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group">
-                    <img src="public/industrial-factory-solar-system.jpg" alt="Industrial" class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg">
-                    <div class="flex-grow text-center md:text-left">
-                        <h3 class="font-display-sm text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors">Industrial Energy Systems</h3>
-                        <p class="text-gray-500 font-body-sm text-sm max-w-xl mx-auto md:mx-0">Heavy-duty power arrays designed for factories and agro-processing. Zero production downtime with high surge capacity.</p>
+                <!-- Card 3 -->
+                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="public/industrial-factory-solar-system.jpg" alt="Industrial Systems" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Industrial Energy Systems</h3>
+                        <p>Heavy-duty power arrays designed for factories and agro-processing.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> Tri-Phase Sync</li>
+                            <li><i data-lucide="check"></i> High Surge Capacity</li>
+                            <li><i data-lucide="check"></i> Zero Production Downtime</li>
+                        </ul>
+                        <a href="#assessment" class="btn btn-secondary btn-full">Explore Industrial Systems</a>
                     </div>
-                    <button class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </button>
                 </div>
-                <!-- Stacked Service Card 4 -->
-                <div class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group">
-                    <img src="public/hybrid-inverter-premium.jpg" alt="Hybrid" class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg">
-                    <div class="flex-grow text-center md:text-left">
-                        <h3 class="font-display-sm text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors">Hybrid Inverter Systems</h3>
-                        <p class="text-gray-500 font-body-sm text-sm max-w-xl mx-auto md:mx-0">Intelligent power routing between solar, grid, and battery storage with auto-failover in under 10 milliseconds.</p>
+                <!-- Card 4 -->
+                <div class="solution-card glass-card" data-aos="fade-up">
+                    <img src="public/hybrid-inverter-premium.jpg" alt="Hybrid Inverters" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Hybrid Inverter Systems</h3>
+                        <p>Intelligent power routing between solar, grid, and battery storage.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> Auto-Failover < 10ms</li>
+                            <li><i data-lucide="check"></i> Grid Export Ready</li>
+                            <li><i data-lucide="check"></i> High Efficiency MPPT</li>
+                        </ul>
+                        <a href="#assessment" class="btn btn-secondary btn-full">View Inverters</a>
                     </div>
-                    <button class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </button>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#assessment" class="bg-primary text-white px-8 py-3 rounded shadow-lg font-label-md font-semibold hover:bg-primary/90 transition-all inline-block">Load More</a>
+                <!-- Card 5 -->
+                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="public/lithium-battery-bank.jpg" alt="Battery Storage" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Battery Storage Solutions</h3>
+                        <p>High-density LiFePO4 storage engineered for 10+ years of deep cycling.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> 6000+ Lifecycles</li>
+                            <li><i data-lucide="check"></i> Advanced BMS</li>
+                            <li><i data-lucide="check"></i> Modular Expansion</li>
+                        </ul>
+                        <a href="#assessment" class="btn btn-secondary btn-full">Explore Batteries</a>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="solution-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="public/solar-maintenance-engineer-service.jpg" alt="Maintenance" class="sol-img">
+                    <div class="sol-content">
+                        <h3>Maintenance & Support</h3>
+                        <p>Predictive AI-driven monitoring and on-site engineering support.</p>
+                        <ul class="sol-benefits">
+                            <li><i data-lucide="check"></i> 24/7 Monitoring</li>
+                            <li><i data-lucide="check"></i> Preventative Cleaning</li>
+                            <li><i data-lucide="check"></i> Rapid Response Fleet</li>
+                        </ul>
+                        <a href="#assessment" class="btn btn-secondary btn-full">Get Maintenance</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
