@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" class="light">
+<html lang="en" class="light scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solagates Global - Premium Enterprise Solar</title>
+    <title>Solagates Global - Sustainable Energy</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -15,1096 +15,675 @@
         darkMode: "class",
         theme: {
           extend: {
-            colors: { 
-              primary: "#005f2d",
-              accent: "#d97736",
-              cardbg: "#24344d"
+            colors: {
+              primary: "#0d281e",
+              palegreen: "#eef4d4",
+              textgray: "#4a5568",
             },
             fontFamily: {
               sans: ["Inter", "sans-serif"],
-              display: ["Manrope", "sans-serif"],
-              serif: ["\'Playfair Display\'", "serif"],
+              display: ["Outfit", "sans-serif"],
             },
           },
         },
       };
     </script>
     <style>
-      .hero-cutout {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 65%;
-        height: 280px;
-        background-color: white;
-        border-top-left-radius: 80px;
+      .pill-tag {
+        display: inline-block;
+        border: 1px solid #cbd5e1;
+        border-radius: 9999px;
+        padding: 4px 16px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        color: #4a5568;
+        margin-bottom: 1rem;
       }
-      @media (max-width: 1024px) {
-        .hero-cutout {
-          width: 100%;
-          height: auto;
-          position: relative;
-          border-top-left-radius: 0;
-          background-color: transparent;
-        }
+      .uppercase-title {
+        font-family: "Outfit", sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
       }
     </style>
   </head>
-  <body class="bg-white text-[#444] font-sans">
-    
-    <!-- 1. HERO SECTION -->
-    <div class="p-4 lg:p-6 w-full max-w-[1600px] mx-auto">
-      <div class="relative w-full rounded-[40px] overflow-hidden bg-slate-900" style="min-height: 850px;">
-        <!-- Background Image -->
-        <div class="absolute inset-0 bg-[url('public/hero-african-family-solar-home.jpg')] bg-cover bg-center opacity-70 mix-blend-overlay"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-[#1a2b42]/90 via-[#1a2b42]/60 to-transparent"></div>
-        
-        <!-- Navbar Inside Hero -->
-        <nav class="relative z-20 flex justify-between items-start p-8 md:p-12">
-          <a href="#" class="flex items-center gap-3 bg-white text-[#1a2b42] px-5 py-3 rounded-xl font-bold text-xl shadow-lg">
-            <img src="public/logo.png" alt="Logo" class="h-6 object-contain hidden" />
-            <i data-lucide="sun" class="w-6 h-6 text-accent"></i> Solagates
-          </a>
-          
-          <div class="hidden md:flex flex-col items-end gap-3 text-white text-sm font-medium">
-            <a href="#" class="flex items-center gap-3 hover:text-white transition-colors">
-              <span class="w-1.5 h-1.5 rounded-full bg-white"></span> Home
-              <span class="absolute w-8 border-b border-white bottom-0 right-0"></span>
-            </a>
-            <a href="#about" class="text-white/70 hover:text-white transition-colors pr-4">About</a>
-            <a href="#solutions" class="text-white/70 hover:text-white transition-colors pr-4">Services</a>
-            <a href="#academy" class="text-white/70 hover:text-white transition-colors pr-4">Pricing</a>
-          </div>
-        </nav>
-
-        <!-- Hero Content -->
-        <div class="relative z-20 px-8 md:px-16 mt-12 md:mt-24 max-w-4xl">
-          <span class="inline-block border border-white/30 rounded-full px-6 py-2 text-white/90 text-sm font-medium mb-8 backdrop-blur-md">
-            Sustainable Energy
-          </span>
-          <h1 class="font-serif text-5xl md:text-7xl lg:text-[80px] font-bold text-white leading-[1.1] mb-12">
-            Powering a Brighter,<br>
-            Greener Future with<br>
-            Solar Energy
-          </h1>
-          <a href="#assessment" class="inline-flex items-center gap-3 bg-accent text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#c26526] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
-            Go Solar <i data-lucide="arrow-right" class="w-5 h-5"></i>
-          </a>
-        </div>
-
-        <!-- Translucent overlay box -->
-        <div class="hidden lg:block absolute z-20 bottom-[320px] right-12 bg-[#24344d]/70 backdrop-blur-md border border-white/10 rounded-3xl p-8 max-w-md text-right shadow-2xl">
-          <p class="text-white font-serif text-2xl leading-snug">
-            Sustainable power made simple,<br>smart, and affordable.
-          </p>
-        </div>
-
-        <!-- The White Cutout for Desktop -->
-        <div class="hidden lg:block hero-cutout z-10 shadow-[-20px_-20px_40px_rgba(0,0,0,0.1)]"></div>
-        
-        <!-- Bottom Content overlapping the cutout -->
-        <div class="absolute bottom-0 left-0 right-0 z-30 flex flex-col lg:flex-row items-end justify-between px-8 md:px-16 pb-8 lg:pb-0">
-          
-          <!-- Left Text -->
-          <div class="w-full lg:w-[30%] mb-12 lg:mb-16 pr-8 text-white lg:text-[#444] lg:pb-8">
-            <p class="text-lg leading-relaxed font-medium mix-blend-luminosity lg:mix-blend-normal">
-              Solagates delivers reliable, eco-friendly solar solutions that cut costs and reduce carbon footprints. Join us in building a sustainable future with clean, renewable energy that powers homes and businesses efficiently.
-            </p>
-          </div>
-
-          <!-- Right Cards (sitting inside the white cutout area) -->
-          <div class="w-full lg:w-[65%] flex flex-col sm:flex-row gap-4 relative lg:-top-10">
-            <!-- Orange Arrow Button positioned exactly at the curve -->
-            <a href="#solutions" class="hidden lg:flex absolute -top-16 -left-16 w-14 h-14 bg-accent text-white rounded-full items-center justify-center shadow-lg hover:bg-[#c26526] transition-colors">
-              <i data-lucide="arrow-up-right" class="w-6 h-6"></i>
-            </a>
-
-            <!-- Card 1 -->
-            <div class="flex-1 bg-cardbg rounded-[2rem] p-8 text-white shadow-xl hover:-translate-y-2 transition-transform duration-300">
-              <h3 class="font-serif text-2xl font-bold mb-4 leading-tight">Sustainable Green<br>Energy</h3>
-              <p class="text-white/70 text-sm leading-relaxed">Harness the unlimited power of the sun to reduce carbon footprint and protect our planet.</p>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="flex-1 bg-cardbg rounded-[2rem] p-8 text-white shadow-xl hover:-translate-y-2 transition-transform duration-300">
-              <h3 class="font-serif text-2xl font-bold mb-4 leading-tight">Affordable Solar<br>Savings</h3>
-              <p class="text-white/70 text-sm leading-relaxed">Cut electricity bills while investing in a sustainable, cost-effective energy solution for tomorrow.</p>
-            </div>
-            
-            <!-- Card 3 -->
-            <div class="flex-1 bg-cardbg rounded-[2rem] p-8 text-white shadow-xl hover:-translate-y-2 transition-transform duration-300">
-              <h3 class="font-serif text-2xl font-bold mb-4 leading-tight">Reliable Solar<br>Power</h3>
-              <p class="text-white/70 text-sm leading-relaxed">High-performance solar panels built with advanced technology for long-lasting, efficient energy generation.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    
-<!-- 2. ABOUT THE FOUNDER / VISION -->
-    <section id="about" class="bg-white py-24 px-8">
+  <body class="bg-[#fcfdfc] text-[#111] font-sans antialiased">
+    <!-- NAVBAR -->
+    <nav
+      class="bg-white py-5 px-8 md:px-16 flex justify-between items-center sticky top-0 z-50 shadow-sm"
+    >
+      <a href="#" class="flex items-center gap-2">
+        <i data-lucide="sun" class="w-6 h-6 text-primary"></i>
+        <span
+          class="font-display font-bold text-xl tracking-tight text-primary uppercase"
+          >Solagates</span
+        >
+      </a>
       <div
-        class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16"
+        class="hidden lg:flex items-center gap-10 font-display text-xs font-semibold tracking-widest text-[#111] uppercase"
       >
-        <div class="order-2 lg:order-1">
-          <img
-            src="public/founder.jpg"
-            alt="Founder"
-            class="w-full h-[500px] object-cover rounded-2xl shadow-lg border border-gray-100"
-          />
-        </div>
-        <div class="order-1 lg:order-2 flex flex-col justify-center">
-          <div class="text-primary font-bold mb-4 tracking-wider uppercase">
-            THE VISION
-          </div>
-          <h2
-            class="font-display text-4xl font-extrabold text-[#111] leading-tight mb-8"
+        <a href="#about" class="hover:text-primary transition-colors">About</a>
+        <a href="#services" class="hover:text-primary transition-colors"
+          >Services</a
+        >
+        <a href="#process" class="hover:text-primary transition-colors"
+          >Process</a
+        >
+        <a href="#testimonials" class="hover:text-primary transition-colors"
+          >Testimonials</a
+        >
+        <a href="#academy" class="hover:text-primary transition-colors"
+          >Academy</a
+        >
+      </div>
+      <a
+        href="#contact"
+        class="hidden md:flex items-center gap-2 font-display text-xs font-semibold tracking-widest uppercase border-b border-black pb-1 hover:text-primary hover:border-primary transition-colors"
+      >
+        Contact Us <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="px-4 lg:px-8 pb-12 pt-4">
+      <div
+        class="relative w-full rounded-2xl overflow-hidden bg-primary flex flex-col items-center justify-center text-center px-4"
+        style="min-height: 85vh"
+      >
+        <div
+          class="absolute inset-0 bg-[url('public/hero-african-family-solar-home.jpg')] bg-cover bg-center mix-blend-overlay opacity-60"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/50 to-primary/90"
+        ></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+          <div
+            class="border border-white/30 rounded-full px-6 py-2 text-white/90 text-[10px] font-display uppercase tracking-widest font-semibold mb-6 backdrop-blur-sm"
           >
-            Eliminating the Generator Culture
-          </h2>
-          <p class="text-gray-500 text-lg mb-8 leading-relaxed">
-            "Africa's economic future depends on energy independence. At
-            Solagates Global, we aren't just installing panels; we are building
-            the intelligent infrastructure that empowers the next generation of
-            businesses and homes to thrive without limits."
+            Premium Solar Standard
+          </div>
+          <h1
+            class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase leading-[1.1] mb-6 tracking-tight"
+          >
+            Utilizing Solar Power to Foster a Sustainable Future.
+          </h1>
+          <p
+            class="text-white/80 text-sm md:text-base max-w-2xl font-medium mb-10"
+          >
+            Eliminating the generator culture across Africa. Reliable,
+            eco-friendly solar solutions that cut costs and reduce carbon
+            footprints for homes and businesses.
           </p>
-          <div class="grid grid-cols-2 gap-8 mb-12">
-            <div
-              class="bg-[#fcfdfc] p-6 rounded-xl border border-gray-100 text-center"
+          <div class="flex items-center gap-4">
+            <a
+              href="#contact"
+              class="bg-palegreen text-primary font-display uppercase text-xs font-bold tracking-wider px-8 py-4 rounded-full hover:bg-white transition-colors"
             >
-              <div class="font-display text-4xl font-black text-primary mb-2">
-                10+
-              </div>
-              <div class="text-sm font-bold text-gray-500 uppercase">
-                Years Experience
-              </div>
-            </div>
-            <div
-              class="bg-[#fcfdfc] p-6 rounded-xl border border-gray-100 text-center"
+              Get A Quote
+            </a>
+            <a
+              href="#services"
+              class="border border-white/50 text-white font-display uppercase text-xs font-bold tracking-wider px-8 py-4 rounded-full hover:bg-white/10 transition-colors"
             >
-              <div class="font-display text-4xl font-black text-primary mb-2">
-                15MW+
-              </div>
-              <div class="text-sm font-bold text-gray-500 uppercase">
-                Capacity Delivered
-              </div>
-            </div>
+              Learn More
+            </a>
           </div>
-          <div>
-            <strong class="block text-[#111] font-bold text-lg"
-              >The Visionary Team</strong
-            >
-            <span class="text-gray-500">Solagates Global Engineering</span>
-          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- STORAGE SOLUTION / INFRASTRUCTURE -->
+    <section id="services" class="py-20 px-8 md:px-16 max-w-7xl mx-auto">
+      <div class="mb-10">
+        <div class="pill-tag">Our Solutions</div>
+        <h2
+          class="uppercase-title text-3xl md:text-4xl text-primary tracking-tight max-w-2xl"
+        >
+          Enterprise Solar & Storage Infrastructure.
+        </h2>
+        <p class="text-textgray mt-4 max-w-2xl text-sm leading-relaxed">
+          High-performance tier-1 solar panels and lithium-ion storage systems
+          designed specifically for the African climate and power grid
+          challenges.
+        </p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden mb-8 h-[400px] w-full">
+        <img
+          src="public/industrial-prime.jpg"
+          alt="Solar Storage"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <div
+        class="bg-palegreen rounded-2xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-primary"
+      >
+        <div>
+          <h4
+            class="font-display font-bold uppercase text-sm mb-4 tracking-wide border-b border-primary/10 pb-4"
+          >
+            Residential Rooftop
+          </h4>
+          <ul class="space-y-3 text-sm font-medium">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 5kW - 15kW
+              Systems
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Smart Home
+              Integration
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 24/7 Power
+              Backup
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> App
+              Monitoring
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-display font-bold uppercase text-sm mb-4 tracking-wide border-b border-primary/10 pb-4"
+          >
+            Commercial Office
+          </h4>
+          <ul class="space-y-3 text-sm font-medium">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 20kW - 100kW
+              Systems
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Grid-Tied &
+              Hybrid
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Zero Noise
+              Operations
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> O&M Contracts
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-display font-bold uppercase text-sm mb-4 tracking-wide border-b border-primary/10 pb-4"
+          >
+            Industrial Factory
+          </h4>
+          <ul class="space-y-3 text-sm font-medium">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> 100kW+
+              Megawatt Scale
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Heavy
+              Machinery Support
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> High Voltage
+              Integration
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Diesel
+              Synchronization
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- 3. ENTERPRISE SOLUTIONS CARDS (Stacked List) -->
-    <section class="bg-[#fcfdfc] py-24 px-8 relative" id="solutions">
-      <div
-        class="absolute inset-0 z-0 opacity-10"
-        style="
-          background-image: radial-gradient(#005f2d 2px, transparent 2px);
-          background-size: 30px 30px;
-        "
-      ></div>
-      <div class="max-w-[1000px] mx-auto relative z-10">
-        <div class="text-center mb-16">
-          <div class="text-primary font-bold mb-4 tracking-wider uppercase">
-            SOLUTIONS INFRASTRUCTURE
-          </div>
-          <h2
-            class="font-display text-4xl font-extrabold text-[#111] leading-tight"
-          >
-            Premium Energy Solutions
-          </h2>
-          <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
-            Enterprise-grade solar infrastructure tailored for high-ticket
-            residential, commercial, and industrial ecosystems.
-          </p>
-        </div>
+    <!-- WHY CHOOSE US (ACCORDION SECTION) -->
+    <section id="process" class="bg-primary text-white py-24 px-8 md:px-16">
+      <div class="max-w-7xl mx-auto">
+        <div class="pill-tag !border-white/30 !text-palegreen">The Process</div>
+        <h2
+          class="uppercase-title text-3xl md:text-5xl tracking-tight mb-16 max-w-3xl"
+        >
+          Why You Need to Switch to Solar Energy?
+        </h2>
 
-        <div class="flex flex-col gap-6">
-          <!-- Card 1 -->
-          <div
-            class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group"
-          >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="rounded-2xl overflow-hidden h-[500px]">
             <img
               src="public/residential-rooftop-solar-africa.jpg"
-              alt="Residential Solar"
-              class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg"
+              alt="House with solar"
+              class="w-full h-full object-cover"
             />
-            <div class="flex-grow text-center md:text-left">
-              <h3
-                class="font-display text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors"
-              >
-                Residential Solar Systems
-              </h3>
-              <p class="text-gray-500 text-sm max-w-xl mx-auto md:mx-0">
-                Luxury estate power solutions with silent, seamless lithium
-                storage. Features 24/7 power independence and smart home
-                integration.
-              </p>
-            </div>
-            <button
-              class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0"
-            >
-              <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </button>
           </div>
-          <!-- Card 2 -->
-          <div
-            class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group"
-          >
-            <img
-              src="public/commercial-office-solar-installation.jpg"
-              alt="Commercial Solar"
-              class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg"
-            />
-            <div class="flex-grow text-center md:text-left">
-              <h3
-                class="font-display text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors"
-              >
-                Commercial Solar Systems
-              </h3>
-              <p class="text-gray-500 text-sm max-w-xl mx-auto md:mx-0">
-                Reliable power infrastructure for offices, retail, and corporate
-                centers. Up to 80% bill reduction and ESG compliance.
-              </p>
-            </div>
-            <button
-              class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0"
-            >
-              <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </button>
-          </div>
-          <!-- Card 3 -->
-          <div
-            class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group"
-          >
-            <img
-              src="public/industrial-factory-solar-system.jpg"
-              alt="Industrial Systems"
-              class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg"
-            />
-            <div class="flex-grow text-center md:text-left">
-              <h3
-                class="font-display text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors"
-              >
-                Industrial Energy Systems
-              </h3>
-              <p class="text-gray-500 text-sm max-w-xl mx-auto md:mx-0">
-                Heavy-duty power arrays designed for factories and
-                agro-processing. Tri-phase sync and zero production downtime.
-              </p>
-            </div>
-            <button
-              class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0"
-            >
-              <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </button>
-          </div>
-          <!-- Card 4 -->
-          <div
-            class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group"
-          >
-            <img
-              src="public/hybrid-inverter-premium.jpg"
-              alt="Hybrid Inverters"
-              class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg"
-            />
-            <div class="flex-grow text-center md:text-left">
-              <h3
-                class="font-display text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors"
-              >
-                Hybrid Inverter Systems
-              </h3>
-              <p class="text-gray-500 text-sm max-w-xl mx-auto md:mx-0">
-                Intelligent power routing between solar, grid, and battery
-                storage. Auto-failover in < 10ms and grid export ready.
-              </p>
-            </div>
-            <button
-              class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0"
-            >
-              <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </button>
-          </div>
-          <!-- Card 5 -->
-          <div
-            class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group"
-          >
-            <img
-              src="public/lithium-battery-bank.jpg"
-              alt="Battery Storage"
-              class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg"
-            />
-            <div class="flex-grow text-center md:text-left">
-              <h3
-                class="font-display text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors"
-              >
-                Battery Storage Solutions
-              </h3>
-              <p class="text-gray-500 text-sm max-w-xl mx-auto md:mx-0">
-                High-density LiFePO4 storage engineered for 10+ years of deep
-                cycling. 6000+ lifecycles with advanced BMS.
-              </p>
-            </div>
-            <button
-              class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0"
-            >
-              <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </button>
-          </div>
-          <!-- Card 6 -->
-          <div
-            class="bg-white rounded-xl p-4 shadow-[0_4px_20px_rgb(0,0,0,0.05)] flex flex-col md:flex-row items-center gap-8 border border-gray-100 hover:border-primary transition-colors cursor-pointer group"
-          >
-            <img
-              src="public/solar-maintenance-engineer-service.jpg"
-              alt="Maintenance"
-              class="w-full md:w-48 h-48 md:h-32 object-cover rounded-lg"
-            />
-            <div class="flex-grow text-center md:text-left">
-              <h3
-                class="font-display text-xl font-bold text-[#111] mb-2 group-hover:text-primary transition-colors"
-              >
-                Maintenance & Support
-              </h3>
-              <p class="text-gray-500 text-sm max-w-xl mx-auto md:mx-0">
-                Predictive AI-driven monitoring and on-site engineering support.
-                24/7 rapid response fleet for maximum uptime.
-              </p>
-            </div>
-            <button
-              class="w-10 h-10 rounded-full bg-[#f4faf6] text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors shrink-0"
-            >
-              <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </button>
-          </div>
-        </div>
 
-        <div class="text-center mt-12">
-          <a
-            href="#assessment"
-            class="bg-primary text-white px-8 py-3 rounded shadow-lg font-bold hover:bg-primary/90 transition-all inline-block"
-            >Request A Quote</a
-          >
-        </div>
-      </div>
-    </section>
+          <div class="space-y-4">
+            <!-- Accordion Item 1 -->
+            <div
+              class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 transition-colors"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="font-display font-semibold text-lg flex items-center gap-4"
+                >
+                  <span class="text-palegreen text-xl">01</span> Energy
+                  Consultation & Audit
+                </div>
+                <i data-lucide="chevron-down" class="w-5 h-5 text-white/50"></i>
+              </div>
+            </div>
 
-    <!-- 4. PREMIUM TRUST BADGES (Partner Grid) -->
-    <section class="bg-white py-24 px-8">
-      <div class="max-w-[1440px] mx-auto text-center">
-        <div class="text-primary font-bold mb-4 tracking-wider uppercase">
-          PARTNER WITH US
-        </div>
-        <h2
-          class="font-display text-4xl font-extrabold text-[#111] leading-tight mb-16"
-        >
-          Why Partner With Us?
-        </h2>
+            <!-- Accordion Item 2 (Open state) -->
+            <div class="bg-white/10 border border-white/20 rounded-xl p-6">
+              <div class="flex justify-between items-center mb-4">
+                <div
+                  class="font-display font-semibold text-lg flex items-center gap-4"
+                >
+                  <span class="text-palegreen text-xl">02</span> Custom Design &
+                  Blueprint
+                </div>
+                <i data-lucide="chevron-up" class="w-5 h-5"></i>
+              </div>
+              <p class="text-white/70 text-sm leading-relaxed pl-10">
+                Our certified engineers design a custom solar infrastructure
+                tailored perfectly to your roof space, energy consumption, and
+                future scaling needs, ensuring maximum efficiency.
+              </p>
+            </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Feature 1 -->
-          <div
-            class="bg-[#f4faf6] p-8 rounded-xl text-center border border-transparent hover:border-primary/20 transition-colors"
-          >
+            <!-- Accordion Item 3 -->
             <div
-              class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm"
+              class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 transition-colors"
             >
-              <img
-                src="public/warranty-badge.png"
-                alt="Warranty"
-                class="w-10 h-10 object-contain"
-              />
+              <div class="flex justify-between items-center">
+                <div
+                  class="font-display font-semibold text-lg flex items-center gap-4"
+                >
+                  <span class="text-palegreen text-xl">03</span> Professional
+                  Installation
+                </div>
+                <i data-lucide="chevron-down" class="w-5 h-5 text-white/50"></i>
+              </div>
             </div>
-            <h3 class="font-display text-xl font-bold text-[#111] mb-3">
-              Comprehensive Warranty
-            </h3>
-            <p class="text-gray-500 text-sm">
-              Long-term coverage and peace of mind on all core equipment and
-              batteries.
-            </p>
-          </div>
-          <!-- Feature 2 -->
-          <div
-            class="bg-[#f4faf6] p-8 rounded-xl text-center border border-transparent hover:border-primary/20 transition-colors"
-          >
+
+            <!-- Accordion Item 4 -->
             <div
-              class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm"
+              class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 transition-colors"
             >
-              <img
-                src="public/certified-engineers-badge.png"
-                alt="Engineers"
-                class="w-10 h-10 object-contain"
-              />
+              <div class="flex justify-between items-center">
+                <div
+                  class="font-display font-semibold text-lg flex items-center gap-4"
+                >
+                  <span class="text-palegreen text-xl">04</span> Commissioning &
+                  App Setup
+                </div>
+                <i data-lucide="chevron-down" class="w-5 h-5 text-white/50"></i>
+              </div>
             </div>
-            <h3 class="font-display text-xl font-bold text-[#111] mb-3">
-              Certified Engineers
-            </h3>
-            <p class="text-gray-500 text-sm">
-              ISO-certified technical teams ensuring flawless industrial-grade
-              installations.
-            </p>
-          </div>
-          <!-- Feature 3 -->
-          <div
-            class="bg-[#f4faf6] p-8 rounded-xl text-center border border-transparent hover:border-primary/20 transition-colors"
-          >
-            <div
-              class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm"
-            >
-              <img
-                src="public/nationwide-support-icon.png"
-                alt="Support"
-                class="w-10 h-10 object-contain"
-              />
-            </div>
-            <h3 class="font-display text-xl font-bold text-[#111] mb-3">
-              Nationwide Support
-            </h3>
-            <p class="text-gray-500 text-sm">
-              Rapid response fleets available 24/7 across all 36 states for any
-              required servicing.
-            </p>
-          </div>
-          <!-- Feature 4 -->
-          <div
-            class="bg-[#f4faf6] p-8 rounded-xl text-center border border-transparent hover:border-primary/20 transition-colors"
-          >
-            <div
-              class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm"
-            >
-              <img
-                src="public/quality-assurance-icon.png"
-                alt="Quality"
-                class="w-10 h-10 object-contain"
-              />
-            </div>
-            <h3 class="font-display text-xl font-bold text-[#111] mb-3">
-              Quality Assurance
-            </h3>
-            <p class="text-gray-500 text-sm">
-              Rigorous testing protocols guaranteeing 99.9% uptime for all
-              setups.
-            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. PROCESS TIMELINE -->
-    <section
-      class="bg-[#fcfdfc] py-24 px-8 border-t border-gray-100"
-      id="process"
-    >
-      <div class="max-w-[1440px] mx-auto text-center">
-        <div class="text-primary font-bold mb-4 tracking-wider uppercase">
-          DEPLOYMENT
-        </div>
+    <!-- BREAKTHROUGH TECHNOLOGY (ZIG-ZAG) -->
+    <section class="py-24 px-8 md:px-16 max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <div class="pill-tag">Innovation</div>
         <h2
-          class="font-display text-4xl font-extrabold text-[#111] leading-tight mb-4"
+          class="uppercase-title text-3xl md:text-4xl text-primary tracking-tight"
         >
-          Our Premium Process
+          Bringing You Breakthrough Technology
         </h2>
-        <p class="text-gray-500 mb-16 max-w-xl mx-auto">
-          A seamless, 5-step journey to energy independence.
+        <p class="text-textgray mt-4 max-w-2xl mx-auto text-sm">
+          We leverage the latest advancements in renewable energy to provide
+          systems that are incredibly efficient and reliable.
         </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-          <!-- Step 1 -->
-          <div
-            class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center relative group"
-          >
-            <div
-              class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold absolute -top-4 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm"
-            >
-              1
-            </div>
-            <img
-              src="public/energy-consultation.jpg"
-              alt="Consultation"
-              class="w-full h-32 object-cover rounded-lg mb-4 mt-2 group-hover:opacity-90 transition-opacity"
-            />
-            <h3 class="font-bold text-[#111] text-sm uppercase tracking-wide">
-              Energy Assessment
-            </h3>
-          </div>
-          <!-- Step 2 -->
-          <div
-            class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center relative group"
-          >
-            <div
-              class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold absolute -top-4 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm"
-            >
-              2
-            </div>
-            <img
-              src="public/solar-system-design-blueprint.jpg"
-              alt="Design"
-              class="w-full h-32 object-cover rounded-lg mb-4 mt-2 group-hover:opacity-90 transition-opacity"
-            />
-            <h3 class="font-bold text-[#111] text-sm uppercase tracking-wide">
-              System Design
-            </h3>
-          </div>
-          <!-- Step 3 -->
-          <div
-            class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center relative group"
-          >
-            <div
-              class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold absolute -top-4 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm"
-            >
-              3
-            </div>
-            <img
-              src="public/installation-team.jpg"
-              alt="Installation"
-              class="w-full h-32 object-cover rounded-lg mb-4 mt-2 group-hover:opacity-90 transition-opacity"
-            />
-            <h3 class="font-bold text-[#111] text-sm uppercase tracking-wide">
-              Installation
-            </h3>
-          </div>
-          <!-- Step 4 -->
-          <div
-            class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center relative group"
-          >
-            <div
-              class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold absolute -top-4 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm"
-            >
-              4
-            </div>
-            <img
-              src="public/commissioning-system.jpg"
-              alt="Commissioning"
-              class="w-full h-32 object-cover rounded-lg mb-4 mt-2 group-hover:opacity-90 transition-opacity"
-            />
-            <h3 class="font-bold text-[#111] text-sm uppercase tracking-wide">
-              Commissioning
-            </h3>
-          </div>
-          <!-- Step 5 -->
-          <div
-            class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center relative group"
-          >
-            <div
-              class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold absolute -top-4 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-sm"
-            >
-              5
-            </div>
-            <img
-              src="public/solar-monitoring-dashboard.jpg"
-              alt="Monitoring"
-              class="w-full h-32 object-cover rounded-lg mb-4 mt-2 group-hover:opacity-90 transition-opacity"
-            />
-            <h3 class="font-bold text-[#111] text-sm uppercase tracking-wide">
-              Monitoring
-            </h3>
-          </div>
-        </div>
       </div>
-    </section>
 
-    <!-- 6. FEATURED PROJECT GALLERY (Success Stories dark theme) -->
-    <section class="bg-[#111] py-24 px-8" id="projects">
-      <div class="max-w-[1440px] mx-auto">
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
-        >
-          <div>
-            <div class="text-primary font-bold mb-4 tracking-wider uppercase">
-              ENGINEERING EXCELLENCE
-            </div>
-            <h2
-              class="font-display text-4xl font-extrabold text-white leading-tight"
-            >
-              Featured Deployments
-            </h2>
-          </div>
-          <div class="flex gap-4">
-            <button
-              class="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
-            >
-              <i data-lucide="arrow-left" class="w-5 h-5"></i>
-            </button>
-            <button
-              class="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-colors"
-            >
-              <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </button>
-          </div>
+      <!-- Zig-Zag 1 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+        <div class="rounded-3xl overflow-hidden h-[400px]">
+          <img
+            src="public/commercial-office-solar-installation.jpg"
+            alt="Commercial Solar"
+            class="w-full h-full object-cover"
+          />
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Project 1 -->
-          <div class="group relative rounded-2xl overflow-hidden h-[400px]">
-            <img
-              src="public/project-1.jpg"
-              alt="50kW Hybrid Estate System"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-[#111] via-[#111]/40 to-transparent"
-            ></div>
-            <div class="absolute bottom-0 left-0 w-full p-6">
-              <div
-                class="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded mb-3"
-              >
-                120kWh Lithium
-              </div>
-              <h3 class="font-display text-xl font-bold text-white mb-2">
-                50kW Hybrid Estate System
-              </h3>
-              <p class="text-gray-400 text-sm">Lekki Peninsula, Lagos</p>
-            </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="group relative rounded-2xl overflow-hidden h-[400px]">
-            <img
-              src="public/project-2.jpg"
-              alt="150kW Industrial Solar Grid"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-[#111] via-[#111]/40 to-transparent"
-            ></div>
-            <div class="absolute bottom-0 left-0 w-full p-6">
-              <div
-                class="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded mb-3"
-              >
-                Tri-Phase Sync
-              </div>
-              <h3 class="font-display text-xl font-bold text-white mb-2">
-                150kW Industrial Grid
-              </h3>
-              <p class="text-gray-400 text-sm">Kano Agro-Processing Hub</p>
-            </div>
-          </div>
-          <!-- Project 3 -->
-          <div class="group relative rounded-2xl overflow-hidden h-[400px]">
-            <img
-              src="public/project-3.jpg"
-              alt="30kW Premium Medical Backup"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-[#111] via-[#111]/40 to-transparent"
-            ></div>
-            <div class="absolute bottom-0 left-0 w-full p-6">
-              <div
-                class="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded mb-3"
-              >
-                0.2ms Latency
-              </div>
-              <h3 class="font-display text-xl font-bold text-white mb-2">
-                30kW Medical Backup
-              </h3>
-              <p class="text-gray-400 text-sm">Asokoro, Abuja</p>
-            </div>
-          </div>
-          <!-- Project 4 -->
-          <div class="group relative rounded-2xl overflow-hidden h-[400px]">
-            <img
-              src="public/project-4.jpg"
-              alt="85kW Commercial Center"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-[#111] via-[#111]/40 to-transparent"
-            ></div>
-            <div class="absolute bottom-0 left-0 w-full p-6">
-              <div
-                class="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded mb-3"
-              >
-                Net-Metering
-              </div>
-              <h3 class="font-display text-xl font-bold text-white mb-2">
-                85kW Commercial Center
-              </h3>
-              <p class="text-gray-400 text-sm">Wuse II, Abuja</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. SOLAGATES ACADEMY -->
-    <section
-      class="bg-[#fcfdfc] py-24 px-8 border-b border-gray-100"
-      id="academy"
-    >
-      <div class="max-w-[1440px] mx-auto text-center">
-        <div class="text-primary font-bold mb-4 tracking-wider uppercase">
-          EDUCATION
-        </div>
-        <h2
-          class="font-display text-4xl font-extrabold text-[#111] leading-tight mb-4"
-        >
-          Solagates Academy
-        </h2>
-        <p class="text-gray-500 mb-16 max-w-xl mx-auto">
-          Building Africa's next generation of ISO-certified energy leaders.
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <!-- Tier 1 -->
-          <div
-            class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow text-left"
-          >
-            <div
-              class="w-12 h-12 bg-[#f4faf6] text-primary rounded-lg flex items-center justify-center mb-6"
-            >
-              <i data-lucide="sun" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-display text-2xl font-bold text-[#111] mb-2">
-              Basic Installation
-            </h3>
-            <p class="text-gray-500 text-sm mb-6 h-16">
-              Foundational training in PV panel mounting, circuit wiring, and
-              home inverter configuration.
-            </p>
-            <div class="font-display text-3xl font-black text-[#111] mb-8">
-              ₦150,000
-            </div>
-            <a
-              href="#contact"
-              class="block w-full bg-[#f4faf6] text-primary font-bold text-center py-3 rounded-lg hover:bg-primary hover:text-white transition-colors"
-              >Enroll Now</a
-            >
-          </div>
-          <!-- Tier 2 -->
-          <div
-            class="bg-primary p-8 rounded-2xl border border-primary shadow-xl text-left text-white transform md:-translate-y-4"
-          >
-            <div
-              class="w-12 h-12 bg-white/20 text-white rounded-lg flex items-center justify-center mb-6"
-            >
-              <i data-lucide="zap" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-display text-2xl font-bold text-white mb-2">
-              Advanced Masterclass
-            </h3>
-            <p class="text-white/80 text-sm mb-6 h-16">
-              Deep-dive into complex industrial system design, smart load
-              management, and high-voltage engineering.
-            </p>
-            <div class="font-display text-3xl font-black text-white mb-8">
-              ₦350,000
-            </div>
-            <a
-              href="#contact"
-              class="block w-full bg-white text-primary font-bold text-center py-3 rounded-lg hover:bg-gray-100 transition-colors"
-              >Enroll Now</a
-            >
-          </div>
-          <!-- Tier 3 -->
-          <div
-            class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow text-left"
-          >
-            <div
-              class="w-12 h-12 bg-[#f4faf6] text-primary rounded-lg flex items-center justify-center mb-6"
-            >
-              <i data-lucide="trending-up" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-display text-2xl font-bold text-[#111] mb-2">
-              Elite Mentorship
-            </h3>
-            <p class="text-gray-500 text-sm mb-6 h-16">
-              A specialized business launchpad. Learn how to brand, market, and
-              scale your own high-ticket solar firm.
-            </p>
-            <div class="font-display text-3xl font-black text-[#111] mb-8">
-              ₦750,000
-            </div>
-            <a
-              href="#contact"
-              class="block w-full bg-[#f4faf6] text-primary font-bold text-center py-3 rounded-lg hover:bg-primary hover:text-white transition-colors"
-              >Apply Now</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. CLIENT TESTIMONIALS -->
-    <section class="bg-white py-24 px-8" id="testimonials">
-      <div
-        class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16"
-      >
-        <div class="lg:col-span-1">
-          <div class="text-primary font-bold mb-4 tracking-wider uppercase">
-            TESTIMONIALS
-          </div>
-          <h2
-            class="font-display text-4xl font-extrabold text-[#111] leading-tight mb-8"
-          >
-            Hear Our Client's Success Stories
-          </h2>
+        <div>
+          <h3 class="uppercase-title text-2xl text-primary mb-4 tracking-tight">
+            Innovative Energy Management Systems
+          </h3>
+          <p class="text-textgray text-sm leading-relaxed mb-8">
+            Experience complete control over your power consumption. Our smart
+            systems automatically switch between solar, grid, and battery
+            storage to ensure zero downtime and maximum cost savings. Monitor
+            everything right from your mobile device.
+          </p>
           <a
-            href="#projects"
-            class="bg-primary text-white px-8 py-4 rounded-lg shadow-lg font-bold hover:bg-primary/90 transition-all inline-flex items-center gap-2"
+            href="#contact"
+            class="inline-block border border-gray-300 font-display uppercase text-[10px] font-bold tracking-widest px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-colors"
           >
-            View More <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            Learn More
           </a>
         </div>
-
-        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Review 1 -->
-          <div class="bg-[#f4faf6] p-8 rounded-2xl">
-            <div class="flex gap-1 text-yellow-400 mb-6">
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-            </div>
-            <p class="text-[#111] font-medium mb-8">
-              "Eliminated our ₦400k monthly diesel bill. The AI load-monitoring
-              system is brilliant at auto-balancing power, ensuring our
-              essential estate services never skip a beat."
-            </p>
-            <div class="flex items-center gap-4">
-              <img
-                src="public/client-taiwo.jpg"
-                alt="Taiwo"
-                class="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <div class="font-bold text-[#111]">Engr. Taiwo Oyewole</div>
-                <div class="text-gray-500 text-sm">Estate Manager, Abuja</div>
-              </div>
-            </div>
-          </div>
-          <!-- Review 2 -->
-          <div
-            class="bg-[#fcfdfc] border border-gray-100 p-8 rounded-2xl shadow-sm"
-          >
-            <div class="flex gap-1 text-yellow-400 mb-6">
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-            </div>
-            <p class="text-[#111] font-medium mb-8">
-              "We went from 60% production capacity due to grid instability to
-              100% constant power. Our operational costs dropped by 70% in the
-              first quarter alone."
-            </p>
-            <div class="flex items-center gap-4">
-              <img
-                src="public/client-amina.jpg"
-                alt="Amina"
-                class="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <div class="font-bold text-[#111]">Hajia Amina Yusuf</div>
-                <div class="text-gray-500 text-sm">Agro-Processor, Kano</div>
-              </div>
-            </div>
-          </div>
-          <!-- Review 3 -->
-          <div
-            class="bg-[#fcfdfc] border border-gray-100 p-8 rounded-2xl shadow-sm"
-          >
-            <div class="flex gap-1 text-yellow-400 mb-6">
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-            </div>
-            <p class="text-[#111] font-medium mb-8">
-              "In healthcare, a power outage is life or death. SolaGates
-              installed a zero-latency hybrid solar backup system that has run
-              flawlessly for over 18 months."
-            </p>
-            <div class="flex items-center gap-4">
-              <img
-                src="public/client-jude.jpg"
-                alt="Jude"
-                class="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <div class="font-bold text-[#111]">Dr. Jude Okonjo</div>
-                <div class="text-gray-500 text-sm">Medical Director, Lagos</div>
-              </div>
-            </div>
-          </div>
-          <!-- Review 4 -->
-          <div
-            class="bg-[#fcfdfc] border border-gray-100 p-8 rounded-2xl shadow-sm"
-          >
-            <div class="flex gap-1 text-yellow-400 mb-6">
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-            </div>
-            <p class="text-[#111] font-medium mb-8">
-              "Our workspace developers enjoy 24/7 power. The ROI was fully
-              realized in just 14 months, saving us millions in generator
-              maintenance and diesel."
-            </p>
-            <div class="flex items-center gap-4">
-              <img
-                src="public/client-femi.jpg"
-                alt="Femi"
-                class="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <div class="font-bold text-[#111]">Femi Adebayo</div>
-                <div class="text-gray-500 text-sm">
-                  Tech Hub Founder, Ibadan
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
 
-    <!-- 9. NEWSLETTER -->
-    <section class="bg-[#111] py-16 px-8 relative overflow-hidden">
-      <div class="max-w-[800px] mx-auto text-center relative z-10">
-        <h2
-          class="font-display text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4"
-        >
-          Subscribe to our Newsletter and get <br />10% off your next ROI
-          Survey.
-        </h2>
-        <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto mt-8">
-          <input
-            type="email"
-            placeholder="Your email address..."
-            class="flex-grow bg-white text-[#111] px-6 py-4 rounded focus:outline-none"
-            required
+      <!-- Zig-Zag 2 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <h3 class="uppercase-title text-2xl text-primary mb-4 tracking-tight">
+            Lithium-Ion Battery Banks
+          </h3>
+          <p class="text-textgray text-sm leading-relaxed mb-8">
+            Our premium lithium battery systems offer incredibly deep discharge
+            cycles and an extended lifespan compared to traditional lead-acid
+            options. Secure your energy independence with reliable overnight
+            storage.
+          </p>
+          <a
+            href="#contact"
+            class="inline-block border border-gray-300 font-display uppercase text-[10px] font-bold tracking-widest px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-colors"
+          >
+            Learn More
+          </a>
+        </div>
+        <div class="rounded-3xl overflow-hidden h-[400px] order-1 lg:order-2">
+          <img
+            src="public/lithium-battery-bank.jpg"
+            alt="Battery Storage"
+            class="w-full h-full object-cover"
           />
-          <button
-            type="submit"
-            class="bg-primary text-white px-8 py-4 rounded font-bold hover:bg-primary/90 transition-colors whitespace-nowrap"
-          >
-            Submit
-          </button>
-        </form>
+        </div>
       </div>
     </section>
 
-    <!-- 10. FOOTER -->
-    <footer
-      class="w-full bg-[#fcfdfc] py-16 px-8 grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-gray-100"
+    <!-- TESTIMONIALS -->
+    <section
+      id="testimonials"
+      class="py-20 px-8 md:px-16 max-w-5xl mx-auto text-center"
     >
-      <div class="col-span-1 md:col-span-1">
-        <a href="#">
-          <img src="public/logo.png" alt="Logo" class="h-8 mb-6" />
-        </a>
-        <p class="text-gray-500 text-sm leading-relaxed mb-6">
-          ISO-Certified energy infrastructure for Africa's future. Engineering
-          excellence in every watt.
-        </p>
-        <div class="flex gap-4 text-gray-400">
-          <a href="#" class="hover:text-primary"
-            ><i data-lucide="facebook" class="w-5 h-5"></i
-          ></a>
-          <a href="#" class="hover:text-primary"
-            ><i data-lucide="twitter" class="w-5 h-5"></i
-          ></a>
-          <a href="#" class="hover:text-primary"
-            ><i data-lucide="linkedin" class="w-5 h-5"></i
-          ></a>
-          <a href="#" class="hover:text-primary"
-            ><i data-lucide="instagram" class="w-5 h-5"></i
-          ></a>
+      <div class="pill-tag">Testimonials</div>
+      <h2
+        class="uppercase-title text-3xl md:text-4xl text-primary tracking-tight mb-12"
+      >
+        What Our Clients Say
+      </h2>
+
+      <div
+        class="bg-palegreen rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 text-left"
+      >
+        <img
+          src="public/client-taiwo.jpg"
+          alt="Client"
+          class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-2xl shadow-md shrink-0"
+        />
+        <div>
+          <h4
+            class="font-display font-semibold text-xl text-primary leading-snug mb-6"
+          >
+            "Since Solagates installed our 20kW system, our factory has been
+            running seamlessly during grid failures. We spent almost nothing on
+            diesel this quarter. A true game-changer!"
+          </h4>
+          <p class="text-primary font-bold text-sm tracking-wide uppercase">
+            Engr. Taiwo Adebayo
+          </p>
+          <p class="text-textgray text-xs mt-1">Estate Manager, Abuja</p>
+
+          <div class="flex gap-2 mt-6">
+            <button
+              class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm"
+            >
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+            <button
+              class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white shadow-sm"
+            >
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div>
-        <h4
-          class="font-display font-bold text-[#111] mb-6 tracking-wide uppercase"
+    <!-- CONTACT FORM -->
+    <section id="contact" class="py-24 px-8 md:px-16 max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="pill-tag">Get A Quote</div>
+        <h2
+          class="uppercase-title text-3xl md:text-4xl text-primary tracking-tight"
         >
-          COMPANY
-        </h4>
-        <ul class="space-y-4 text-gray-500 text-sm">
-          <li><a href="#about" class="hover:text-primary">About Us</a></li>
-          <li><a href="#projects" class="hover:text-primary">Portfolio</a></li>
-          <li><a href="#academy" class="hover:text-primary">Academy</a></li>
-          <li><a href="#contact" class="hover:text-primary">Contact Us</a></li>
-        </ul>
+          Ready to Start Your Solar Journey?
+        </h2>
+        <p class="text-textgray mt-4 max-w-xl mx-auto text-sm">
+          Fill out the form below and our certified engineers will get back to
+          you with a customized energy assessment.
+        </p>
       </div>
 
-      <div>
-        <h4
-          class="font-display font-bold text-[#111] mb-6 tracking-wide uppercase"
-        >
-          SERVICES
-        </h4>
-        <ul class="space-y-4 text-gray-500 text-sm">
-          <li>
-            <a href="#" class="hover:text-primary">Residential Systems</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-primary">Commercial Installations</a>
-          </li>
-          <li><a href="#" class="hover:text-primary">Industrial Grids</a></li>
-          <li><a href="#" class="hover:text-primary">Energy Maintenance</a></li>
-        </ul>
-      </div>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-gray-50 rounded-3xl p-4 md:p-8"
+      >
+        <div class="rounded-2xl overflow-hidden h-[400px] lg:h-auto">
+          <img
+            src="public/solar-maintenance-engineer-service.jpg"
+            alt="Engineer"
+            class="w-full h-full object-cover"
+          />
+        </div>
 
-      <div>
-        <h4
-          class="font-display font-bold text-[#111] mb-6 tracking-wide uppercase"
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <form class="space-y-6">
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="block text-[10px] font-display uppercase font-bold tracking-widest text-gray-500 mb-2"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="w-full bg-gray-50 border-transparent rounded-lg px-4 py-3 text-sm focus:border-primary focus:ring-0"
+                  placeholder="John"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-[10px] font-display uppercase font-bold tracking-widest text-gray-500 mb-2"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  class="w-full bg-gray-50 border-transparent rounded-lg px-4 py-3 text-sm focus:border-primary focus:ring-0"
+                  placeholder="Doe"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-[10px] font-display uppercase font-bold tracking-widest text-gray-500 mb-2"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="w-full bg-gray-50 border-transparent rounded-lg px-4 py-3 text-sm focus:border-primary focus:ring-0"
+                placeholder="john@company.com"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="block text-[10px] font-display uppercase font-bold tracking-widest text-gray-500 mb-2"
+                  >Phone</label
+                >
+                <input
+                  type="tel"
+                  class="w-full bg-gray-50 border-transparent rounded-lg px-4 py-3 text-sm focus:border-primary focus:ring-0"
+                  placeholder="+234..."
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-[10px] font-display uppercase font-bold tracking-widest text-gray-500 mb-2"
+                  >State</label
+                >
+                <select
+                  class="w-full bg-gray-50 border-transparent rounded-lg px-4 py-3 text-sm text-gray-500 focus:border-primary focus:ring-0"
+                >
+                  <option>Lagos</option>
+                  <option>Abuja</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-[10px] font-display uppercase font-bold tracking-widest text-gray-500 mb-2"
+                >Tell Us About Your Project</label
+              >
+              <textarea
+                rows="3"
+                class="w-full bg-gray-50 border-transparent rounded-lg px-4 py-3 text-sm focus:border-primary focus:ring-0"
+                placeholder="Project details..."
+              ></textarea>
+            </div>
+            <button
+              type="button"
+              class="bg-primary text-white font-display uppercase text-xs font-bold tracking-wider px-8 py-4 rounded-lg w-full hover:bg-primary/90 transition-colors"
+            >
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary pt-24 pb-12 px-8 md:px-16 text-white">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="font-display text-4xl md:text-6xl font-bold uppercase tracking-tight mb-20 max-w-4xl leading-tight"
         >
-          CONTACT US
-        </h4>
-        <ul class="space-y-4 text-gray-500 text-sm">
-          <li class="flex items-start gap-3">
-            <div class="bg-primary/10 text-primary p-2 rounded shrink-0 mt-1">
-              <i data-lucide="map-pin" class="w-4 h-4"></i>
+          Your Trusted Partner in Renewable Energy Solutions.
+        </h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-white/10 pt-12"
+        >
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 mb-6">
+              <i data-lucide="sun" class="w-6 h-6 text-palegreen"></i>
+              <span
+                class="font-display font-bold text-xl tracking-tight uppercase"
+                >Solagates</span
+              >
             </div>
-            <span>Lagos, Abuja, PH, Ibadan, Global</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <div class="bg-primary/10 text-primary p-2 rounded shrink-0">
-              <i data-lucide="mail" class="w-4 h-4"></i>
+            <p class="text-white/60 text-xs leading-relaxed mb-6">
+              14 Innovation Way, Victoria Island, Lagos<br />
+              Building a sustainable future with clean energy.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i data-lucide="facebook" class="w-4 h-4"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i data-lucide="twitter" class="w-4 h-4"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i data-lucide="instagram" class="w-4 h-4"></i
+              ></a>
             </div>
-            <span>engineering@solagates.com</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <div class="bg-primary/10 text-primary p-2 rounded shrink-0">
-              <i data-lucide="phone" class="w-4 h-4"></i>
-            </div>
-            <span>+234 807 515 5862</span>
-          </li>
-        </ul>
+          </div>
+
+          <div>
+            <h5
+              class="font-display uppercase text-[10px] font-bold tracking-widest text-white/50 mb-6"
+            >
+              Company
+            </h5>
+            <ul class="space-y-4 text-sm text-white/80">
+              <li>
+                <a href="#about" class="hover:text-palegreen transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#process"
+                  class="hover:text-palegreen transition-colors"
+                  >Process</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#academy"
+                  class="hover:text-palegreen transition-colors"
+                  >Academy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5
+              class="font-display uppercase text-[10px] font-bold tracking-widest text-white/50 mb-6"
+            >
+              Services
+            </h5>
+            <ul class="space-y-4 text-sm text-white/80">
+              <li>
+                <a href="#" class="hover:text-palegreen transition-colors"
+                  >Residential Solar</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-palegreen transition-colors"
+                  >Commercial Setup</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-palegreen transition-colors"
+                  >Industrial Power</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5
+              class="font-display uppercase text-[10px] font-bold tracking-widest text-white/50 mb-6"
+            >
+              Contact Info
+            </h5>
+            <ul class="space-y-4 text-sm text-white/80">
+              <li>
+                <a
+                  href="mailto:info@solagates.com"
+                  class="hover:text-palegreen transition-colors"
+                  >info@solagates.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:+2348000000000"
+                  class="hover:text-palegreen transition-colors"
+                  >+234 800 000 0000</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/40"
+        >
+          <p>&copy; 2026 Solagates Global. All Rights Reserved.</p>
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-white">Privacy Policy</a>
+            <a href="#" class="hover:text-white">Terms of Service</a>
+          </div>
+        </div>
       </div>
     </footer>
-
-    <!-- SUB FOOTER -->
-    <div
-      class="bg-[#fcfdfc] border-t border-gray-100 py-6 px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500"
-    >
-      <div>&copy; 2026 Solagates Global. All Rights Reserved.</div>
-      <div class="flex gap-4">
-        <a href="#" class="hover:text-primary">Privacy Policy</a>
-        <a href="#" class="hover:text-primary">Terms of Service</a>
-      </div>
-    </div>
-
-    <!-- WhatsApp Floating Button -->
-    <a
-      href="https://wa.me/2348075155862"
-      class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:scale-110 transition-transform z-50 flex items-center gap-2"
-    >
-      <i data-lucide="message-circle" class="w-6 h-6 fill-current"></i>
-      <span class="font-bold hidden md:inline">WhatsApp</span>
-    </a>
 
     <script>
       lucide.createIcons();
