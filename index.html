@@ -1583,42 +1583,72 @@
             Our engineers will evaluate your load profile and provide a custom
             ROI roadmap.
           </p>
-          <form
-            class="flex flex-col gap-4"
-            action="mailto:solagateglobal@gmail.com"
-            method="post"
-            enctype="text/plain"
-          >
+          <form id="auditForm" class="flex flex-col gap-4">
             <input
+              id="auditName"
               type="text"
               placeholder="Full Name or Company"
+              required
               class="bg-grey-50 border border-grey-200 rounded-lg px-6 py-4 font-sans focus:outline-none focus:border-accent"
             />
             <input
+              id="auditEmail"
               type="email"
               placeholder="Email Address"
+              required
               class="bg-grey-50 border border-grey-200 rounded-lg px-6 py-4 font-sans focus:outline-none focus:border-accent"
             />
             <input
+              id="auditPhone"
               type="tel"
               placeholder="Phone Number"
+              required
               class="bg-grey-50 border border-grey-200 rounded-lg px-6 py-4 font-sans focus:outline-none focus:border-accent"
             />
             <select
+              id="auditType"
+              required
               class="bg-grey-50 border border-grey-200 rounded-lg px-6 py-4 font-sans focus:outline-none focus:border-accent text-grey-500"
             >
-              <option>Select Property Type</option>
-              <option>Residential Estate</option>
-              <option>Commercial Facility</option>
-              <option>Industrial/Factory</option>
+              <option value="" disabled selected>Select Property Type</option>
+              <option value="Residential Estate">Residential Estate</option>
+              <option value="Commercial Facility">Commercial Facility</option>
+              <option value="Industrial/Factory">Industrial/Factory</option>
             </select>
             <button
-              type="button"
+              type="submit"
               class="mt-4 font-sans font-semibold text-[16px] bg-accent text-primary px-[32px] py-[18px] rounded-[14px] hover:bg-white border border-accent transition-colors uppercase w-full"
             >
               Request Audit
             </button>
           </form>
+
+          <script>
+            document
+              .getElementById("auditForm")
+              .addEventListener("submit", function (e) {
+                e.preventDefault();
+                const name = document.getElementById("auditName").value;
+                const email = document.getElementById("auditEmail").value;
+                const phone = document.getElementById("auditPhone").value;
+                const type = document.getElementById("auditType").value;
+
+                const message =
+                  "Hello Solagates! I would like to request a FREE Solar Audit.\n\n*Name/Company:* " +
+                  name +
+                  "\n*Email:* " +
+                  email +
+                  "\n*Phone:* " +
+                  phone +
+                  "\n*Property Type:* " +
+                  type;
+                const whatsappUrl =
+                  "https://wa.me/2348075155862?text=" +
+                  encodeURIComponent(message);
+
+                window.open(whatsappUrl, "_blank");
+              });
+          </script>
         </div>
         <!-- Energy Guide -->
         <div class="flex flex-col justify-center">
