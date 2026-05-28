@@ -817,17 +817,23 @@
                   >Monthly Power Expenditure (₦)</label
                 >
                 <input
+                  id="roiExpenditure"
                   type="range"
                   min="100000"
                   max="10000000"
                   step="100000"
+                  value="2500000"
                   class="w-full accent-accent h-2 bg-grey-200 rounded-lg appearance-none cursor-pointer"
                 />
                 <div
                   class="flex justify-between items-center text-xs font-bold text-grey-400 mt-4"
                 >
                   <span>₦100K</span>
-                  <span class="text-accent font-display text-xl">₦2.5M</span>
+                  <span
+                    id="roiExpenditureLabel"
+                    class="text-accent font-display text-xl"
+                    >₦2.5M</span
+                  >
                   <span>₦10M+</span>
                 </div>
               </div>
@@ -838,6 +844,7 @@
                 >
                 <div class="relative">
                   <select
+                    id="roiAssetClass"
                     class="w-full border-2 border-grey-200 rounded-xl p-4 text-grey-900 bg-white font-semibold focus:ring-0 focus:border-accent outline-none appearance-none cursor-pointer transition-colors"
                   >
                     <option>High-End Residential Estate</option>
@@ -853,6 +860,7 @@
               </div>
               <button
                 type="button"
+                id="roiGenerateBtn"
                 class="mt-2 bg-grey-900 text-white font-semibold px-8 py-5 rounded-xl hover:bg-accent transition-colors w-full text-lg shadow-xl hover:shadow-accent/20 font-display uppercase tracking-widest flex items-center justify-center gap-3 group"
               >
                 Generate Executive Report
@@ -892,6 +900,7 @@
                   10-Year Capital Retention
                 </p>
                 <p
+                  id="roiRetentionVal"
                   class="text-[56px] lg:text-[64px] font-display font-black text-white leading-none tracking-tight"
                 >
                   ~₦142.5M
@@ -904,7 +913,10 @@
                   >
                     Capital Recovery
                   </p>
-                  <p class="text-3xl font-display font-bold text-white">
+                  <p
+                    id="roiRecoveryVal"
+                    class="text-3xl font-display font-bold text-white"
+                  >
                     2.4 Years
                   </p>
                 </div>
@@ -914,7 +926,10 @@
                   >
                     Carbon Emission Offset
                   </p>
-                  <p class="text-3xl font-display font-bold text-white">
+                  <p
+                    id="roiCarbonVal"
+                    class="text-3xl font-display font-bold text-white"
+                  >
                     45 Tons
                   </p>
                 </div>
@@ -1850,5 +1865,76 @@
         >Chat with us</span
       >
     </a>
+    <script>
+      // ROI Estimator Logic
+      const roiExpenditure = document.getElementById("roiExpenditure");
+      const roiAssetClass = document.getElementById("roiAssetClass");
+      const roiGenerateBtn = document.getElementById("roiGenerateBtn");
+
+      const roiExpenditureLabel = document.getElementById(
+        "roiExpenditureLabel",
+      );
+      const roiRetentionVal = document.getElementById("roiRetentionVal");
+      const roiRecoveryVal = document.getElementById("roiRecoveryVal");
+      const roiCarbonVal = document.getElementById("roiCarbonVal");
+
+      function updateROI() {
+        if (!roiExpenditure) return;
+        const e = parseFloat(roiExpenditure.value);
+        const assetClass = roiAssetClass.value;
+
+        // Update Label
+        roiExpenditureLabel.innerText =
+          "₦" +
+          (e >= 1000000
+            ? (e / 1000000).toFixed(1) + "M"
+            : (e / 1000).toFixed(0) + "K");
+
+        // Retention: roughly 50-60% of 10 year cost
+        let savingsMultiplier = 0.55;
+        if (assetClass.includes("Commercial")) savingsMultiplier = 0.6;
+        if (assetClass.includes("Industrial")) savingsMultiplier = 0.65;
+
+        const savings = e * 12 * 10 * savingsMultiplier;
+        roiRetentionVal.innerText =
+          "~₦" +
+          (savings >= 1000000
+            ? (savings / 1000000).toFixed(1) + "M"
+            : (savings / 1000).toFixed(0) + "K");
+
+        // Recovery
+        let recovery = 2.4;
+        if (assetClass.includes("Commercial")) recovery = 2.1;
+        if (assetClass.includes("Industrial")) recovery = 1.8;
+        if (assetClass.includes("Healthcare")) recovery = 2.0;
+        roiRecoveryVal.innerText = recovery.toFixed(1) + " Years";
+
+        // Carbon
+        const carbon = Math.round(e * 0.000018);
+        roiCarbonVal.innerText = carbon + " Tons";
+      }
+
+      if (roiExpenditure) {
+        roiExpenditure.addEventListener("input", updateROI);
+        roiAssetClass.addEventListener("change", updateROI);
+      }
+
+      if (roiGenerateBtn) {
+        roiGenerateBtn.addEventListener("click", function () {
+          const eStr = roiExpenditureLabel.innerText;
+          const assetClass = roiAssetClass.value;
+          const retention = roiRetentionVal.innerText;
+          const recovery = roiRecoveryVal.innerText;
+          const carbon = roiCarbonVal.innerText;
+
+          const msg = `Hello Solagates! I would like to request an Executive ROI Report based on my simulation:\n\n*Monthly Expenditure:* ${eStr}\n*Asset Class:* ${assetClass}\n\n*Projected Metrics:*\n- 10-Year Capital Retention: ${retention}\n- Capital Recovery: ${recovery}\n- Carbon Emission Offset: ${carbon}\n\n*Name/Company:* \n*Email:* \n*Phone:* `;
+
+          window.open(
+            "https://wa.me/2348075155862?text=" + encodeURIComponent(msg),
+            "_blank",
+          );
+        });
+      }
+    </script>
   </body>
 </html>
