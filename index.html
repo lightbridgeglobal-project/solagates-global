@@ -136,8 +136,66 @@
           >
             Solar Calculator
           </a>
+          <button
+            id="mobileMenuBtn"
+            class="lg:hidden text-white focus:outline-none ml-auto"
+          >
+            <i data-lucide="menu" class="w-8 h-8"></i>
+          </button>
         </div>
       </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="fixed inset-0 bg-primary z-50 flex flex-col pt-24 px-8 transform translate-x-full transition-transform duration-300"
+      >
+        <button
+          id="closeMenuBtn"
+          class="absolute top-8 right-8 text-white focus:outline-none"
+        >
+          <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <ul
+          class="flex flex-col gap-y-8 list-none font-sans font-semibold text-[20px] uppercase tracking-[0.08em] text-white"
+        >
+          <li>
+            <a href="#vision" class="hover:text-accent transition-colors"
+              >Vision</a
+            >
+          </li>
+          <li>
+            <a href="#solutions" class="hover:text-accent transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="ecosystem.html#dealership"
+              class="hover:text-accent transition-colors"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-accent transition-colors"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="ecosystem.html#academy"
+              class="hover:text-accent transition-colors"
+              >Academy</a
+            >
+          </li>
+        </ul>
+        <a
+          href="#calculator"
+          class="mt-12 bg-accent text-primary text-center font-display text-[14px] tracking-widest uppercase font-bold px-6 py-4 rounded-full shadow-md"
+        >
+          Solar Calculator
+        </a>
+      </div>
 
       <!-- Hero Content -->
       <div class="w-[90%] 2xl:w-[75%] mx-auto z-40 flex flex-col gap-y-6 pt-20">
@@ -1842,8 +1900,29 @@
 
     <script>
       lucide.createIcons();
-    </script>
 
+      // Mobile Menu Logic
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const closeMenuBtn = document.getElementById("closeMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+
+        closeMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.add("translate-x-full");
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+          });
+        });
+      }
+    </script>
     <!-- WhatsApp Floating Icon -->
     <a
       href="https://wa.me/2348075155862"

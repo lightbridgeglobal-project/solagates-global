@@ -138,13 +138,77 @@
             </li>
           </ul>
           <a
-            href="#calculator"
+            href="index.html#calculator"
             class="hidden lg:flex bg-primary text-white font-display text-[10px] tracking-widest uppercase font-bold px-6 py-3 rounded-full hover:bg-primary/90 transition-all shadow-md"
           >
             Solar Calculator
           </a>
+          <button
+            id="mobileMenuBtn"
+            class="lg:hidden text-white focus:outline-none ml-auto"
+          >
+            <i data-lucide="menu" class="w-8 h-8"></i>
+          </button>
         </div>
       </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="fixed inset-0 bg-primary z-50 flex flex-col pt-24 px-8 transform translate-x-full transition-transform duration-300"
+      >
+        <button
+          id="closeMenuBtn"
+          class="absolute top-8 right-8 text-white focus:outline-none"
+        >
+          <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <ul
+          class="flex flex-col gap-y-8 list-none font-sans font-semibold text-[20px] uppercase tracking-[0.08em] text-white"
+        >
+          <li>
+            <a
+              href="index.html#vision"
+              class="hover:text-accent transition-colors"
+              >Vision</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#solutions"
+              class="hover:text-accent transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="ecosystem.html#dealership"
+              class="hover:text-accent transition-colors"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#projects"
+              class="hover:text-accent transition-colors"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="ecosystem.html#academy"
+              class="hover:text-accent transition-colors"
+              >Academy</a
+            >
+          </li>
+        </ul>
+        <a
+          href="index.html#calculator"
+          class="mt-12 bg-accent text-primary text-center font-display text-[14px] tracking-widest uppercase font-bold px-6 py-4 rounded-full shadow-md"
+        >
+          Solar Calculator
+        </a>
+      </div>
 
       <div class="w-[90%] 2xl:w-[75%] mx-auto z-40 flex flex-col pt-24 pb-12">
         <h1
@@ -384,25 +448,53 @@
               systems that meet global quality management standards.
             </p>
             <div
-              class="bg-primary border border-accent p-6 rounded-xl flex-1 flex flex-col justify-center items-center text-center"
+              class="bg-primary border border-accent p-6 sm:p-8 rounded-xl flex-1 flex flex-col justify-center gap-6 text-left"
             >
-              <p
-                class="font-sans font-semibold text-[14px] uppercase tracking-[0.08em] text-accent mb-2"
-              >
-                Next Cohort
-              </p>
-              <h4 class="font-display font-bold text-[34px] text-white mb-4">
-                Starts Next Month
-              </h4>
-              <p class="font-display font-bold text-[48px] text-accent mb-6">
-                ₦350,000
-              </p>
-              <button
-                class="w-full font-sans font-semibold text-[16px] bg-accent text-primary py-[18px] rounded-[14px] hover:bg-white transition-colors uppercase"
-                onclick="window.open('https://wa.me/2348075155862', '_blank')"
-              >
-                Reserve Your Seat
-              </button>
+              <div class="flex items-start gap-4">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-6 h-6 text-accent shrink-0 mt-0.5"
+                ></i>
+                <p
+                  class="font-sans font-normal text-[16px] leading-[1.6] text-white/90"
+                >
+                  <strong class="text-white block mb-1"
+                    >Global Competence</strong
+                  >
+                  Mastery of international standards for PV system design,
+                  ensuring projects meet strict compliance guidelines.
+                </p>
+              </div>
+              <div class="flex items-start gap-4">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-6 h-6 text-accent shrink-0 mt-0.5"
+                ></i>
+                <p
+                  class="font-sans font-normal text-[16px] leading-[1.6] text-white/90"
+                >
+                  <strong class="text-white block mb-1"
+                    >Quality Assurance Protocol</strong
+                  >
+                  Implement rigorous QA processes spanning from component
+                  procurement to final commissioning.
+                </p>
+              </div>
+              <div class="flex items-start gap-4">
+                <i
+                  data-lucide="check-circle-2"
+                  class="w-6 h-6 text-accent shrink-0 mt-0.5"
+                ></i>
+                <p
+                  class="font-sans font-normal text-[16px] leading-[1.6] text-white/90"
+                >
+                  <strong class="text-white block mb-1"
+                    >Enterprise Readiness</strong
+                  >
+                  Graduate fully prepared to execute large-scale, high-stakes
+                  renewable projects with total confidence.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -524,6 +616,28 @@
 
     <script>
       lucide.createIcons();
+
+      // Mobile Menu Logic
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const closeMenuBtn = document.getElementById("closeMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+
+        closeMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.add("translate-x-full");
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+          });
+        });
+      }
     </script>
 
     <!-- WhatsApp Floating Icon -->
