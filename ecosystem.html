@@ -155,7 +155,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobileMenu"
-        class="fixed inset-0 bg-primary z-50 flex flex-col pt-24 px-8 transform translate-x-full transition-transform duration-300"
+        class="fixed inset-0 bg-primary/90 backdrop-blur-xl z-50 flex flex-col pt-24 px-8 transform translate-x-full transition-transform duration-300"
       >
         <button
           id="closeMenuBtn"
@@ -210,9 +210,9 @@
         </a>
       </div>
 
-      <div class="w-[90%] 2xl:w-[75%] mx-auto z-40 flex flex-col pt-24 pb-12">
+      <div class="w-[90%] md:w-[85%] 2xl:w-[75%] mx-auto z-40 flex flex-col pt-24 pb-12">
         <h1
-          class="text-4xl md:text-5xl font-bold font-display text-white uppercase tracking-tight"
+          class="font-bold font-display text-white uppercase tracking-tight text-[clamp(2.125rem,5vw,3.75rem)]"
         >
           Solagates Ecosystem
         </h1>
@@ -220,8 +220,8 @@
     </section>
 
     <!-- 7. SERVICE CENTER (Dealership & Academy) -->
-    <section id="dealership" class="py-18 md:py-24 bg-accent text-white">
-      <div class="flex gap-y-12 mx-auto w-[90%] 2xl:w-[75%] flex-col">
+    <section id="dealership" class="py-[clamp(4.5rem,8vw,7.5rem)] bg-accent text-white">
+      <div class="flex gap-y-12 mx-auto w-[90%] md:w-[85%] 2xl:w-[75%] flex-col">
         <div class="flex items-center flex-col gap-y-4">
           <h3
             class="text-sm font-semibold tracking-widest text-white/90 uppercase"
@@ -229,7 +229,7 @@
             Partnerships & Education
           </h3>
           <h2
-            class="text-white font-display font-bold text-[34px] md:text-[44px] lg:text-[52px] leading-[1.15] text-center"
+            class="text-white font-display font-bold text-[clamp(2.125rem,4vw,3.25rem)] leading-[1.15] text-center"
           >
             Join The Solagates Ecosystem
           </h2>
@@ -245,12 +245,12 @@
             ></div>
             <div class="relative z-10 flex flex-col h-full">
               <h3
-                class="font-display font-bold text-[28px] lg:text-[34px] text-white mb-4"
+                class="font-display font-bold text-[clamp(1.5rem,3vw,2.125rem)] text-white mb-4"
               >
                 Authorized Dealership
               </h3>
               <p
-                class="text-white/80 font-sans font-normal text-[16px] lg:text-[20px] leading-[1.75] mb-10 max-w-md"
+                class="text-white/80 font-sans font-normal text-[clamp(1rem,1.5vw,1.25rem)] leading-[1.75] mb-10 max-w-md"
               >
                 Partner with Africa's leading renewable brand. Access wholesale
                 pricing on premium inverters, tier-1 panels, and lithium storage
@@ -259,7 +259,7 @@
               <a
                 href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20apply%20for%20a%20dealership.%0A%0A*Authorized%20Dealership*%0APartner%20with%20Africa's%20leading%20renewable%20brand.%20Access%20wholesale%20pricing%20on%20premium%20inverters%2C%20tier-1%20panels%2C%20and%20lithium%20storage%20solutions."
                 target="_blank"
-                class="mt-auto inline-flex items-center justify-center rounded-md font-bold bg-accent text-primary h-14 px-8 w-full sm:w-max hover:bg-white transition-colors uppercase tracking-widest text-xs font-display"
+                class="mt-auto inline-flex items-center justify-center rounded-md font-bold bg-accent text-primary min-h-[56px] px-8 w-full sm:w-max hover:bg-white transition-colors uppercase tracking-widest text-[clamp(0.75rem,2vw,0.875rem)] font-display"
               >
                 Apply for Dealership
                 <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
@@ -276,12 +276,12 @@
             ></div>
             <div class="relative z-10 flex flex-col h-full">
               <h3
-                class="font-display font-bold text-[28px] lg:text-[34px] text-white mb-4"
+                class="font-display font-bold text-[clamp(1.5rem,3vw,2.125rem)] text-white mb-4"
               >
                 Solagates Academy
               </h3>
               <p
-                class="text-white/80 font-sans font-normal text-[16px] lg:text-[20px] leading-[1.75] mb-10 max-w-md"
+                class="text-white/80 font-sans font-normal text-[clamp(1rem,1.5vw,1.25rem)] leading-[1.75] mb-10 max-w-md"
               >
                 Elite technical training for the next generation of solar
                 engineers. Master microgrid architecture, hybrid inverter
@@ -289,7 +289,7 @@
               </p>
               <a
                 href="ecosystem.html#academy"
-                class="mt-auto inline-flex items-center justify-center rounded-md font-bold bg-white text-grey-900 h-14 px-8 w-full sm:w-max hover:bg-grey-100 transition-colors uppercase tracking-widest text-xs font-display"
+                class="mt-auto inline-flex items-center justify-center rounded-md font-bold bg-white text-grey-900 min-h-[56px] px-8 w-full sm:w-max hover:bg-grey-100 transition-colors uppercase tracking-widest text-[clamp(0.75rem,2vw,0.875rem)] font-display"
               >
                 View Curriculum
                 <i data-lucide="graduation-cap" class="w-5 h-5 ml-2"></i>
@@ -350,7 +350,7 @@
                     <a
                       href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20reserve%20my%20seat%20for%20the%20Academy.%0A%0A*Basic%20Solar%20Installation*%0APrice%3A%20%E2%82%A6150%2C000%0AMaster%20fundamental%20PV%20concepts%2C%20series%2Fparallel%20array%20wiring%2C%20safety%20protocols%2C%20and%20tier-1%20residential%20deployments."
                       target="_blank"
-                      class="bg-accent text-primary font-bold px-8 py-3.5 rounded-lg hover:bg-white transition-all text-xs uppercase tracking-widest shadow-xl"
+                      class="bg-accent text-primary font-bold min-h-[56px] flex items-center justify-center px-8 rounded-lg hover:bg-white transition-all text-xs uppercase tracking-widest shadow-xl w-full sm:w-auto"
                     >
                       Reserve Your Seat
                     </a>
@@ -398,7 +398,7 @@
                     <a
                       href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20reserve%20my%20seat%20for%20the%20Academy.%0A%0A*Advanced%20Masterclass*%0APrice%3A%20%E2%82%A6300%2C000%0AEnterprise%20microgrid%20design%2C%20heavy-duty%20three-phase%20inverter%20topology%2C%20and%20high-voltage%20lithium%20rack%20integration."
                       target="_blank"
-                      class="bg-accent text-primary font-bold px-8 py-3.5 rounded-lg hover:bg-white transition-all text-xs uppercase tracking-widest shadow-xl"
+                      class="bg-accent text-primary font-bold min-h-[56px] flex items-center justify-center px-8 rounded-lg hover:bg-white transition-all text-xs uppercase tracking-widest shadow-xl w-full sm:w-auto"
                     >
                       Reserve Your Seat
                     </a>
@@ -446,7 +446,7 @@
                     <a
                       href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20reserve%20my%20seat%20for%20the%20Academy.%0A%0A*Business%20Mentorship*%0APrice%3A%20%E2%82%A6500%2C000%0ALearn%20how%20to%20procure%20enterprise%20contracts%2C%20manage%20supply%20chains%2C%20and%20build%20a%20profitable%20renewable%20energy%20firm."
                       target="_blank"
-                      class="bg-accent text-primary font-bold px-8 py-3.5 rounded-lg hover:bg-white transition-all text-xs uppercase tracking-widest shadow-xl"
+                      class="bg-accent text-primary font-bold min-h-[56px] flex items-center justify-center px-8 rounded-lg hover:bg-white transition-all text-xs uppercase tracking-widest shadow-xl w-full sm:w-auto"
                     >
                       Reserve Your Seat
                     </a>
@@ -523,8 +523,8 @@
     </section>
 
     <!-- 10. FOOTER -->
-    <footer class="bg-white border-t border-grey-200 pt-24 pb-12">
-      <div class="w-[90%] 2xl:w-[75%] mx-auto flex flex-col gap-y-16">
+    <footer class="bg-white border-t border-grey-200 pt-[clamp(4.5rem,8vw,6rem)] pb-12">
+      <div class="w-[90%] md:w-[85%] 2xl:w-[75%] mx-auto flex flex-col gap-y-16">
         <!-- Links Row -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div class="flex flex-col gap-6">
@@ -546,22 +546,22 @@
             </h4>
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Residential Microgrids</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Commercial Power</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Industrial Scale</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Operations & Maintenance</a
             >
           </div>
@@ -572,22 +572,22 @@
             </h4>
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >About Us</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Featured Projects</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Solagates Academy</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Authorized Dealership</a
             >
           </div>

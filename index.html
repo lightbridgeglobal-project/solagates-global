@@ -148,7 +148,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobileMenu"
-        class="fixed inset-0 bg-primary z-50 flex flex-col pt-24 px-8 transform translate-x-full transition-transform duration-300"
+        class="fixed inset-0 bg-primary/90 backdrop-blur-xl z-50 flex flex-col pt-24 px-8 transform translate-x-full transition-transform duration-300"
       >
         <button
           id="closeMenuBtn"
@@ -201,7 +201,7 @@
       <div class="w-[90%] 2xl:w-[75%] mx-auto z-40 flex flex-col gap-y-6 pt-20">
         <div class="flex flex-col">
           <h1
-            class="font-display font-bold text-[38px] md:text-[52px] lg:text-[64px] xl:text-[72px] leading-[1.05] text-white w-full"
+            class="font-display font-bold text-[clamp(2rem,6vw,4.5rem)] leading-[1.05] text-white w-full"
           >
             Power Intelligent Energy <br /><span class="text-accent"
               >Independence</span
@@ -210,7 +210,7 @@
           </h1>
         </div>
         <p
-          class="text-white/90 font-sans font-normal text-[18px] md:text-[20px] lg:text-[22px] leading-[1.65] max-w-[700px] mt-4"
+          class="text-white/90 font-sans font-normal text-[clamp(1rem,2vw,1.375rem)] leading-[1.65] max-w-[700px] mt-4"
         >
           Premium solar infrastructure engineered for uninterrupted energy,
           lower electricity costs, and long-term operational reliability.
@@ -218,13 +218,13 @@
         <div class="flex gap-4 flex-col sm:flex-row mt-6">
           <a
             href="#contact"
-            class="inline-flex items-center justify-center rounded-md font-sans font-semibold text-[15px] md:text-[16px] bg-accent text-primary px-[32px] py-[18px] rounded-[14px] transition-all duration-200 hover:scale-105 hover:bg-white shadow-lg"
+            class="inline-flex items-center justify-center rounded-md font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] bg-accent text-primary px-8 min-h-[56px] rounded-[14px] transition-all duration-200 hover:scale-105 hover:bg-white shadow-lg w-full sm:w-auto"
           >
             Request an Assessment
           </a>
           <a
             href="#solutions"
-            class="flex items-center justify-center gap-2 text-white/80 hover:text-white font-sans font-semibold text-[15px] md:text-[16px] px-[32px] py-[18px] rounded-[14px]"
+            class="flex items-center justify-center gap-2 text-white/80 hover:text-white font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] px-8 min-h-[56px] rounded-[14px] w-full sm:w-auto"
           >
             Explore Solutions <i data-lucide="arrow-right" class="w-5 h-5"></i>
           </a>
@@ -239,7 +239,7 @@
       >
         <div class="flex flex-col items-center gap-y-1 text-center px-4">
           <span
-            class="font-display font-bold text-[42px] md:text-[48px] lg:text-[56px] text-primary"
+            class="font-display font-bold text-[clamp(2.5rem,5vw,3.5rem)] text-primary"
             >250+</span
           >
           <span
@@ -249,7 +249,7 @@
         </div>
         <div class="flex flex-col items-center gap-y-1 text-center px-4">
           <span
-            class="font-display font-bold text-[42px] md:text-[48px] lg:text-[56px] text-primary"
+            class="font-display font-bold text-[clamp(2.5rem,5vw,3.5rem)] text-primary"
             >15+</span
           >
           <span
@@ -259,7 +259,7 @@
         </div>
         <div class="flex flex-col items-center gap-y-1 text-center px-4">
           <span
-            class="font-display font-bold text-[42px] md:text-[48px] lg:text-[56px] text-primary"
+            class="font-display font-bold text-[clamp(2.5rem,5vw,3.5rem)] text-primary"
             >99.9%</span
           >
           <span
@@ -269,7 +269,7 @@
         </div>
         <div class="flex flex-col items-center gap-y-1 text-center px-4">
           <span
-            class="font-display font-bold text-[42px] md:text-[48px] lg:text-[56px] text-primary"
+            class="font-display font-bold text-[clamp(2.5rem,5vw,3.5rem)] text-primary"
             >50M+</span
           >
           <span
@@ -467,247 +467,116 @@
     </section>
 
     <!-- 4. SERVICES / SOLUTIONS GRID (Products) -->
-    <section id="solutions" class="py-18 md:py-24 bg-white">
-      <div class="flex gap-y-12 mx-auto w-[90%] 2xl:w-[75%] flex-col">
-        <div
-          class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4"
-        >
+    <section id="solutions" class="py-[clamp(4.5rem,8vw,7.5rem)] bg-white">
+      <div class="flex gap-y-12 mx-auto w-[90%] md:w-[85%] 2xl:w-[75%] flex-col">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4">
           <div class="flex flex-col gap-y-2">
-            <h3
-              class="font-sans font-medium text-[12px] md:text-[13px] lg:text-[14px] uppercase tracking-[0.12em] text-grey-500"
-            >
+            <h3 class="font-sans font-medium text-[12px] md:text-[13px] lg:text-[14px] uppercase tracking-[0.12em] text-grey-500">
               Our Solutions
             </h3>
-            <h2
-              class="text-grey-900 font-display font-bold text-[34px] md:text-[44px] lg:text-[52px] leading-[1.15]"
-            >
+            <h2 class="text-grey-900 font-display font-bold text-[clamp(2.125rem,4vw,3.25rem)] leading-[1.15]">
               Enterprise Energy Systems
             </h2>
-            <p
-              class="text-grey-500 font-sans font-normal text-[16px] md:text-[18px] lg:text-[20px] leading-[1.7] max-w-[700px]"
-            >
-              Scalable, high-performance clean energy infrastructure tailored to
-              your specific power requirements.
+            <p class="text-grey-500 font-sans font-normal text-[clamp(1rem,1.5vw,1.25rem)] leading-[1.7] max-w-[700px]">
+              Scalable, high-performance clean energy infrastructure tailored to your specific power requirements.
             </p>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Service Card 1 -->
-          <div
-            class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col"
-          >
-            <div
-              class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200"
-            >
-              <img
-                src="public/residential-rooftop-solar-africa.jpeg"
-                alt="Residential"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
+          <div class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col">
+            <div class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200">
+              <img src="public/residential-rooftop-solar-africa.jpeg" alt="Residential" class="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             </div>
-            <div class="p-8 flex flex-col gap-y-2 h-full">
-              <h3
-                class="font-display font-semibold text-[20px] md:text-[22px] lg:text-[24px] text-grey-900"
-              >
-                Residential Microgrids
-              </h3>
-              <p
-                class="font-sans font-normal text-[15px] lg:text-[16px] leading-[1.7] text-grey-500 mb-4"
-              >
-                Complete home energy autonomy. Say goodbye to noisy generators
-                and unstable grid power with our smart home solar integrations.
-              </p>
-              <a
-                href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0A*Residential%20Microgrids*%0AComplete%20home%20energy%20autonomy.%20Say%20goodbye%20to%20noisy%20generators%20and%20unstable%20grid%20power%20with%20our%20smart%20home%20solar%20integrations."
-                target="_blank"
-                class="text-primary font-semibold flex items-center gap-2 hover:underline mt-auto"
-                >Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i
-              ></a>
+            <div class="p-[clamp(1.25rem,2vw,2rem)] flex flex-col gap-y-2 h-full">
+              <h3 class="font-display font-semibold text-[clamp(1.125rem,2vw,1.25rem)] text-grey-900">Residential Solar Installation</h3>
+              <p class="font-sans font-normal text-[clamp(0.9375rem,1vw,1rem)] leading-[1.7] text-grey-500 mb-4">Complete home energy autonomy. Smart home solar integrations for maximum efficiency.</p>
+              <a href="#contact" class="text-primary font-semibold flex items-center gap-2 mt-auto min-h-[48px] py-2">Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
           </div>
-
+          
           <!-- Service Card 2 -->
-          <div
-            class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col"
-          >
-            <div
-              class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200"
-            >
-              <img
-                src="public/commercial-office-solar-installation.jpeg"
-                alt="Commercial"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
+          <div class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col">
+            <div class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200">
+              <img src="public/commercial-office-solar-installation.jpeg" alt="Commercial" class="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             </div>
-            <div class="p-8 flex flex-col gap-y-2 h-full">
-              <h3
-                class="font-display font-semibold text-[20px] md:text-[22px] lg:text-[24px] text-grey-900"
-              >
-                Commercial Power
-              </h3>
-              <p
-                class="font-sans font-normal text-[15px] lg:text-[16px] leading-[1.7] text-grey-500 mb-4"
-              >
-                Slash operational costs. High-capacity rooftop arrays designed
-                to power offices, retail spaces, and commercial real estate.
-              </p>
-              <a
-                href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0A*Commercial%20Power*%0ASlash%20operational%20costs.%20High-capacity%20rooftop%20arrays%20designed%20to%20power%20offices%2C%20retail%20spaces%2C%20and%20commercial%20real%20estate."
-                target="_blank"
-                class="text-primary font-semibold flex items-center gap-2 hover:underline mt-auto"
-                >Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i
-              ></a>
+            <div class="p-[clamp(1.25rem,2vw,2rem)] flex flex-col gap-y-2 h-full">
+              <h3 class="font-display font-semibold text-[clamp(1.125rem,2vw,1.25rem)] text-grey-900">Commercial Solar Systems</h3>
+              <p class="font-sans font-normal text-[clamp(0.9375rem,1vw,1rem)] leading-[1.7] text-grey-500 mb-4">Slash operational costs. High-capacity arrays designed for offices and retail.</p>
+              <a href="#contact" class="text-primary font-semibold flex items-center gap-2 mt-auto min-h-[48px] py-2">Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
           </div>
 
           <!-- Service Card 3 -->
-          <div
-            class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col"
-          >
-            <div
-              class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200"
-            >
-              <img
-                src="public/industrial-factory-solar-system.jpeg"
-                alt="Industrial"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
+          <div class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col">
+            <div class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200">
+              <img src="public/industrial-factory-solar-system.jpeg" alt="Industrial" class="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             </div>
-            <div class="p-8 flex flex-col gap-y-2 h-full">
-              <h3
-                class="font-display font-semibold text-[20px] md:text-[22px] lg:text-[24px] text-grey-900"
-              >
-                Industrial Scale
-              </h3>
-              <p
-                class="font-sans font-normal text-[15px] lg:text-[16px] leading-[1.7] text-grey-500 mb-4"
-              >
-                Megawatt-class installations for manufacturing, agriculture, and
-                heavy industry requiring massive, stable power loads.
-              </p>
-              <a
-                href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0A*Industrial%20Scale*%0AMegawatt-class%20installations%20for%20manufacturing%2C%20agriculture%2C%20and%20heavy%20industry%20requiring%20massive%2C%20stable%20power%20loads."
-                target="_blank"
-                class="text-primary font-semibold flex items-center gap-2 hover:underline mt-auto"
-                >Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i
-              ></a>
+            <div class="p-[clamp(1.25rem,2vw,2rem)] flex flex-col gap-y-2 h-full">
+              <h3 class="font-display font-semibold text-[clamp(1.125rem,2vw,1.25rem)] text-grey-900">Industrial Infrastructure</h3>
+              <p class="font-sans font-normal text-[clamp(0.9375rem,1vw,1rem)] leading-[1.7] text-grey-500 mb-4">Megawatt-class installations for manufacturing and heavy industry loads.</p>
+              <a href="#contact" class="text-primary font-semibold flex items-center gap-2 mt-auto min-h-[48px] py-2">Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
           </div>
 
           <!-- Service Card 4 -->
-          <div
-            class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col"
-          >
-            <div
-              class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200"
-            >
-              <img
-                src="public/hybrid-inverter-premium.jpeg"
-                alt="Inverters"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
+          <div class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col">
+            <div class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200">
+              <img src="public/solar-maintenance-engineer-service.jpeg" alt="Maintenance" class="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             </div>
-            <div class="p-8 flex flex-col gap-y-2 h-full">
-              <h3
-                class="font-display font-semibold text-[20px] md:text-[22px] lg:text-[24px] text-grey-900"
-              >
-                Hybrid Inverters
-              </h3>
-              <p
-                class="font-sans font-normal text-[15px] lg:text-[16px] leading-[1.7] text-grey-500 mb-4"
-              >
-                Intelligent power routing. Seamlessly switch between solar,
-                battery, and grid power with zero interruption to your
-                operations.
-              </p>
-              <a
-                href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0A*Hybrid%20Inverters*%0AIntelligent%20power%20routing.%20Seamlessly%20switch%20between%20solar%2C%20battery%2C%20and%20grid%20power%20with%20zero%20interruption%20to%20your%20operations."
-                target="_blank"
-                class="text-primary font-semibold flex items-center gap-2 hover:underline mt-auto"
-                >Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i
-              ></a>
+            <div class="p-[clamp(1.25rem,2vw,2rem)] flex flex-col gap-y-2 h-full">
+              <h3 class="font-display font-semibold text-[clamp(1.125rem,2vw,1.25rem)] text-grey-900">Maintenance & Support</h3>
+              <p class="font-sans font-normal text-[clamp(0.9375rem,1vw,1rem)] leading-[1.7] text-grey-500 mb-4">Comprehensive O&M. Preventive diagnostics and rapid-response technical support.</p>
+              <a href="#contact" class="text-primary font-semibold flex items-center gap-2 mt-auto min-h-[48px] py-2">Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
           </div>
 
           <!-- Service Card 5 -->
-          <div
-            class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col"
-          >
-            <div
-              class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200"
-            >
-              <img
-                src="public/lithium-battery-bank.jpeg"
-                alt="Battery"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
+          <div class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col">
+            <div class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200">
+              <img src="public/lithium-battery-bank.jpeg" alt="Battery" class="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             </div>
-            <div class="p-8 flex flex-col gap-y-2 h-full">
-              <h3
-                class="font-display font-semibold text-[20px] md:text-[22px] lg:text-[24px] text-grey-900"
-              >
-                High-Density Storage
-              </h3>
-              <p
-                class="font-sans font-normal text-[15px] lg:text-[16px] leading-[1.7] text-grey-500 mb-4"
-              >
-                Enterprise-grade lithium battery banks offering deep discharge
-                cycles, thermal stability, and decades of reliable storage.
-              </p>
-              <a
-                href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0A*High-Density%20Storage*%0AEnterprise-grade%20lithium%20battery%20banks%20offering%20deep%20discharge%20cycles%2C%20thermal%20stability%2C%20and%20decades%20of%20reliable%20storage."
-                target="_blank"
-                class="text-primary font-semibold flex items-center gap-2 hover:underline mt-auto"
-                >Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i
-              ></a>
+            <div class="p-[clamp(1.25rem,2vw,2rem)] flex flex-col gap-y-2 h-full">
+              <h3 class="font-display font-semibold text-[clamp(1.125rem,2vw,1.25rem)] text-grey-900">Battery Backup Systems</h3>
+              <p class="font-sans font-normal text-[clamp(0.9375rem,1vw,1rem)] leading-[1.7] text-grey-500 mb-4">Enterprise-grade lithium banks offering deep discharge cycles and thermal stability.</p>
+              <a href="#contact" class="text-primary font-semibold flex items-center gap-2 mt-auto min-h-[48px] py-2">Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
           </div>
 
           <!-- Service Card 6 -->
-          <div
-            class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col"
-          >
-            <div
-              class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200"
-            >
-              <img
-                src="public/solar-maintenance-engineer-service.jpeg"
-                alt="Maintenance"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-                decoding="async"
-              />
+          <div class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col">
+            <div class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200">
+              <img src="public/hybrid-inverter-premium.jpeg" alt="Dealership" class="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
             </div>
-            <div class="p-8 flex flex-col gap-y-2 h-full">
-              <h3
-                class="font-display font-semibold text-[20px] md:text-[22px] lg:text-[24px] text-grey-900"
-              >
-                O&M Services
-              </h3>
-              <p
-                class="font-sans font-normal text-[15px] lg:text-[16px] leading-[1.7] text-grey-500 mb-4"
-              >
-                Comprehensive operations and maintenance. Preventive
-                diagnostics, panel cleaning, and rapid-response technical
-                support.
-              </p>
-              <a
-                href="https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20learn%20more%20about%20your%20services.%0A%0A*O%26M%20Services*%0AComprehensive%20operations%20and%20maintenance.%20Preventive%20diagnostics%2C%20panel%20cleaning%2C%20and%20rapid-response%20technical%20support."
-                target="_blank"
-                class="text-primary font-semibold flex items-center gap-2 hover:underline mt-auto"
-                >Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i
-              ></a>
+            <div class="p-[clamp(1.25rem,2vw,2rem)] flex flex-col gap-y-2 h-full">
+              <h3 class="font-display font-semibold text-[clamp(1.125rem,2vw,1.25rem)] text-grey-900">Solar Product Dealership</h3>
+              <p class="font-sans font-normal text-[clamp(0.9375rem,1vw,1rem)] leading-[1.7] text-grey-500 mb-4">Wholesale access to tier-1 panels, hybrid inverters, and lithium storage solutions.</p>
+              <a href="ecosystem.html#dealership" class="text-primary font-semibold flex items-center gap-2 mt-auto min-h-[48px] py-2">Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+          </div>
+
+          <!-- Service Card 7 -->
+          <div class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col">
+            <div class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200">
+              <img src="public/solar-blueprint-design.jpg" alt="Consultation" class="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-[clamp(1.25rem,2vw,2rem)] flex flex-col gap-y-2 h-full">
+              <h3 class="font-display font-semibold text-[clamp(1.125rem,2vw,1.25rem)] text-grey-900">Energy Consultation</h3>
+              <p class="font-sans font-normal text-[clamp(0.9375rem,1vw,1rem)] leading-[1.7] text-grey-500 mb-4">Expert energy audits, ROI forecasting, and system architecture planning.</p>
+              <a href="#calculator" class="text-primary font-semibold flex items-center gap-2 mt-auto min-h-[48px] py-2">Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+          </div>
+
+          <!-- Service Card 8 -->
+          <div class="group bg-[#fcfdfc] rounded-2xl border border-grey-200 overflow-hidden flex flex-col">
+            <div class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200">
+              <img src="public/solar-system-design-blueprint.jpg" alt="Training" class="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+            </div>
+            <div class="p-[clamp(1.25rem,2vw,2rem)] flex flex-col gap-y-2 h-full">
+              <h3 class="font-display font-semibold text-[clamp(1.125rem,2vw,1.25rem)] text-grey-900">Solar Training & Mentorship</h3>
+              <p class="font-sans font-normal text-[clamp(0.9375rem,1vw,1rem)] leading-[1.7] text-grey-500 mb-4">Elite technical training for the next generation of certified solar engineers.</p>
+              <a href="ecosystem.html#academy" class="text-primary font-semibold flex items-center gap-2 mt-auto min-h-[48px] py-2">Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
           </div>
         </div>
@@ -715,9 +584,9 @@
     </section>
 
     <!-- 5. TARGET SECTORS (Production Pillars) -->
-    <section class="py-20 md:py-28 bg-primary">
+    <section class="py-[clamp(4.5rem,8vw,7.5rem)] bg-primary">
       <div
-        class="mx-auto w-[90%] 2xl:w-[75%] grid gap-16 lg:grid-cols-[1fr_1fr] items-center"
+        class="mx-auto w-[90%] md:w-[85%] 2xl:w-[75%] grid gap-16 lg:grid-cols-[1fr_1fr] items-center"
       >
         <div class="text-white flex flex-col gap-8">
           <div class="flex flex-col gap-3">
@@ -727,12 +596,12 @@
               Target Sectors
             </h3>
             <h2
-              class="font-display font-bold text-[38px] md:text-[48px] lg:text-[60px] leading-[1.1]"
+              class="font-display font-bold text-[clamp(2.125rem,4vw,3.75rem)] leading-[1.1]"
             >
               Powering Critical Infrastructure
             </h2>
             <p
-              class="text-white/70 font-sans font-normal text-[16px] lg:text-[20px] leading-[1.75]"
+              class="text-white/70 font-sans font-normal text-[clamp(1rem,1.5vw,1.25rem)] leading-[1.75]"
             >
               Solagates Global delivers tailored energy solutions for industries
               where power failure is simply not an option.
@@ -841,23 +710,23 @@
     </section>
 
     <!-- 6. SOLAR CALCULATOR SECTION -->
-    <section id="calculator" class="py-18 md:py-24 bg-[#F7F9FC]">
-      <div class="mx-auto w-[90%] 2xl:w-[75%]">
+    <section id="calculator" class="py-[clamp(4.5rem,8vw,7.5rem)] bg-[#F7F9FC]">
+      <div class="mx-auto w-[90%] md:w-[85%] 2xl:w-[75%]">
         <div
           class="bg-white rounded-[2rem] border border-grey-200 shadow-xl overflow-hidden flex flex-col lg:flex-row"
         >
-          <div class="lg:w-1/2 p-12 lg:p-16 flex flex-col justify-center">
+          <div class="lg:w-1/2 p-[clamp(2rem,4vw,4rem)] flex flex-col justify-center">
             <h3
               class="font-sans font-semibold text-[13px] lg:text-[14px] uppercase tracking-[0.15em] text-accent mb-4"
             >
               Enterprise ROI Projection
             </h3>
             <h2
-              class="font-display font-bold text-[34px] md:text-[44px] lg:text-[48px] leading-[1.15] text-grey-900 mb-6"
+              class="font-display font-bold text-[clamp(2.125rem,4vw,3rem)] leading-[1.15] text-grey-900 mb-6"
             >
               Simulate Your Yield
             </h2>
-            <p class="text-grey-500 text-lg mb-10 leading-relaxed">
+            <p class="text-grey-500 text-[clamp(1rem,1.5vw,1.125rem)] mb-10 leading-relaxed">
               Input your average monthly power expenditure (grid & diesel) to
               forecast your 10-year capital retention by migrating to premium
               Solagates infrastructure.
@@ -919,12 +788,12 @@
               <button
                 type="button"
                 id="roiGenerateBtn"
-                class="mt-2 bg-grey-900 text-white font-semibold px-8 py-5 rounded-xl hover:bg-accent transition-colors w-full text-lg shadow-xl hover:shadow-accent/20 font-display uppercase tracking-widest flex items-center justify-center gap-3 group"
+                class="mt-2 bg-grey-900 text-white font-semibold px-8 min-h-[56px] rounded-xl hover:bg-accent transition-colors w-full text-[clamp(0.9375rem,2vw,1.125rem)] shadow-xl hover:shadow-accent/20 font-display uppercase tracking-widest flex items-center justify-center gap-3 group"
               >
                 Generate Executive Report
                 <i
                   data-lucide="arrow-right"
-                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  class="w-5 h-5 sm:group-hover:translate-x-1 transition-transform"
                 ></i>
               </button>
             </form>
@@ -1062,7 +931,7 @@
               </li>
             </ul>
             <button
-              class="w-full font-sans font-semibold text-[15px] bg-primary text-white py-[14px] rounded-[10px] hover:bg-primary/90 transition-colors uppercase"
+              class="w-full font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] bg-primary text-white min-h-[56px] rounded-[10px] hover:bg-primary/90 transition-colors uppercase"
               onclick="
                 window.open(
                   'https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20request%20a%20FREE%20Solar%20Quote.%0A%0AStarter%20Package%0AEssential%20home%20backup.%0A%0A5kW%0A%0A-%20Premium%205kVA%20Hybrid%20Inverter%0A-%205kWh%20Lithium%20Storage%0A-%20Tier-1%20Solar%20Array',
@@ -1126,7 +995,7 @@
               </li>
             </ul>
             <button
-              class="w-full font-sans font-semibold text-[15px] bg-accent text-primary py-[14px] rounded-[10px] hover:bg-white transition-colors uppercase"
+              class="w-full font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] bg-accent text-primary min-h-[56px] rounded-[10px] hover:bg-white transition-colors uppercase"
               onclick="
                 window.open(
                   'https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20request%20a%20FREE%20Solar%20Quote.%0A%0AProfessional%0ALarge%20residential%20%26%20small%20business.%0A%0A10kW%0A%0A-%2010kVA%20Heavy-Duty%20Inverter%0A-%2010kWh-15kWh%20Scalable%20Storage%0A-%20High-Yield%20Monocrystalline%20Array%0A-%2024%2F7%20Remote%20Monitoring',
@@ -1178,7 +1047,7 @@
               </li>
             </ul>
             <button
-              class="w-full font-sans font-semibold text-[15px] bg-primary text-white py-[14px] rounded-[10px] hover:bg-primary/90 transition-colors uppercase"
+              class="w-full font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] bg-primary text-white min-h-[56px] rounded-[10px] hover:bg-primary/90 transition-colors uppercase"
               onclick="
                 window.open(
                   'https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20request%20a%20FREE%20Solar%20Quote.%0A%0ABusiness%0ACommercial%20facilities%20%26%20clinics.%0A%0A30kW%0A%0A-%20Three-Phase%20Commercial%20Inverter%0A-%20High-Voltage%20Rack%20Storage%0A-%20Commercial%20Roof%20Array',
@@ -1230,7 +1099,7 @@
               </li>
             </ul>
             <button
-              class="w-full font-sans font-semibold text-[15px] bg-primary text-white py-[14px] rounded-[10px] hover:bg-primary/90 transition-colors uppercase"
+              class="w-full font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] bg-primary text-white min-h-[56px] rounded-[10px] hover:bg-primary/90 transition-colors uppercase"
               onclick="
                 window.open(
                   'https://wa.me/2348075155862?text=Hello%20Solagates!%20I%20would%20like%20to%20request%20a%20FREE%20Solar%20Consultation.%0A%0AEnterprise%0AIndustrial%20grids%20%26%20estates.%0A%0A100kW%2B%0A%0A-%20Containerized%20Microgrid%0A-%20Utility-Grade%20Storage%0A-%20Custom%20Engineering',
@@ -1246,8 +1115,8 @@
     </section>
 
     <!-- 5.7 DEPLOYMENT PROCESS -->
-    <section class="py-18 md:py-24 bg-[#F7F9FC]">
-      <div class="w-[90%] 2xl:w-[75%] mx-auto">
+    <section class="py-[clamp(4.5rem,8vw,7.5rem)] bg-[#F7F9FC]">
+      <div class="w-[90%] md:w-[85%] 2xl:w-[75%] mx-auto">
         <div class="text-center mb-16">
           <h3
             class="font-sans font-medium text-[14px] uppercase tracking-[0.12em] text-accent mb-4"
@@ -1255,7 +1124,7 @@
             Methodology
           </h3>
           <h2
-            class="font-display font-bold text-[34px] md:text-[44px] lg:text-[52px] leading-[1.15] text-grey-900 uppercase"
+            class="font-display font-bold text-[clamp(2.125rem,4vw,3.25rem)] leading-[1.15] text-grey-900 uppercase"
           >
             Our Premium Deployment Process
           </h2>
@@ -1364,8 +1233,8 @@
     </section>
 
     <!-- 8. FEATURED PROJECTS -->
-    <section id="projects" class="py-18 md:py-24 bg-[#F7F9FC]">
-      <div class="flex gap-y-12 mx-auto w-[90%] 2xl:w-[75%] flex-col">
+    <section id="projects" class="py-[clamp(4.5rem,8vw,7.5rem)] bg-[#F7F9FC]">
+      <div class="flex gap-y-12 mx-auto w-[90%] md:w-[85%] 2xl:w-[75%] flex-col">
         <div
           class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4"
         >
@@ -1376,7 +1245,7 @@
               Our Portfolio
             </h3>
             <h2
-              class="text-grey-900 font-display font-bold text-[34px] md:text-[44px] lg:text-[52px] leading-[1.15]"
+              class="text-grey-900 font-display font-bold text-[clamp(2.125rem,4vw,3.25rem)] leading-[1.15]"
             >
               Featured Installations
             </h2>
@@ -1488,8 +1357,8 @@
     </section>
 
     <!-- 9. TESTIMONIALS (Slider style grid) -->
-    <section class="py-18 md:py-24 bg-primary">
-      <div class="flex gap-y-12 mx-auto w-[90%] 2xl:w-[75%] flex-col">
+    <section class="py-[clamp(4.5rem,8vw,7.5rem)] bg-primary">
+      <div class="flex gap-y-12 mx-auto w-[90%] md:w-[85%] 2xl:w-[75%] flex-col">
         <div class="flex justify-center items-center flex-col gap-y-4">
           <h3
             class="text-sm font-semibold tracking-widest text-accent uppercase"
@@ -1497,7 +1366,7 @@
             Client Success
           </h3>
           <h2
-            class="text-white font-display font-bold text-[34px] md:text-[44px] lg:text-[52px] leading-[1.15] text-center"
+            class="text-white font-display font-bold text-[clamp(2.125rem,4vw,3.25rem)] leading-[1.15] text-center"
           >
             Trusted By Enterprise Leaders
           </h2>
@@ -1505,7 +1374,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-8 rounded-2xl bg-white flex flex-col justify-between">
             <p
-              class="font-sans font-normal text-[18px] md:text-[20px] lg:text-[22px] leading-[1.75] text-grey-700 mb-8"
+              class="font-sans font-normal text-[clamp(1.125rem,1.5vw,1.375rem)] leading-[1.75] text-grey-700 mb-8"
             >
               "As a startup founder working remotely, power stability is
               critical. Solagates Global's inverter and battery combo has been
@@ -1531,7 +1400,7 @@
           </div>
           <div class="p-8 rounded-2xl bg-white flex flex-col justify-between">
             <p
-              class="font-sans font-normal text-[18px] md:text-[20px] lg:text-[22px] leading-[1.75] text-grey-700 mb-8"
+              class="font-sans font-normal text-[clamp(1.125rem,1.5vw,1.375rem)] leading-[1.75] text-grey-700 mb-8"
             >
               "Solagates Global has been our go-to partner for solar solutions
               across all our residential projects. Their engineering is
@@ -1557,7 +1426,7 @@
           </div>
           <div class="p-8 rounded-2xl bg-white flex flex-col justify-between">
             <p
-              class="font-sans font-normal text-[18px] md:text-[20px] lg:text-[22px] leading-[1.75] text-grey-700 mb-8"
+              class="font-sans font-normal text-[clamp(1.125rem,1.5vw,1.375rem)] leading-[1.75] text-grey-700 mb-8"
             >
               "Our hospital switched to Solagates Global's backup systems. Even
               during outages, we stay powered. Their technology is efficient and
@@ -1586,8 +1455,8 @@
     </section>
 
     <!-- 8.5 FREQUENTLY ASKED QUESTIONS -->
-    <section class="py-18 md:py-24 bg-white border-t border-grey-200">
-      <div class="w-[90%] 2xl:w-[75%] mx-auto flex flex-col md:flex-row gap-16">
+    <section class="py-[clamp(4.5rem,8vw,7.5rem)] bg-white border-t border-grey-200">
+      <div class="w-[90%] md:w-[85%] 2xl:w-[75%] mx-auto flex flex-col md:flex-row gap-16">
         <div class="md:w-1/3">
           <h3
             class="font-sans font-medium text-[14px] uppercase tracking-[0.12em] text-accent mb-4"
@@ -1595,7 +1464,7 @@
             Support
           </h3>
           <h2
-            class="font-display font-bold text-[34px] md:text-[44px] leading-[1.15] text-grey-900 uppercase tracking-tight mb-6"
+            class="font-display font-bold text-[clamp(2.125rem,4vw,3.25rem)] leading-[1.15] text-grey-900 uppercase tracking-tight mb-6"
           >
             Frequently Asked Questions
           </h2>
@@ -1606,7 +1475,7 @@
             premium solar infrastructure.
           </p>
           <button
-            class="font-sans font-semibold text-[15px] bg-primary text-white px-[32px] py-[18px] rounded-[14px] hover:bg-primary/90 transition-colors uppercase"
+            class="font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] bg-primary text-white px-[32px] min-h-[56px] rounded-[14px] hover:bg-primary/90 transition-colors uppercase"
           >
             View All FAQs
           </button>
@@ -1660,19 +1529,19 @@
     </section>
 
     <!-- 8.7 LEAD GENERATION -->
-    <section class="py-18 md:py-24 bg-primary text-white">
+    <section class="py-[clamp(4.5rem,8vw,7.5rem)] bg-primary text-white">
       <div
-        class="w-[90%] 2xl:w-[75%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12"
+        class="w-[90%] md:w-[85%] 2xl:w-[75%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12"
       >
         <!-- Audit Form -->
-        <div class="bg-white rounded-2xl p-10 md:p-14 text-grey-900">
+        <div class="bg-white rounded-2xl p-[clamp(2rem,4vw,3.5rem)] text-grey-900">
           <h2
-            class="font-display font-bold text-[34px] md:text-[44px] uppercase mb-4"
+            class="font-display font-bold text-[clamp(2.125rem,4vw,3.25rem)] uppercase mb-4"
           >
             Get Your Free Solar Audit
           </h2>
           <p
-            class="font-sans font-normal text-[16px] leading-[1.7] text-grey-500 mb-8"
+            class="font-sans font-normal text-[clamp(1rem,1.5vw,1.125rem)] leading-[1.7] text-grey-500 mb-8"
           >
             Our engineers will evaluate your load profile and provide a custom
             ROI roadmap.
@@ -1683,26 +1552,26 @@
               type="text"
               placeholder="Full Name or Company"
               required
-              class="bg-grey-50 border border-grey-200 rounded-lg px-6 py-4 font-sans focus:outline-none focus:border-accent"
+              class="bg-grey-50 border border-grey-200 rounded-lg px-6 min-h-[56px] font-sans focus:outline-none focus:border-accent"
             />
             <input
               id="auditEmail"
               type="email"
               placeholder="Email Address"
               required
-              class="bg-grey-50 border border-grey-200 rounded-lg px-6 py-4 font-sans focus:outline-none focus:border-accent"
+              class="bg-grey-50 border border-grey-200 rounded-lg px-6 min-h-[56px] font-sans focus:outline-none focus:border-accent"
             />
             <input
               id="auditPhone"
               type="tel"
               placeholder="Phone Number"
               required
-              class="bg-grey-50 border border-grey-200 rounded-lg px-6 py-4 font-sans focus:outline-none focus:border-accent"
+              class="bg-grey-50 border border-grey-200 rounded-lg px-6 min-h-[56px] font-sans focus:outline-none focus:border-accent"
             />
             <select
               id="auditType"
               required
-              class="bg-grey-50 border border-grey-200 rounded-lg px-6 py-4 font-sans focus:outline-none focus:border-accent text-grey-500"
+              class="bg-grey-50 border border-grey-200 rounded-lg px-6 min-h-[56px] font-sans focus:outline-none focus:border-accent text-grey-500"
             >
               <option value="" disabled selected>Select Property Type</option>
               <option value="Residential Estate">Residential Estate</option>
@@ -1711,7 +1580,7 @@
             </select>
             <button
               type="submit"
-              class="mt-4 font-sans font-semibold text-[16px] bg-accent text-primary px-[32px] py-[18px] rounded-[14px] hover:bg-white border border-accent transition-colors uppercase w-full"
+              class="mt-4 font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] bg-accent text-primary px-[32px] min-h-[56px] rounded-[14px] hover:bg-white border border-accent transition-colors uppercase w-full"
             >
               Request Audit
             </button>
@@ -1752,12 +1621,12 @@
             Free Resource
           </h3>
           <h2
-            class="font-display font-bold text-[38px] md:text-[48px] leading-[1.1] uppercase mb-6"
+            class="font-display font-bold text-[clamp(2.125rem,4vw,3.25rem)] leading-[1.1] uppercase mb-6"
           >
             The Enterprise Energy Guide
           </h2>
           <p
-            class="font-sans font-normal text-[18px] leading-[1.75] text-white/80 mb-8"
+            class="font-sans font-normal text-[clamp(1rem,1.5vw,1.125rem)] leading-[1.75] text-white/80 mb-8"
           >
             Download our comprehensive blueprint on migrating commercial
             operations to sustainable microgrids, including ROI metrics and
@@ -1777,7 +1646,7 @@
             </div>
           </div>
           <button
-            class="font-sans font-semibold text-[16px] bg-transparent border-2 border-accent text-white px-[32px] py-[18px] rounded-[14px] hover:bg-accent hover:text-primary transition-colors uppercase w-full sm:w-max flex items-center justify-center gap-2"
+            class="font-sans font-semibold text-[clamp(0.9375rem,2vw,1rem)] bg-transparent border-2 border-accent text-white px-[32px] min-h-[56px] rounded-[14px] hover:bg-accent hover:text-primary transition-colors uppercase w-full sm:w-max flex items-center justify-center gap-2"
           >
             Download Guide <i data-lucide="download" class="w-5 h-5"></i>
           </button>
@@ -1786,8 +1655,8 @@
     </section>
 
     <!-- 10. FOOTER -->
-    <footer class="bg-white border-t border-grey-200 pt-24 pb-12">
-      <div class="w-[90%] 2xl:w-[75%] mx-auto flex flex-col gap-y-16">
+    <footer class="bg-white border-t border-grey-200 pt-[clamp(4.5rem,8vw,6rem)] pb-12">
+      <div class="w-[90%] md:w-[85%] 2xl:w-[75%] mx-auto flex flex-col gap-y-16">
         <!-- Links Row -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div class="flex flex-col gap-6">
@@ -1809,22 +1678,22 @@
             </h4>
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Residential Microgrids</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Commercial Power</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Industrial Scale</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Operations & Maintenance</a
             >
           </div>
@@ -1835,17 +1704,17 @@
             </h4>
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >About Us</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Featured Projects</a
             >
             <a
               href="#"
-              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors"
+              class="font-sans font-normal text-[15px] leading-[1.8] text-grey-500 hover:text-primary transition-colors block py-2 min-h-[48px] flex items-center"
               >Solagates Academy</a
             >
             <a
