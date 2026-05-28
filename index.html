@@ -356,7 +356,7 @@
               class="aspect-[4/3] w-full overflow-hidden relative bg-grey-200"
             >
               <img
-                src="public/residential-rooftop-solar-africa.jpg"
+                src="public/residential-rooftop-solar-africa.jpeg"
                 alt="Residential"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
@@ -697,122 +697,134 @@
         >
           <div class="lg:w-1/2 p-12 lg:p-16 flex flex-col justify-center">
             <h3
-              class="font-sans font-medium text-[12px] md:text-[13px] lg:text-[14px] uppercase tracking-[0.12em] text-grey-500 mb-3"
+              class="font-sans font-semibold text-[13px] lg:text-[14px] uppercase tracking-[0.15em] text-accent mb-4"
             >
-              ROI Estimator
+              Enterprise ROI Projection
             </h3>
             <h2
-              class="font-display font-bold text-[34px] md:text-[44px] lg:text-[52px] leading-[1.15] text-grey-900 mb-6"
+              class="font-display font-bold text-[34px] md:text-[44px] lg:text-[48px] leading-[1.15] text-grey-900 mb-6"
             >
-              Calculate Your Savings
+              Simulate Your Yield
             </h2>
-            <p class="text-grey-500 text-lg mb-8">
-              Input your average monthly electricity or diesel generator spend
-              to instantly see your potential return on investment by switching
-              to Solagates infrastructure.
+            <p class="text-grey-500 text-lg mb-10 leading-relaxed">
+              Input your average monthly power expenditure (grid & diesel) to
+              forecast your 10-year capital retention by migrating to premium
+              Solagates infrastructure.
             </p>
 
             <form
-              class="flex flex-col gap-6"
+              class="flex flex-col gap-8"
               action="mailto:solagateglobal@gmail.com"
               method="post"
               enctype="text/plain"
             >
               <div>
                 <label
-                  class="block text-sm font-bold text-grey-900 uppercase tracking-wider mb-2"
-                  >Monthly Energy Spend ($)</label
+                  class="block text-[13px] font-bold text-grey-900 uppercase tracking-widest mb-4"
+                  >Monthly Power Expenditure (₦)</label
                 >
                 <input
                   type="range"
-                  min="100"
-                  max="10000"
-                  step="100"
-                  class="w-full accent-primary"
+                  min="100000"
+                  max="10000000"
+                  step="100000"
+                  class="w-full accent-accent h-2 bg-grey-200 rounded-lg appearance-none cursor-pointer"
                 />
                 <div
-                  class="flex justify-between text-xs font-bold text-grey-500 mt-2"
+                  class="flex justify-between items-center text-xs font-bold text-grey-400 mt-4"
                 >
-                  <span>$100</span>
-                  <span class="text-primary text-lg">$2,500</span>
-                  <span>$10k+</span>
+                  <span>₦100K</span>
+                  <span class="text-accent font-display text-xl">₦2.5M</span>
+                  <span>₦10M+</span>
                 </div>
               </div>
               <div>
                 <label
-                  class="block text-sm font-bold text-grey-900 uppercase tracking-wider mb-2"
-                  >Facility Type</label
+                  class="block text-[13px] font-bold text-grey-900 uppercase tracking-widest mb-4"
+                  >Asset Class</label
                 >
-                <select
-                  class="w-full border border-grey-200 rounded-lg p-3 text-grey-900 bg-grey-50 font-medium focus:ring-primary focus:border-primary outline-none"
-                >
-                  <option>Residential Estate</option>
-                  <option>Commercial Office</option>
-                  <option>Industrial Facility</option>
-                  <option>Healthcare Clinic</option>
-                </select>
+                <div class="relative">
+                  <select
+                    class="w-full border-2 border-grey-200 rounded-xl p-4 text-grey-900 bg-white font-semibold focus:ring-0 focus:border-accent outline-none appearance-none cursor-pointer transition-colors"
+                  >
+                    <option>High-End Residential Estate</option>
+                    <option>Commercial Headquarters</option>
+                    <option>Heavy Industrial Facility</option>
+                    <option>Healthcare Infrastructure</option>
+                  </select>
+                  <i
+                    data-lucide="chevron-down"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-grey-500 pointer-events-none"
+                  ></i>
+                </div>
               </div>
               <button
                 type="button"
-                class="mt-4 bg-primary text-white font-medium px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors w-full text-lg shadow-md font-display uppercase tracking-widest"
+                class="mt-2 bg-grey-900 text-white font-semibold px-8 py-5 rounded-xl hover:bg-accent transition-colors w-full text-lg shadow-xl hover:shadow-accent/20 font-display uppercase tracking-widest flex items-center justify-center gap-3 group"
               >
-                Generate Full Report
+                Generate Executive Report
+                <i
+                  data-lucide="arrow-right"
+                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                ></i>
               </button>
             </form>
           </div>
           <div
-            class="lg:w-1/2 bg-primary p-12 lg:p-16 text-white flex flex-col justify-center relative overflow-hidden"
+            class="lg:w-1/2 bg-primary p-12 lg:p-16 text-white flex flex-col justify-center relative overflow-hidden rounded-b-[2rem] lg:rounded-r-[2rem] lg:rounded-bl-none border-l border-white/5"
           >
-            <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
-              <svg
-                width="400"
-                height="400"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1"
-              >
-                <path
-                  d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-                />
-              </svg>
-            </div>
-            <h3
-              class="text-xl font-display font-bold uppercase tracking-widest text-accent mb-12"
+            <!-- Sleek background accent -->
+            <div
+              class="absolute -top-[20%] -right-[20%] w-[80%] h-[80%] bg-accent/10 blur-[120px] rounded-full pointer-events-none"
+            ></div>
+
+            <div
+              class="absolute -bottom-10 -right-10 opacity-5 pointer-events-none text-[400px] font-display font-black leading-none select-none"
             >
-              Estimated Impact
+              ₦
+            </div>
+
+            <h3
+              class="text-sm font-sans font-bold uppercase tracking-[0.2em] text-white/50 mb-12 flex items-center gap-3"
+            >
+              <i data-lucide="bar-chart-3" class="w-5 h-5 text-accent"></i>
+              Projected Metrics
             </h3>
 
-            <div class="flex flex-col gap-10 relative z-10">
-              <div>
+            <div class="flex flex-col gap-12 relative z-10">
+              <div class="border-b border-white/10 pb-10">
                 <p
-                  class="text-white/60 text-sm font-bold uppercase tracking-wider mb-1"
+                  class="text-accent text-[12px] font-bold uppercase tracking-[0.15em] mb-3"
                 >
-                  10-Year Financial Savings
+                  10-Year Capital Retention
                 </p>
-                <p class="text-5xl font-display font-bold text-white">
+                <p
+                  class="text-[56px] lg:text-[64px] font-display font-black text-white leading-none tracking-tight"
+                >
                   ~₦142.5M
                 </p>
               </div>
-              <div>
-                <p
-                  class="text-white/60 text-sm font-bold uppercase tracking-wider mb-1"
-                >
-                  Payback Period
-                </p>
-                <p class="text-5xl font-display font-bold text-white">
-                  2.4 Years
-                </p>
-              </div>
-              <div>
-                <p
-                  class="text-white/60 text-sm font-bold uppercase tracking-wider mb-1"
-                >
-                  Carbon Offset
-                </p>
-                <p class="text-5xl font-display font-bold text-white">
-                  45 Tons
-                </p>
+              <div class="grid grid-cols-2 gap-8">
+                <div>
+                  <p
+                    class="text-white/50 text-[11px] font-bold uppercase tracking-widest mb-2"
+                  >
+                    Capital Recovery
+                  </p>
+                  <p class="text-3xl font-display font-bold text-white">
+                    2.4 Years
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="text-white/50 text-[11px] font-bold uppercase tracking-widest mb-2"
+                  >
+                    Carbon Emission Offset
+                  </p>
+                  <p class="text-3xl font-display font-bold text-white">
+                    45 Tons
+                  </p>
+                </div>
               </div>
             </div>
           </div>
