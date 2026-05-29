@@ -1,89 +1,36 @@
-# ☀️ Solagates Global - Premium Solar Engineering Nigeria
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-**ISO-Certified Solar Energy Infrastructure for Africa's Future**
+## Getting Started
 
-Solagates Global is Nigeria's premier AI-powered solar engineering firm. We deliver uninterrupted, high-performance energy solutions for luxury estates, industrial complexes, and commercial hubs nationwide.
+First, run the development server:
 
----
-
-## 🌟 Premium Features
-
-- ✅ **ISO 9001:2015 Certified** - International engineering standards in every installation.
-- ✅ **AI-Powered Load Balancing** - Smart energy management to extend battery life by 40%.
-- ✅ **Tier-1 Lithium Storage** - Fire-safe LiFePO4 technology (No more lead-acid).
-- ✅ **Solagate Academy** - Building Africa's next generation of solar leaders.
-- ✅ **ROI Calculator** - Precision tools for energy savings projection.
-- ✅ **Nationwide Infrastructure** - Core hubs in Abuja, Lagos, PH, Ibadan, and Ekiti.
-
----
-
-## 🛠️ Engineering Standards
-
-| Standard | Description |
-|----------|-------------|
-| ISO 9001:2015 | Global quality management for solar engineering. |
-| Tier-1 LiFePO4 | High-density lithium storage with 10+ years lifespan. |
-| AI Management | Real-time monitoring and smart power prioritization. |
-
----
-
-## 🎓 Solagate Academy
-
-We offer three tiers of ISO-certified training:
-1. **Basic Installation** - PV mounting and circuit wiring.
-2. **Advanced Masterclass** - Complex industrial system design.
-3. **Elite Mentorship** - Business scaling for solar entrepreneurs.
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Docker (Optional)
-
-### Local Development
-Simply open `index.html` in any modern browser or use a live server.
-
-### Docker Deployment
 ```bash
-# Build and run
-docker build -t solagates-premium .
-docker run -d --name solagates -p 8085:80 solagates-premium
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📁 Project Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-solagates/
-├── index.html          # Premium Dark Mode Landing Page
-├── public/             # High-resolution assets & images
-├── Dockerfile          # Nginx configuration
-├── .gitignore          # Git ignore rules
-└── README.md           # Documentation
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-## 📊 Infrastructure Status
+To learn more about Next.js, take a look at the following resources:
 
-The current deployment features our "Premium Dark Mode" UI, optimized for high-ticket lead conversion and engineering authority.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 📞 Contact Engineering
+## Deploy on Vercel
 
-- **WhatsApp:** +234 807 515 5862
-- **Email:** solagateglobal@gmail.com
-- **Hubs:** Abuja | Lagos | PH | Ibadan | Ekiti
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-## 📝 License
-
-All rights reserved. Solagates Global Proprietary Infrastructure.
-
----
-
-**Engineering Excellence in Every Watt.**
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
