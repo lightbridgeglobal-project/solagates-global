@@ -71,7 +71,7 @@ export default function ProductsPage() {
       <section className="relative pt-32 pb-24 bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder-products.jpg"
+            src="/products.jpeg"
             alt="Solagates Products"
             className="w-full h-full object-cover"
           />

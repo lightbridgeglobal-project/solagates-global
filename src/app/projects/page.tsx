@@ -59,7 +59,7 @@ export default function ProjectsPage() {
       <section className="relative min-h-[60vh] flex items-center justify-center bg-primary text-white pt-24 pb-16">
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder-projects.jpg"
+            src="/projects.jpeg"
             alt="Solagates Projects"
             className="w-full h-full object-cover"
           />

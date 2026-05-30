@@ -11,7 +11,7 @@ export default function AboutPage() {
       <section className="relative min-h-[60vh] flex items-center justify-center bg-primary text-white pt-24 pb-16">
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder-about.jpg"
+            src="/about.jpeg"
             alt="About Solagates"
             className="w-full h-full object-cover"
           />

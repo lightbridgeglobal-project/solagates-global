@@ -37,7 +37,7 @@ export default function CalculatorPage() {
       <section className="relative pt-32 pb-24 bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder-calculator.jpg"
+            src="/calculator.jpeg"
             alt="Solagates Calculator"
             className="w-full h-full object-cover"
           />

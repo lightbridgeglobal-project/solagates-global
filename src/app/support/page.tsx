@@ -46,7 +46,7 @@ ${formData.message}`;
       <section className="relative pt-32 pb-24 bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder-contact.jpg"
+            src="/contact.jpeg"
             alt="Technical Support"
             className="w-full h-full object-cover"
           />

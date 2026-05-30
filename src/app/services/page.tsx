@@ -70,7 +70,7 @@ export default function ServicesPage() {
       <section className="relative pt-32 pb-24 bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder-services.jpg"
+            src="/services.jpeg"
             alt="Solagates Services"
             className="w-full h-full object-cover"
           />
