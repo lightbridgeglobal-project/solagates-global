@@ -10,7 +10,7 @@ export default function CookiePolicyPage() {
       <section className="relative pt-32 pb-24 bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder-cookie.jpg"
+            src="/cookie.jpg.jpeg"
             alt="Cookie Policy"
             className="w-full h-full object-cover"
           />

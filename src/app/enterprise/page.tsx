@@ -44,7 +44,7 @@ export default function EnterprisePage() {
       <section className="relative min-h-[85vh] flex items-center justify-center bg-primary text-white pt-24 pb-16">
         <div className="absolute inset-0 z-0">
           <img
-            src="/commercial-office-solar-installation.jpeg" // using placeholder industrial image
+            src="/commercial_office-solar-installation.jpeg" // using placeholder industrial image
             alt="Enterprise Solar Infrastructure"
             className="w-full h-full object-cover"
           />

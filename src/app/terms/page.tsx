@@ -10,7 +10,7 @@ export default function TermsPage() {
       <section className="relative pt-32 pb-24 bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder-terms.jpg"
+            src="/terms.jpeg"
             alt="Terms of Service"
             className="w-full h-full object-cover"
           />

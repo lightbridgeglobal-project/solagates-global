@@ -12,7 +12,7 @@ const PRODUCTS = [
     id: 1,
     name: "Enterprise 550W Monocrystalline Panel",
     category: "Solar Panels",
-    image: "/commercial-office-solar-installation.jpeg", // reusing solar images
+    image: "/commercial_office-solar-installation.jpeg", // reusing solar images
     desc: "High-efficiency tier-1 solar panel designed for commercial rooftops.",
     specs: ["Efficiency: 21.5%", "Tier-1 OEM", "25-year Warranty"]
   },
@@ -36,7 +36,7 @@ const PRODUCTS = [
     id: 4,
     name: "Industrial Rack Battery 50kWh",
     category: "Lithium Batteries",
-    image: "/storage-rack.jpg",
+    image: "/storage-rack.jpeg",
     desc: "Heavy-duty rack-mounted battery bank for commercial grid applications.",
     specs: ["Capacity: 50kWh", "Scalable to 1MWh", "BMS Integrated"]
   },
@@ -44,7 +44,7 @@ const PRODUCTS = [
     id: 5,
     name: "Hybrid Smart Inverter 12kW",
     category: "Hybrid Inverters",
-    image: "/hybrid-inverter-premium.jpeg",
+    image: "/hybrid-inverter.jpeg",
     desc: "Three-phase intelligent hybrid inverter with dual MPPT trackers.",
     specs: ["Power: 12kW", "IP65 Rating", "Smart Grid Tie"]
   },
@@ -52,7 +52,7 @@ const PRODUCTS = [
     id: 6,
     name: "Single-Phase Hybrid Inverter 5kW",
     category: "Hybrid Inverters",
-    image: "/hybrid-inverter-premium.jpeg",
+    image: "/hybrid-inverter.jpeg",
     desc: "Silent, fanless hybrid inverter perfect for residential applications.",
     specs: ["Power: 5kW", "Fanless cooling", "Wi-Fi Monitoring"]
   }
