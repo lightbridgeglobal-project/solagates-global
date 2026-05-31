@@ -15,6 +15,7 @@ const NAV_LINKS = [
   { name: "Projects", href: "/projects" },
   { name: "Enterprise", href: "/enterprise" },
   { name: "Resources", href: "/resources" },
+  { name: "Calculator", href: "/calculator" },
   { name: "Contact", href: "/contact" },
 ];
 
