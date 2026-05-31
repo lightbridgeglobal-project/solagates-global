@@ -3,7 +3,7 @@ title: "The Ultimate Guide to Lithium LiFePO4 Depth of Discharge"
 category: "Battery Systems"
 date: "2026-05-20"
 readTime: "8 min read"
-image: "/lithium_battery_1779840218141.png"
+image: "/lithium_battery_1779840218141.jpg"
 author: "Chief Engineering Desk"
 excerpt: "Understanding the true cycle life of modern lithium storage systems and why pushing beyond 80% DoD impacts long-term enterprise ROI."
 seoKeywords: ["LiFePO4 depth of discharge", "lithium battery lifespan", "solar battery performance", "best battery DoD percentage"]

@@ -3,7 +3,7 @@ title: "Three-Phase Inverter Programming for Commercial Real Estate"
 category: "Installation Guides"
 date: "2026-04-28"
 readTime: "15 min read"
-image: "/hybrid_inverter_1779840201284.png"
+image: "/hybrid_inverter_1779840201284.jpg"
 author: "Engineering Academy"
 excerpt: "A technical walkthrough for engineers on balancing massive loads across three phases using tier-1 hybrid inverter firmware."
 seoKeywords: ["three-phase inverter programming", "commercial solar installation", "phase balancing", "industrial inverter setup"]

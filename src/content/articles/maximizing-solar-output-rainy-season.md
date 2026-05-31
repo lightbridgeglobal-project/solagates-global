@@ -3,7 +3,7 @@ title: "Maximizing Solar Output During the African Rainy Season"
 category: "Energy Savings"
 date: "2026-05-05"
 readTime: "5 min read"
-image: "/hero_family_1779840127369.png"
+image: "/hero_family_1779840127369.jpg"
 author: "Meteorological Analytics Desk"
 excerpt: "Cloud cover doesn't mean zero power. Learn how to dimension your battery bank to comfortably survive three days of continuous rain."
 seoKeywords: ["solar in rainy season", "solar panel cloud cover", "battery dimensioning", "solar weather resilience"]
