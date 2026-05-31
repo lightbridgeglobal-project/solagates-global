@@ -3,7 +3,7 @@ title: "How Manufacturing Plants Are Slashing Diesel Costs by 70%"
 category: "Business Solutions"
 date: "2026-05-15"
 readTime: "12 min read"
-image: "/commercial_solar_1779840161462.jpg"
+image: "/commercial_solar_1779840161462.jpeg"
 author: "Commercial Operations Team"
 excerpt: "A deep dive into industrial load hybridization. See how heavy machinery can seamlessly transition between solar and grid without voltage drops."
 seoKeywords: ["solar for factories", "diesel reduction solar systems", "commercial solar installation", "industrial solar hybrid"]

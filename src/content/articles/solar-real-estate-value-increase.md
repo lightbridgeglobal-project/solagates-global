@@ -3,7 +3,7 @@ title: "Why Solar Real Estate Integration Increases Property Value by 25%"
 category: "Business Solutions"
 date: "2026-04-20"
 readTime: "7 min read"
-image: "/project_estate_1779840249013.jpg"
+image: "/project_estate_1779840249013.jpeg"
 author: "Real Estate Integration Team"
 excerpt: "Property developers are moving away from noisy generator houses to centralized solar micro-grids. Here is the financial justification."
 seoKeywords: ["solar real estate value", "solar for housing estates", "increase property value with solar", "green real estate"]

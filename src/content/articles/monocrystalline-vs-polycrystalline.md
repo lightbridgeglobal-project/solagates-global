@@ -3,7 +3,7 @@ title: "Monocrystalline vs Polycrystalline: The 2026 Engineering Consensus"
 category: "Solar Education"
 date: "2026-05-10"
 readTime: "6 min read"
-image: "/residential_solar_1779840142533.jpg"
+image: "/residential_solar_1779840142533.jpeg"
 author: "Technology Review Board"
 excerpt: "With efficiency ratings pushing past 22%, is there still a use case for polycrystalline panels in modern grid-tie applications?"
 seoKeywords: ["Monocrystalline vs Polycrystalline", "solar panel efficiency", "best solar panels 2026", "monocrystalline benefits"]
