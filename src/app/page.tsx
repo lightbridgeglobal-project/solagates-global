@@ -90,7 +90,7 @@ export default function HomePage() {
       {/* Ecosystem Preview */}
       <section className="py-[clamp(5rem,8vw,8rem)] bg-grey-50">
         <div className="w-[90%] md:w-[85%] 2xl:w-[75%] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <h2 className="font-display font-bold text-[clamp(2rem,4vw,3.5rem)] text-primary leading-[1.1] mb-6 tracking-tight">
                 An Ecosystem Built For Scale
