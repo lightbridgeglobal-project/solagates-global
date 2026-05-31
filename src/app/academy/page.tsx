@@ -63,7 +63,7 @@ export default function AcademyPage() {
       <section className="relative min-h-[75vh] flex items-center justify-center bg-primary text-white pt-24 pb-16">
         <div className="absolute inset-0 z-0">
           <img
-            src="/category-academy.jpg" // placeholder image
+            src="/category-academy.jpeg" // placeholder image
             alt="Solagates Academy Engineering"
             className="w-full h-full object-cover"
           />
